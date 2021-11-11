@@ -589,6 +589,7 @@ public class Form extends BaseObservable implements Observable {
     private String e10704 = _EMPTY_;
     private String e10705 = _EMPTY_;
     private String e10796 = _EMPTY_;
+    private String e10796x = _EMPTY_;
     private String e10798 = _EMPTY_;
     private String e108 = _EMPTY_;
     private String e10801 = _EMPTY_;
@@ -620,6 +621,7 @@ public class Form extends BaseObservable implements Observable {
     private String e11202 = _EMPTY_;
     private String e113 = _EMPTY_;
     private String e11301 = _EMPTY_;
+    private String e11301x = _EMPTY_;
     private String e11302 = _EMPTY_;
     private String e114 = _EMPTY_;
     private String e115 = _EMPTY_;
@@ -6076,6 +6078,16 @@ public class Form extends BaseObservable implements Observable {
     }
 
     @Bindable
+    public String getE10796x() {
+        return e10796x;
+    }
+
+    public void setE10796x(String e10796x) {
+        this.e10796x = e10796x;
+        notifyPropertyChanged(BR.e10796x);
+    }
+
+    @Bindable
     public String getE10798() {
         return e10798;
     }
@@ -6383,6 +6395,16 @@ public class Form extends BaseObservable implements Observable {
     public void setE11301(String e11301) {
         this.e11301 = e11301;
         notifyPropertyChanged(BR.e11301);
+    }
+
+    @Bindable
+    public String getE11301x() {
+        return e11301x;
+    }
+
+    public void setE11301x(String e11301x) {
+        this.e11301x = e11301x;
+        notifyPropertyChanged(BR.e11301x);
     }
 
     @Bindable
@@ -8156,6 +8178,7 @@ public class Form extends BaseObservable implements Observable {
             this.e10602 = json.getString("e10602");
             this.e10603 = json.getString("e10603");
             this.e10796 = json.getString("e10796");
+            this.e10796x = json.getString("e10796x");
             this.e10801 = json.getString("e10801");
             this.e10802 = json.getString("e10802");
             this.e10803 = json.getString("e10803");
@@ -8185,6 +8208,7 @@ public class Form extends BaseObservable implements Observable {
             this.e11202 = json.getString("e11202");
             this.e113 = json.getString("e113");
             this.e11301 = json.getString("e11301");
+            this.e11301x = json.getString("e11301x");
             this.e11302 = json.getString("e11302");
             this.e114 = json.getString("e114");
             this.e115 = json.getString("e115");
@@ -8807,6 +8831,7 @@ public class Form extends BaseObservable implements Observable {
                 .put("e10602", e10602)
                 .put("e10603", e10603)
                 .put("e10796", e10796)
+                .put("e10796x", e10796x)
                 .put("e10801", e10801)
                 .put("e10802", e10802)
                 .put("e10803", e10803)
@@ -8836,6 +8861,7 @@ public class Form extends BaseObservable implements Observable {
                 .put("e11202", e11202)
                 .put("e113", e113)
                 .put("e11301", e11301)
+                .put("e11301x", e11301x)
                 .put("e11302", e11302)
                 .put("e114", e114)
                 .put("e115", e115)
