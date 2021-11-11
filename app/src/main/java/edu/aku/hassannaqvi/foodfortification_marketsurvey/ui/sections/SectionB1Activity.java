@@ -19,18 +19,18 @@ import edu.aku.hassannaqvi.foodfortification_marketsurvey.R;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.contracts.TableContracts;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.core.MainApp;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.database.DatabaseHelper;
-import edu.aku.hassannaqvi.foodfortification_marketsurvey.databinding.ActivitySectionABinding;
+import edu.aku.hassannaqvi.foodfortification_marketsurvey.databinding.ActivitySectionB1Binding;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.EndingActivity;
 
-public class SectionBActivity extends AppCompatActivity {
-    private static final String TAG = "SectionBActivity";
-    ActivitySectionABinding bi;
+public class SectionB1Activity extends AppCompatActivity {
+    private static final String TAG = "SectionB1Activity";
+    ActivitySectionB1Binding bi;
     private DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_b);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_b1);
         bi.setForm(form);
         setSupportActionBar(bi.toolbar);
         db = MainApp.appInfo.dbHelper;
@@ -64,7 +64,7 @@ public class SectionBActivity extends AppCompatActivity {
         saveDraft();
         if (updateDB()) {
             finish();
-            startActivity(new Intent(this, SectionC1Activity.class).putExtra("complete", true));
+            startActivity(new Intent(this, SectionB2Activity.class).putExtra("complete", true));
         } else Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();
     }
 

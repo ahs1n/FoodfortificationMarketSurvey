@@ -23,7 +23,7 @@ import edu.aku.hassannaqvi.foodfortification_marketsurvey.databinding.ActivitySe
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.EndingActivity;
 
 public class SectionE1Activity extends AppCompatActivity {
-    private static final String TAG = "SectionEActivity";
+    private static final String TAG = "SectionE1Activity";
     ActivitySectionE1Binding bi;
     private DatabaseHelper db;
 
