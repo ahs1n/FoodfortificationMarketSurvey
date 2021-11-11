@@ -30,18 +30,28 @@
         tools:replace="android:allowBackup">
         <activity
             android:name=".ui.sections.SectionE1Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeEnglish1"
             android:exported="true" />
         <activity
             android:name=".ui.sections.SectionD1Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeEnglish1"
             android:exported="true" />
         <activity
             android:name=".ui.sections.SectionC1Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeEnglish1"
             android:exported="true" />
         <activity
             android:name=".ui.sections.SectionB1Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeEnglish1"
             android:exported="true" />
         <activity
             android:name=".ui.sections.SectionAActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeEnglish1"
             android:exported="true" />
         <activity
             android:name=".ui.IdentificationActivity"
@@ -67,6 +77,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".MainActivity"
+            android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize|stateHidden" />
         <activity
             android:name=".ui.EndingActivity"

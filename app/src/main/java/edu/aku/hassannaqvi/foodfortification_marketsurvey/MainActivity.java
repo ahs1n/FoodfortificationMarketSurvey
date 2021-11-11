@@ -17,6 +17,11 @@ import edu.aku.hassannaqvi.foodfortification_marketsurvey.models.Form;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.IdentificationActivity;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.SyncActivity;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.lists.FormsReportPending;
+import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionAActivity;
+import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionB1Activity;
+import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionC1Activity;
+import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionD1Activity;
+import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionE1Activity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -65,9 +70,46 @@ public class MainActivity extends AppCompatActivity {
                 MainApp.form = new Form();
                 startActivity(new Intent(this, IdentificationActivity.class));
                 break;
+            case R.id.seca:
+                MainApp.form = new Form();
+                startActivity(new Intent(this, SectionAActivity.class));
+                break;
+            case R.id.secb:
+                MainApp.form = new Form();
+                startActivity(new Intent(this, SectionB1Activity.class));
+                break;
+            case R.id.secc:
+                MainApp.form = new Form();
+                startActivity(new Intent(this, SectionC1Activity.class));
+                break;
+            case R.id.secd:
+                MainApp.form = new Form();
+                startActivity(new Intent(this, SectionD1Activity.class));
+                break;
+            case R.id.sece:
+                MainApp.form = new Form();
+                startActivity(new Intent(this, SectionE1Activity.class));
+                break;
             case R.id.dbManager:
                 startActivity(new Intent(this, AndroidManager.class));
                 break;
+
+            /*case R.id.secb:
+                MainApp.form = new Form();
+                startActivity(new Intent(this, SectionB1Activity.class));
+            case R.id.secc:
+                MainApp.form = new Form();
+                startActivity(new Intent(this, SectionC1Activity.class));
+            case R.id.secd:
+                MainApp.form = new Form();
+                startActivity(new Intent(this, SectionD1Activity.class));
+            case R.id.sece:
+                MainApp.form = new Form();
+                startActivity(new Intent(this, SectionE1Activity.class));
+                break;
+            case R.id.dbManager:
+                startActivity(new Intent(this, AndroidManager.class));
+                break;*/
 
 
         }
@@ -78,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = null;
         switch (item.getItemId()) {
             case R.id.action_database:
-                //intent = new Intent(MainActivity.this, AndroidDatabaseManager.class);
+                intent = new Intent(MainActivity.this, AndroidManager.class);
                 startActivity(intent);
                 break;
             case R.id.onSync:

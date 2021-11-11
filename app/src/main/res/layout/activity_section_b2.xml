@@ -663,8 +663,8 @@
                                 android:id="@+id/b12101"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b121.equals(``)}"
-                                android:onClick="@{()->form.setB121(``)}"
+                                android:checked="@{form.b121.equals(`1`)}"
+                                android:onClick="@{()->form.setB121(`1`)}"
                                 android:text="@string/b12101" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -676,8 +676,8 @@
                                 android:maxLength="2"
                                 android:tag="b12101"
                                 android:text="@={form.b12101x}"
-
                                 android:visibility='@{b12101.checked? View.VISIBLE : View.GONE}'
+                                app:minValue="1"
                                 app:maxValue="99"
                                 app:type="range" />
 
@@ -685,8 +685,8 @@
                                 android:id="@+id/b12102"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b121.equals(``)}"
-                                android:onClick="@{()->form.setB121(``)}"
+                                android:checked="@{form.b121.equals(`2`)}"
+                                android:onClick="@{()->form.setB121(`2`)}"
                                 android:text="@string/b12102" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -698,8 +698,8 @@
                                 android:maxLength="2"
                                 android:tag="b12102"
                                 android:text="@={form.b12102x}"
-
                                 android:visibility='@{b12102.checked? View.VISIBLE : View.GONE}'
+                                app:minValue="1"
                                 app:maxValue="99"
                                 app:type="range" />
 
@@ -707,8 +707,8 @@
                                 android:id="@+id/b12103"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b121.equals(``)}"
-                                android:onClick="@{()->form.setB121(``)}"
+                                android:checked="@{form.b121.equals(`3`)}"
+                                android:onClick="@{()->form.setB121(`3`)}"
                                 android:text="@string/b12103" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -720,8 +720,8 @@
                                 android:maxLength="2"
                                 android:tag="b12103"
                                 android:text="@={form.b12103x}"
-
                                 android:visibility='@{b12103.checked? View.VISIBLE : View.GONE}'
+                                app:minValue="1"
                                 app:maxValue="99"
                                 app:type="range" />
 
@@ -729,8 +729,8 @@
                                 android:id="@+id/b12104"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b121.equals(``)}"
-                                android:onClick="@{()->form.setB121(``)}"
+                                android:checked="@{form.b121.equals(`4`)}"
+                                android:onClick="@{()->form.setB121(`4`)}"
                                 android:text="@string/b12104" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -742,8 +742,8 @@
                                 android:maxLength="2"
                                 android:tag="b12104"
                                 android:text="@={form.b12104x}"
-
                                 android:visibility='@{b12104.checked? View.VISIBLE : View.GONE}'
+                                app:minValue="1"
                                 app:maxValue="99"
                                 app:type="range" />
 
@@ -751,8 +751,8 @@
                                 android:id="@+id/b12105"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b121.equals(``)}"
-                                android:onClick="@{()->form.setB121(``)}"
+                                android:checked="@{form.b121.equals(`5`)}"
+                                android:onClick="@{()->form.setB121(`5`)}"
                                 android:text="@string/b12105" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -764,8 +764,8 @@
                                 android:maxLength="2"
                                 android:tag="b12105"
                                 android:text="@={form.b12105x}"
-
                                 android:visibility='@{b12105.checked? View.VISIBLE : View.GONE}'
+                                app:minValue="1"
                                 app:maxValue="99"
                                 app:type="range" />
 
@@ -773,8 +773,8 @@
                                 android:id="@+id/b12106"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b121.equals(``)}"
-                                android:onClick="@{()->form.setB121(``)}"
+                                android:checked="@{form.b121.equals(`6`)}"
+                                android:onClick="@{()->form.setB121(`6`)}"
                                 android:text="@string/b12106" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -786,8 +786,8 @@
                                 android:maxLength="2"
                                 android:tag="b12106"
                                 android:text="@={form.b12106x}"
-
                                 android:visibility='@{b12106.checked? View.VISIBLE : View.GONE}'
+                                app:minValue="1"
                                 app:maxValue="99"
                                 app:type="range" />
 
@@ -795,8 +795,8 @@
                                 android:id="@+id/b12107"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b121.equals(``)}"
-                                android:onClick="@{()->form.setB121(``)}"
+                                android:checked="@{form.b121.equals(`7`)}"
+                                android:onClick="@{()->form.setB121(`7`)}"
                                 android:text="@string/b12107" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -808,8 +808,8 @@
                                 android:maxLength="2"
                                 android:tag="b12107"
                                 android:text="@={form.b12107x}"
-
                                 android:visibility='@{b12107.checked? View.VISIBLE : View.GONE}'
+                                app:minValue="1"
                                 app:maxValue="99"
                                 app:type="range" />
 
@@ -817,8 +817,8 @@
                                 android:id="@+id/b12108"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b121.equals(``)}"
-                                android:onClick="@{()->form.setB121(``)}"
+                                android:checked="@{form.b121.equals(`8`)}"
+                                android:onClick="@{()->form.setB121(`8`)}"
                                 android:text="@string/b12108" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -830,8 +830,8 @@
                                 android:maxLength="2"
                                 android:tag="b12108"
                                 android:text="@={form.b12108x}"
-
                                 android:visibility='@{b12108.checked? View.VISIBLE : View.GONE}'
+                                app:minValue="1"
                                 app:maxValue="99"
                                 app:type="range" />
 
@@ -839,8 +839,8 @@
                                 android:id="@+id/b12109"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b121.equals(``)}"
-                                android:onClick="@{()->form.setB121(``)}"
+                                android:checked="@{form.b121.equals(`9`)}"
+                                android:onClick="@{()->form.setB121(`9`)}"
                                 android:text="@string/b12109" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -852,8 +852,8 @@
                                 android:maxLength="2"
                                 android:tag="b12109"
                                 android:text="@={form.b12109x}"
-
                                 android:visibility='@{b12109.checked? View.VISIBLE : View.GONE}'
+                                app:minValue="1"
                                 app:maxValue="99"
                                 app:type="range" />
 
@@ -861,8 +861,8 @@
                                 android:id="@+id/b12110"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b121.equals(``)}"
-                                android:onClick="@{()->form.setB121(``)}"
+                                android:checked="@{form.b121.equals(`10`)}"
+                                android:onClick="@{()->form.setB121(`10`)}"
                                 android:text="@string/b12110" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -874,8 +874,8 @@
                                 android:maxLength="2"
                                 android:tag="b12110"
                                 android:text="@={form.b12110x}"
-
                                 android:visibility='@{b12110.checked? View.VISIBLE : View.GONE}'
+                                app:minValue="1"
                                 app:maxValue="99"
                                 app:type="range" />
 
@@ -1051,8 +1051,8 @@
                                 android:id="@+id/b12301"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b123.equals(``)}"
-                                android:onClick="@{()->form.setB123(``)}"
+                                android:checked="@{form.b123.equals(`1`)}"
+                                android:onClick="@{()->form.setB123(`1`)}"
                                 android:text="@string/b12301" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1073,8 +1073,8 @@
                                 android:id="@+id/b12302"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b123.equals(``)}"
-                                android:onClick="@{()->form.setB123(``)}"
+                                android:checked="@{form.b123.equals(`2`)}"
+                                android:onClick="@{()->form.setB123(`2`)}"
                                 android:text="@string/b12302" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1095,8 +1095,8 @@
                                 android:id="@+id/b12303"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b123.equals(``)}"
-                                android:onClick="@{()->form.setB123(``)}"
+                                android:checked="@{form.b123.equals(`3`)}"
+                                android:onClick="@{()->form.setB123(`3`)}"
                                 android:text="@string/b12303" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1117,8 +1117,8 @@
                                 android:id="@+id/b12304"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b123.equals(``)}"
-                                android:onClick="@{()->form.setB123(``)}"
+                                android:checked="@{form.b123.equals(`4`)}"
+                                android:onClick="@{()->form.setB123(`4`)}"
                                 android:text="@string/b12304" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1139,8 +1139,8 @@
                                 android:id="@+id/b12305"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b123.equals(``)}"
-                                android:onClick="@{()->form.setB123(``)}"
+                                android:checked="@{form.b123.equals(`5`)}"
+                                android:onClick="@{()->form.setB123(`5`)}"
                                 android:text="@string/b12305" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1161,8 +1161,8 @@
                                 android:id="@+id/b12306"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b123.equals(``)}"
-                                android:onClick="@{()->form.setB123(``)}"
+                                android:checked="@{form.b123.equals(`6`)}"
+                                android:onClick="@{()->form.setB123(`6`)}"
                                 android:text="@string/b12306" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker

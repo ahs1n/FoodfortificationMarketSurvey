@@ -956,8 +956,8 @@
                                 android:id="@+id/d11101"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d111.equals(``)}"
-                                android:onClick="@{()->form.setD111(``)}"
+                                android:checked="@{form.d111.equals(`1`)}"
+                                android:onClick="@{()->form.setD111(`1`)}"
                                 android:text="@string/d11101" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -978,8 +978,8 @@
                                 android:id="@+id/d11102"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d111.equals(``)}"
-                                android:onClick="@{()->form.setD111(``)}"
+                                android:checked="@{form.d111.equals(`2`)}"
+                                android:onClick="@{()->form.setD111(`2`)}"
                                 android:text="@string/d11102" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1000,8 +1000,8 @@
                                 android:id="@+id/d11103"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d111.equals(``)}"
-                                android:onClick="@{()->form.setD111(``)}"
+                                android:checked="@{form.d111.equals(`3`)}"
+                                android:onClick="@{()->form.setD111(`3`)}"
                                 android:text="@string/d11103" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1022,8 +1022,8 @@
                                 android:id="@+id/d11104"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d111.equals(``)}"
-                                android:onClick="@{()->form.setD111(``)}"
+                                android:checked="@{form.d111.equals(`4`)}"
+                                android:onClick="@{()->form.setD111(`4`)}"
                                 android:text="@string/d11104" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1089,8 +1089,8 @@
                                 android:id="@+id/d11201"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d112.equals(``)}"
-                                android:onClick="@{()->form.setD112(``)}"
+                                android:checked="@{form.d112.equals(`1`)}"
+                                android:onClick="@{()->form.setD112(`1`)}"
                                 android:text="@string/d11201" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1111,8 +1111,8 @@
                                 android:id="@+id/d11202"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d112.equals(``)}"
-                                android:onClick="@{()->form.setD112(``)}"
+                                android:checked="@{form.d112.equals(`2`)}"
+                                android:onClick="@{()->form.setD112(`2`)}"
                                 android:text="@string/d11202" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1133,8 +1133,8 @@
                                 android:id="@+id/d11203"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d112.equals(``)}"
-                                android:onClick="@{()->form.setD112(``)}"
+                                android:checked="@{form.d112.equals(`3`)}"
+                                android:onClick="@{()->form.setD112(`3`)}"
                                 android:text="@string/d11203" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1155,8 +1155,8 @@
                                 android:id="@+id/d11204"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d112.equals(``)}"
-                                android:onClick="@{()->form.setD112(``)}"
+                                android:checked="@{form.d112.equals(`4`)}"
+                                android:onClick="@{()->form.setD112(`4`)}"
                                 android:text="@string/d11204" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1255,10 +1255,24 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/d114" />
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_d114" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/d114" />
+                        </LinearLayout>
 
                         <TextView
                             android:layout_width="match_parent"
@@ -1432,8 +1446,8 @@
                                 android:id="@+id/d11501"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d115.equals(``)}"
-                                android:onClick="@{()->form.setD115(``)}"
+                                android:checked="@{form.d115.equals(`1`)}"
+                                android:onClick="@{()->form.setD115(`1`)}"
                                 android:text="@string/d11501" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1454,8 +1468,8 @@
                                 android:id="@+id/d11502"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d115.equals(``)}"
-                                android:onClick="@{()->form.setD115(``)}"
+                                android:checked="@{form.d115.equals(`2`)}"
+                                android:onClick="@{()->form.setD115(`2`)}"
                                 android:text="@string/d11502" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1476,8 +1490,8 @@
                                 android:id="@+id/d11503"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d115.equals(``)}"
-                                android:onClick="@{()->form.setD115(``)}"
+                                android:checked="@{form.d115.equals(`3`)}"
+                                android:onClick="@{()->form.setD115(`3`)}"
                                 android:text="@string/d11503" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1498,8 +1512,8 @@
                                 android:id="@+id/d11504"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d115.equals(``)}"
-                                android:onClick="@{()->form.setD115(``)}"
+                                android:checked="@{form.d115.equals(`4`)}"
+                                android:onClick="@{()->form.setD115(`4`)}"
                                 android:text="@string/d11504" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1520,8 +1534,8 @@
                                 android:id="@+id/d11505"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d115.equals(``)}"
-                                android:onClick="@{()->form.setD115(``)}"
+                                android:checked="@{form.d115.equals(`5`)}"
+                                android:onClick="@{()->form.setD115(`5`)}"
                                 android:text="@string/d11505" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1605,8 +1619,8 @@
                                 android:id="@+id/d11601"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d116.equals(``)}"
-                                android:onClick="@{()->form.setD116(``)}"
+                                android:checked="@{form.d116.equals(`1`)}"
+                                android:onClick="@{()->form.setD116(`1`)}"
                                 android:text="@string/d11601" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1627,8 +1641,8 @@
                                 android:id="@+id/d11602"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d116.equals(``)}"
-                                android:onClick="@{()->form.setD116(``)}"
+                                android:checked="@{form.d116.equals(`2`)}"
+                                android:onClick="@{()->form.setD116(`2`)}"
                                 android:text="@string/d11602" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1649,8 +1663,8 @@
                                 android:id="@+id/d11603"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d116.equals(``)}"
-                                android:onClick="@{()->form.setD116(``)}"
+                                android:checked="@{form.d116.equals(`3`)}"
+                                android:onClick="@{()->form.setD116(`3`)}"
                                 android:text="@string/d11603" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1671,8 +1685,8 @@
                                 android:id="@+id/d11604"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d116.equals(``)}"
-                                android:onClick="@{()->form.setD116(``)}"
+                                android:checked="@{form.d116.equals(`4`)}"
+                                android:onClick="@{()->form.setD116(`4`)}"
                                 android:text="@string/d11604" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1693,8 +1707,8 @@
                                 android:id="@+id/d11605"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d116.equals(``)}"
-                                android:onClick="@{()->form.setD116(``)}"
+                                android:checked="@{form.d116.equals(`5`)}"
+                                android:onClick="@{()->form.setD116(`5`)}"
                                 android:text="@string/d11605" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1778,8 +1792,8 @@
                                 android:id="@+id/d11701"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d117.equals(``)}"
-                                android:onClick="@{()->form.setD117(``)}"
+                                android:checked="@{form.d117.equals(`1`)}"
+                                android:onClick="@{()->form.setD117(`1`)}"
                                 android:text="@string/d11701" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1791,8 +1805,8 @@
                                 android:maxLength="2"
                                 android:tag="d11701"
                                 android:text="@={form.d11701x}"
-
                                 android:visibility='@{d11701.checked? View.VISIBLE : View.GONE}'
+                                app:minValue="1"
                                 app:maxValue="99"
                                 app:type="range" />
 
@@ -1800,8 +1814,8 @@
                                 android:id="@+id/d11702"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d117.equals(``)}"
-                                android:onClick="@{()->form.setD117(``)}"
+                                android:checked="@{form.d117.equals(`2`)}"
+                                android:onClick="@{()->form.setD117(`2`)}"
                                 android:text="@string/d11702" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1813,8 +1827,8 @@
                                 android:maxLength="2"
                                 android:tag="d11702"
                                 android:text="@={form.d11702x}"
-
                                 android:visibility='@{d11702.checked? View.VISIBLE : View.GONE}'
+                                app:minValue="1"
                                 app:maxValue="99"
                                 app:type="range" />
 
@@ -1822,8 +1836,8 @@
                                 android:id="@+id/d11703"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d117.equals(``)}"
-                                android:onClick="@{()->form.setD117(``)}"
+                                android:checked="@{form.d117.equals(`3`)}"
+                                android:onClick="@{()->form.setD117(`3`)}"
                                 android:text="@string/d11703" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1835,8 +1849,8 @@
                                 android:maxLength="2"
                                 android:tag="d11703"
                                 android:text="@={form.d11703x}"
-
                                 android:visibility='@{d11703.checked? View.VISIBLE : View.GONE}'
+                                app:minValue="1"
                                 app:maxValue="99"
                                 app:type="range" />
 
@@ -1844,8 +1858,8 @@
                                 android:id="@+id/d11704"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d117.equals(``)}"
-                                android:onClick="@{()->form.setD117(``)}"
+                                android:checked="@{form.d117.equals(`4`)}"
+                                android:onClick="@{()->form.setD117(`4`)}"
                                 android:text="@string/d11704" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1857,8 +1871,8 @@
                                 android:maxLength="2"
                                 android:tag="d11704"
                                 android:text="@={form.d11704x}"
-
                                 android:visibility='@{d11704.checked? View.VISIBLE : View.GONE}'
+                                app:minValue="1"
                                 app:maxValue="99"
                                 app:type="range" />
 
@@ -1866,8 +1880,8 @@
                                 android:id="@+id/d11705"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d117.equals(``)}"
-                                android:onClick="@{()->form.setD117(``)}"
+                                android:checked="@{form.d117.equals(`5`)}"
+                                android:onClick="@{()->form.setD117(`5`)}"
                                 android:text="@string/d11705" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -1879,8 +1893,8 @@
                                 android:maxLength="2"
                                 android:tag="d11705"
                                 android:text="@={form.d11705x}"
-
                                 android:visibility='@{d11705.checked? View.VISIBLE : View.GONE}'
+                                app:minValue="1"
                                 app:maxValue="99"
                                 app:type="range" />
 

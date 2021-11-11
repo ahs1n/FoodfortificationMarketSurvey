@@ -89,7 +89,16 @@ public class SectionAActivity extends AppCompatActivity {
         saveDraft();
         if (updateDB()) {
             finish();
-            startActivity(new Intent(this, SectionB1Activity.class).putExtra("complete", true));
+            if (form.getA101().equals("2"))
+                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+            else if (form.getA124().equals("1") || form.getA124().equals("2") || form.getA124().equals("3"))
+                startActivity(new Intent(this, SectionB1Activity.class).putExtra("complete", true));
+            else if (form.getA124().equals("4") || form.getA124().equals("5") || form.getA124().equals("6") || form.getA124().equals("7") || form.getA124().equals("8") || form.getA124().equals("9") || form.getA124().equals("10"))
+                startActivity(new Intent(this, SectionC1Activity.class).putExtra("complete", true));
+            else if (form.getA124().equals("11") || form.getA124().equals("12"))
+                startActivity(new Intent(this, SectionD1Activity.class).putExtra("complete", true));
+            else
+                startActivity(new Intent(this, SectionE1Activity.class).putExtra("complete", true));
         } else Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();
     }
 

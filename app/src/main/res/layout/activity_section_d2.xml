@@ -171,8 +171,8 @@
                                 android:id="@+id/d11901"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d119.equals(``)}"
-                                android:onClick="@{()->form.setD119(``)}"
+                                android:checked="@{form.d119.equals(`1`)}"
+                                android:onClick="@{()->form.setD119(`1`)}"
                                 android:text="@string/d11901" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -193,8 +193,8 @@
                                 android:id="@+id/d11902"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d119.equals(``)}"
-                                android:onClick="@{()->form.setD119(``)}"
+                                android:checked="@{form.d119.equals(`2`)}"
+                                android:onClick="@{()->form.setD119(`2`)}"
                                 android:text="@string/d11902" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -215,8 +215,8 @@
                                 android:id="@+id/d11903"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d119.equals(``)}"
-                                android:onClick="@{()->form.setD119(``)}"
+                                android:checked="@{form.d119.equals(`3`)}"
+                                android:onClick="@{()->form.setD119(`3`)}"
                                 android:text="@string/d11903" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -237,8 +237,8 @@
                                 android:id="@+id/d11904"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d119.equals(``)}"
-                                android:onClick="@{()->form.setD119(``)}"
+                                android:checked="@{form.d119.equals(`4`)}"
+                                android:onClick="@{()->form.setD119(`4`)}"
                                 android:text="@string/d11904" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -259,8 +259,8 @@
                                 android:id="@+id/d11905"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d119.equals(``)}"
-                                android:onClick="@{()->form.setD119(``)}"
+                                android:checked="@{form.d119.equals(`5`)}"
+                                android:onClick="@{()->form.setD119(`5`)}"
                                 android:text="@string/d11905" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -491,10 +491,24 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/d123" />
+                            android:background="@drawable/bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/quesNum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/Q_d123" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="@string/d123" />
+                        </LinearLayout>
 
                         <TextView
                             android:layout_width="match_parent"
