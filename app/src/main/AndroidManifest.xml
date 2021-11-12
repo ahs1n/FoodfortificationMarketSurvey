@@ -34,17 +34,37 @@
             android:theme="@style/AppThemeEnglish1"
             android:exported="true" />
         <activity
+            android:name=".ui.sections.SectionE2Activity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeEnglish1" />
+        <activity
             android:name=".ui.sections.SectionD1Activity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeEnglish1" />
+        <activity
+            android:name=".ui.sections.SectionD2Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeEnglish1"
             android:exported="true" />
         <activity
             android:name=".ui.sections.SectionC1Activity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeEnglish1" />
+        <activity
+            android:name=".ui.sections.SectionC2Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeEnglish1"
             android:exported="true" />
         <activity
             android:name=".ui.sections.SectionB1Activity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeEnglish1" />
+        <activity
+            android:name=".ui.sections.SectionB2Activity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeEnglish1"
             android:exported="true" />

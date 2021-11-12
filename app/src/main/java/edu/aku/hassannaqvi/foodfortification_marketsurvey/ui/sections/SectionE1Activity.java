@@ -65,7 +65,10 @@ public class SectionE1Activity extends AppCompatActivity {
         saveDraft();
         if (updateDB()) {
             finish();
-            startActivity(new Intent(this, SectionE2Activity.class).putExtra("complete", true));
+            if (!form.getE102().equals("1"))
+                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
+            else
+                startActivity(new Intent(this, SectionE2Activity.class).putExtra("complete", true));
         } else Toast.makeText(this, R.string.fail_db_upd, Toast.LENGTH_SHORT).show();
     }
 
@@ -81,6 +84,14 @@ public class SectionE1Activity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
+        if (!Validator.emptyCheckingContainer(this, bi.GrpName))
+            return false;
+
+        int total = Integer.parseInt(bi.e10602.getText().toString()) + Integer.parseInt(bi.e10603.getText().toString());
+
+        if (total > Integer.parseInt(bi.e10601.getText().toString()))
+            return Validator.emptyCustomTextBox(this, bi.e10601, "Invalid count");
+
+        return true;
     }
 }
