@@ -75,7 +75,16 @@ public class SectionAActivity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
+        if (!Validator.emptyCheckingContainer(this, bi.GrpName))
+            return false;
+        if (form.getA110().equals("1")) {
+            int total = Integer.parseInt(bi.a11802.getText().toString()) + Integer.parseInt(bi.a11803.getText().toString());
+
+            if (total != Integer.parseInt(bi.a11801.getText().toString()))
+                return Validator.emptyCustomTextBox(this, bi.a11801, "Invalid count");
+        }
+
+        return true;
     }
 
 
@@ -89,7 +98,7 @@ public class SectionAActivity extends AppCompatActivity {
         saveDraft();
         if (updateDB()) {
             finish();
-            if (form.getA101().equals("2"))
+            if (form.getA110().equals("2"))
                 startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
             else if (form.getA124().equals("1") || form.getA124().equals("2") || form.getA124().equals("3"))
                 startActivity(new Intent(this, SectionB1Activity.class).putExtra("complete", true));

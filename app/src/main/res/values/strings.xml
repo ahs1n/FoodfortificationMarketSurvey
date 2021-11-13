@@ -167,9 +167,9 @@
     <string name="a102h">Hours</string>
     <string name="a102m">Minutes</string>
     <string name="a103">Data collector’s Name and Code</string>
-    <string name="a103a">Code</string>
+    <string name="a103a">Name and Code</string>
     <string name="a104">Team Leader’s name and Code</string>
-    <string name="a104a">Code</string>
+    <string name="a104a">Name and Code</string>
     <string name="a105">Enumeration Block (if applicable)</string>
     <string name="a106">Province</string>
     <string name="a107">District</string>

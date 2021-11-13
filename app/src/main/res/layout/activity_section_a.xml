@@ -303,17 +303,12 @@
                             android:layout_height="wrap_content"
                             android:text="@string/a104a" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <EditText
                             android:id="@+id/a104a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/a104a"
-                            android:inputType="number"
-                            android:maxLength="4"
-                            app:maxValue="9999"
-                            app:minValue="1"
-                            android:text="@={form.a104a}"
-                            app:type="range" />
+                            android:text="@={form.a104a}" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -856,8 +851,8 @@
                                 android:inputType="number"
                                 android:maxLength="2"
                                 android:text="@={form.a116}"
-                                app:maxValue="0"
-                                app:minValue="99"
+                                app:maxValue="99"
+                                app:minValue="0"
                                 app:type="range" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>

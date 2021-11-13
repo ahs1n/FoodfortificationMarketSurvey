@@ -196,7 +196,7 @@
                                 android:hint="@string/c10196"
                                 android:tag="c10196"
                                 android:text="@={form.c10196x}"
-                                android:visibility='@{c10196.checked? View.VISIBLE : View.GONE}' />
+                                android:visibility="@{form.c10196.equals(`96`) ? View.VISIBLE : View.GONE}" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -293,7 +293,7 @@
                                 android:hint="@string/c10296"
                                 android:tag="c10296"
                                 android:text="@={form.c10296x}"
-                                android:visibility='@{c10296.checked? View.VISIBLE : View.GONE}' />
+                                android:visibility="@{form.c10296.equals(`96`) ? View.VISIBLE : View.GONE}" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -414,7 +414,7 @@
                                 android:hint="@string/c10396"
                                 android:tag="c10396"
                                 android:text="@={form.c10396x}"
-                                android:visibility='@{c10396.checked? View.VISIBLE : View.GONE}' />
+                                android:visibility="@{form.c10396.equals(`96`) ? View.VISIBLE : View.GONE}" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -449,6 +449,7 @@
                         </LinearLayout>
 
                         <RadioGroup
+                            android:onCheckedChanged="@{()->c105.clearCheck() + c106.clearCheck()}"
                             android:orientation="horizontal"
                             android:id="@+id/c104"
                             android:layout_width="match_parent"
@@ -736,7 +737,7 @@
                                     android:hint="@string/c10796"
                                     android:tag="c10796"
                                     android:text="@={form.c10796x}"
-                                    android:visibility='@{c10796.checked? View.VISIBLE : View.GONE}' />
+                                    android:visibility="@{form.c10796.equals(`96`) ? View.VISIBLE : View.GONE}" />
 
                                 <CheckBox
                                     android:id="@+id/c10798"
@@ -910,7 +911,7 @@
                                     android:hint="@string/c10896"
                                     android:tag="c10896"
                                     android:text="@={form.c10896x}"
-                                    android:visibility='@{c10896.checked? View.VISIBLE : View.GONE}' />
+                                    android:visibility="@{form.c10896.equals(`96`) ? View.VISIBLE : View.GONE}" />
 
                                 <CheckBox
                                     android:id="@+id/c10898"
@@ -954,6 +955,7 @@
                         </LinearLayout>
 
                         <RadioGroup
+                            android:onCheckedChanged="@{()->c110.clearCheck() + c111.clearCheck()}"
                             android:orientation="horizontal"
                             android:id="@+id/c109"
                             android:layout_width="match_parent"
@@ -1241,7 +1243,7 @@
                                     android:hint="@string/c11296"
                                     android:tag="c11296"
                                     android:text="@={form.c11296x}"
-                                    android:visibility='@{c11296.checked? View.VISIBLE : View.GONE}' />
+                                    android:visibility="@{form.c11296.equals(`96`) ? View.VISIBLE : View.GONE}" />
 
                                 <CheckBox
                                     android:id="@+id/c11298"
@@ -1415,7 +1417,7 @@
                                     android:hint="@string/c11396"
                                     android:tag="c11396"
                                     android:text="@={form.c11396x}"
-                                    android:visibility='@{c11396.checked? View.VISIBLE : View.GONE}' />
+                                    android:visibility="@{form.c11396.equals(`96`) ? View.VISIBLE : View.GONE}" />
 
                                 <CheckBox
                                     android:id="@+id/c11398"
@@ -1498,7 +1500,8 @@
                             android:orientation="horizontal"
                             android:id="@+id/c114"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:onCheckedChanged="@{()->c115.clearCheck() + c116.clearCheck()}">
 
                             <RadioButton
                                 android:id="@+id/c11401"
@@ -1691,7 +1694,8 @@
                             android:orientation="horizontal"
                             android:id="@+id/c117"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:onCheckedChanged="@{()->c118.clearCheck() + c119.clearCheck()}">
 
                             <RadioButton
                                 android:id="@+id/c11701"
@@ -1884,7 +1888,8 @@
                             android:orientation="horizontal"
                             android:id="@+id/c120"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:onCheckedChanged="@{()->c121.clearCheck() + c122.clearCheck()}">
 
                             <RadioButton
                                 android:id="@+id/c12001"
@@ -2077,7 +2082,8 @@
                             android:orientation="horizontal"
                             android:id="@+id/c123"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:onCheckedChanged="@{()->c124.clearCheck() + c125.clearCheck()}">
 
                             <RadioButton
                                 android:id="@+id/c12301"
@@ -2267,10 +2273,11 @@
                         </LinearLayout>
 
                         <RadioGroup
-                            android:orientation="horizontal"
                             android:id="@+id/c126"
+                            android:layout_height="wrap_content"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:onCheckedChanged="@{()->c127.clearCheck() + c128.clearCheck()}"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/c12601"
@@ -2329,8 +2336,8 @@
                             </LinearLayout>
 
                             <RadioGroup
-                                android:orientation="horizontal"
                                 android:id="@+id/c127"
+                                android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -2385,8 +2392,8 @@
                             </LinearLayout>
 
                             <RadioGroup
-                                android:orientation="horizontal"
                                 android:id="@+id/c128"
+                                android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -2463,7 +2470,8 @@
                             android:orientation="horizontal"
                             android:id="@+id/c129"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:onCheckedChanged="@{()->c130.clearCheck() + c131.clearCheck()}">
 
                             <RadioButton
                                 android:id="@+id/c12901"

@@ -89,7 +89,7 @@ public class SectionE1Activity extends AppCompatActivity {
 
         int total = Integer.parseInt(bi.e10602.getText().toString()) + Integer.parseInt(bi.e10603.getText().toString());
 
-        if (total > Integer.parseInt(bi.e10601.getText().toString()))
+        if (total != Integer.parseInt(bi.e10601.getText().toString()))
             return Validator.emptyCustomTextBox(this, bi.e10601, "Invalid count");
 
         return true;
