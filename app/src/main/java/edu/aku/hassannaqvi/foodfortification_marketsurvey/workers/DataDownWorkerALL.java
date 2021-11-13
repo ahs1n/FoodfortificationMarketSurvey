@@ -18,6 +18,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -25,7 +26,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.zip.GZIPInputStream;
 
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.R;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.core.MainApp;
@@ -130,8 +130,8 @@ public class DataDownWorkerALL extends Worker {
                 length = urlConnection.getContentLength();
                 Log.d(TAG, "Content Length: " + length);
 
-                //InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-                InputStream in = new GZIPInputStream(urlConnection.getInputStream());
+                InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+                //InputStream in = new GZIPInputStream(urlConnection.getInputStream());
 
                 BufferedReader reader = new BufferedReader(new InputStreamReader(in));
 

@@ -559,6 +559,7 @@
                         </LinearLayout>
 
                         <RadioGroup
+                            android:onCheckedChanged="@{()->a115.clearCheck() + a117.clearCheck() + a120.clearCheck() +a121.clearCheck()+ a122.clearCheck() + a123.clearCheck()}"
                             android:orientation="horizontal"
                             android:id="@+id/a110"
                             android:layout_width="match_parent"
@@ -1577,7 +1578,7 @@
                                     android:hint="@string/a12396"
                                     android:tag="a12396"
                                     android:text="@={form.a12396x}"
-                                    android:visibility='@{a12396.checked? View.VISIBLE : View.GONE}' />
+                                    android:visibility="@{form.a123.equals(`96`) ? View.VISIBLE : View.GONE}" />
                             </RadioGroup>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>

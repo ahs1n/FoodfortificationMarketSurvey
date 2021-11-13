@@ -153,7 +153,7 @@
                                 android:hint="@string/b10196"
                                 android:tag="b10196"
                                 android:text="@={form.b10196x}"
-                                android:visibility='@{b10196.checked? View.VISIBLE : View.GONE}' />
+                                android:visibility="@{form.b10196.equals(`96`) ? View.VISIBLE : View.GONE}" />
 
                             <CheckBox
                                 android:id="@+id/b10198"
@@ -319,7 +319,7 @@
                                 android:hint="@string/b10396"
                                 android:tag="b10396"
                                 android:text="@={form.b10396x}"
-                                android:visibility='@{b10396.checked? View.VISIBLE : View.GONE}' />
+                                android:visibility="@{form.b103.equals(`96`) ? View.VISIBLE : View.GONE}" />
 
                             <RadioButton
                                 android:id="@+id/b10398"
@@ -390,7 +390,7 @@
                                 android:maxLength="1"
                                 android:tag="b10401"
                                 android:text="@={form.b10401x}"
-                                android:visibility='@{b10401.checked? View.VISIBLE : View.GONE}'
+                                android:visibility="@{form.b104.equals(`1`)? View.VISIBLE : View.GONE}"
                                 app:maxValue="5"
                                 app:minValue="1"
                                 app:type="range" />
@@ -412,7 +412,7 @@
                                 android:maxLength="1"
                                 android:tag="b10402"
                                 android:text="@={form.b10402x}"
-                                android:visibility='@{b10402.checked? View.VISIBLE : View.GONE}'
+                                android:visibility="@{form.b104.equals(`2`)? View.VISIBLE : View.GONE}"
                                 app:maxValue="5"
                                 app:minValue="1"
                                 app:type="range" />
@@ -434,7 +434,7 @@
                                 android:maxLength="1"
                                 android:tag="b10403"
                                 android:text="@={form.b10403x}"
-                                android:visibility='@{b10403.checked? View.VISIBLE : View.GONE}'
+                                android:visibility="@{form.b104.equals(`3`)? View.VISIBLE : View.GONE}"
                                 app:maxValue="5"
                                 app:minValue="1"
                                 app:type="range" />
@@ -456,7 +456,7 @@
                                 android:maxLength="1"
                                 android:tag="b10404"
                                 android:text="@={form.b10404x}"
-                                android:visibility='@{b10404.checked? View.VISIBLE : View.GONE}'
+                                android:visibility="@{form.b104.equals(`4`)? View.VISIBLE : View.GONE}"
                                 app:maxValue="5"
                                 app:minValue="1"
                                 app:type="range" />
@@ -477,7 +477,7 @@
                                 android:hint="@string/b10496"
                                 android:tag="b10496"
                                 android:text="@={form.b10496x}"
-                                android:visibility='@{b10496.checked? View.VISIBLE : View.GONE}' />
+                                android:visibility="@{form.b104.equals(`96`)? View.VISIBLE : View.GONE}" />
 
                             <RadioButton
                                 android:id="@+id/b10498"
@@ -597,7 +597,7 @@
                                 android:hint="@string/b10596"
                                 android:tag="b10596"
                                 android:text="@={form.b10596x}"
-                                android:visibility='@{b10596.checked? View.VISIBLE : View.GONE}' />
+                                android:visibility="@{form.b10596.equals(`96`) ? View.VISIBLE : View.GONE}" />
 
                             <CheckBox
                                 android:id="@+id/b10598"
@@ -661,7 +661,7 @@
                                 android:maxLength="4"
                                 android:tag="b10601"
                                 android:text="@={form.b10601x}"
-                                android:visibility='@{b10601.checked? View.VISIBLE : View.GONE}'
+                                android:visibility="@{form.b106.equals(`1`) ? View.VISIBLE : View.GONE}"
                                 app:maxValue="9999"
                                 app:minValue="0"
                                 app:type="range" />
@@ -728,7 +728,7 @@
                                 android:maxLength="5"
                                 android:tag="b10701"
                                 android:text="@={form.b10701x}"
-                                android:visibility='@{b10701.checked? View.VISIBLE : View.GONE}'
+                                android:visibility="@{form.b107.equals(`1`) ? View.VISIBLE : View.GONE}"
                                 app:maxValue="99999"
                                 app:minValue="1"
                                 app:type="range" />
@@ -750,7 +750,7 @@
                                 android:maxLength="5"
                                 android:tag="b10702"
                                 android:text="@={form.b10702x}"
-                                android:visibility='@{b10702.checked? View.VISIBLE : View.GONE}'
+                                android:visibility="@{form.b107.equals(`2`) ? View.VISIBLE : View.GONE}"
                                 app:maxValue="99999"
                                 app:minValue="1"
                                 app:type="range" />
@@ -772,7 +772,7 @@
                                 android:maxLength="5"
                                 android:tag="b10703"
                                 android:text="@={form.b10703x}"
-                                android:visibility='@{b10703.checked? View.VISIBLE : View.GONE}'
+                                android:visibility="@{form.b107.equals(`3`)? View.VISIBLE : View.GONE}"
                                 app:maxValue="99999"
                                 app:minValue="1"
                                 app:type="range" />
@@ -794,7 +794,7 @@
                                 android:maxLength="5"
                                 android:tag="b10704"
                                 android:text="@={form.b10704x}"
-                                android:visibility='@{b10704.checked? View.VISIBLE : View.GONE}'
+                                android:visibility="@{form.b107.equals(`4`)? View.VISIBLE : View.GONE}"
                                 app:maxValue="99999"
                                 app:minValue="1"
                                 app:type="range" />
@@ -816,7 +816,7 @@
                                 android:maxLength="5"
                                 android:tag="b10705"
                                 android:text="@={form.b10705x}"
-                                android:visibility='@{b10705.checked? View.VISIBLE : View.GONE}'
+                                android:visibility="@{form.b107.equals(`5`)? View.VISIBLE : View.GONE}"
                                 app:maxValue="99999"
                                 app:minValue="1"
                                 app:type="range" />
@@ -838,7 +838,7 @@
                                 android:maxLength="5"
                                 android:tag="b10706"
                                 android:text="@={form.b10706x}"
-                                android:visibility='@{b10706.checked? View.VISIBLE : View.GONE}'
+                                android:visibility="@{form.b107.equals(`6`) ? View.VISIBLE : View.GONE}"
                                 app:maxValue="99999"
                                 app:minValue="1"
                                 app:type="range" />
@@ -859,7 +859,7 @@
                                 android:hint="@string/b10796"
                                 android:tag="b10796"
                                 android:text="@={form.b10796x}"
-                                android:visibility='@{b10796.checked? View.VISIBLE : View.GONE}' />
+                                android:visibility="@{form.b107.equals(`96`) ? View.VISIBLE : View.GONE}" />
 
                             <RadioButton
                                 android:id="@+id/b10798"
@@ -975,8 +975,9 @@
                         </LinearLayout>
 
                         <RadioGroup
-                            android:orientation="horizontal"
                             android:id="@+id/b109"
+                            android:onCheckedChanged="@{()->b110.clearCheck() + b111.clearCheck() + b112.clearCheck()}"
+                            android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
@@ -1195,7 +1196,7 @@
                                     android:maxLength="1"
                                     android:tag="b11201"
                                     android:text="@={form.b11201x}"
-                                    android:visibility='@{b11201.checked? View.VISIBLE : View.GONE}'
+                                    android:visibility="@{form.b112.equals(`1`) ? View.VISIBLE : View.GONE}"
                                     app:maxValue="4"
                                     app:minValue="1"
                                     app:type="range" />
@@ -1217,7 +1218,7 @@
                                     android:maxLength="1"
                                     android:tag="b11202"
                                     android:text="@={form.b11202x}"
-                                    android:visibility='@{b11202.checked? View.VISIBLE : View.GONE}'
+                                    android:visibility="@{form.b112.equals(`2`)? View.VISIBLE : View.GONE}"
                                     app:maxValue="4"
                                     app:minValue="1"
                                     app:type="range" />
@@ -1239,7 +1240,7 @@
                                     android:maxLength="1"
                                     android:tag="b11203"
                                     android:text="@={form.b11203x}"
-                                    android:visibility='@{b11203.checked? View.VISIBLE : View.GONE}'
+                                    android:visibility="@{form.b112.equals(`3`) ? View.VISIBLE : View.GONE}"
                                     app:maxValue="4"
                                     app:minValue="1"
                                     app:type="range" />
@@ -1261,7 +1262,7 @@
                                     android:maxLength="1"
                                     android:tag="b11204"
                                     android:text="@={form.b11204x}"
-                                    android:visibility='@{b11204.checked? View.VISIBLE : View.GONE}'
+                                    android:visibility="@{form.b112.equals(`4`) ? View.VISIBLE : View.GONE}"
                                     app:maxValue="4"
                                     app:minValue="1"
                                     app:type="range" />
@@ -1282,7 +1283,7 @@
                                     android:hint="@string/b11296"
                                     android:tag="b11296"
                                     android:text="@={form.b11296x}"
-                                    android:visibility='@{b11296.checked? View.VISIBLE : View.GONE}' />
+                                    android:visibility="@{form.b112.equals(`96`) ? View.VISIBLE : View.GONE}" />
 
                                 <RadioButton
                                     android:id="@+id/b112098"
@@ -1393,7 +1394,7 @@
                                     android:hint="@string/b11396"
                                     android:tag="b11396"
                                     android:text="@={form.b11396x}"
-                                    android:visibility='@{b11396.checked? View.VISIBLE : View.GONE}' />
+                                    android:visibility="@{form.b11396.equals(`96`) ? View.VISIBLE : View.GONE}" />
 
                                 <CheckBox
                                     android:id="@+id/b11398"
