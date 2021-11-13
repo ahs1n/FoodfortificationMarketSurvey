@@ -54,7 +54,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         //db.execSQL(SQL_CREATE_RANDOM);
         db.execSQL(CreateTable.SQL_CREATE_FORMS);
         //db.execSQL(SQL_CREATE_FOODS_CONSUMPTION);
-        db.execSQL(CreateTable.SQL_CREATE_FAMILY_MEMBERS);
         db.execSQL(CreateTable.SQL_CREATE_VERSIONAPP);
 
     }

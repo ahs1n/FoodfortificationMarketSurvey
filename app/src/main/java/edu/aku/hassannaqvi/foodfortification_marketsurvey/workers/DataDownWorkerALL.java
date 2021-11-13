@@ -93,7 +93,6 @@ public class DataDownWorkerALL extends Worker {
             urlConnection.setDoInput(true);
             urlConnection.setRequestProperty("Content-Type", "application/json");
             urlConnection.setRequestProperty("charset", "utf-8");
-            urlConnection.setRequestProperty("Accept-Encoding", "gzip");
             urlConnection.setUseCaches(false);
             urlConnection.connect();
             Log.d(TAG, "downloadURL: " + url);

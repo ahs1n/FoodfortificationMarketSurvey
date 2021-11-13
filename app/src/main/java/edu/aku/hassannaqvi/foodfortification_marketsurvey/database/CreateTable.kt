@@ -35,27 +35,6 @@ object CreateTable {
             + " );"
             )
 
-    const val SQL_CREATE_FAMILY_MEMBERS = ("CREATE TABLE "
-            + FamilyMemberListTable.TABLE_NAME + "("
-            + FamilyMemberListTable.COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + FamilyMemberListTable.COLUMN_PROJECT_NAME + " TEXT,"
-            + FamilyMemberListTable.COLUMN_UID + " TEXT,"
-            + FamilyMemberListTable.COLUMN_UUID + " TEXT,"
-            + FamilyMemberListTable.COLUMN_EB_CODE + " TEXT,"
-            + FamilyMemberListTable.COLUMN_HHID + " TEXT,"
-            + FamilyMemberListTable.COLUMN_USERNAME + " TEXT,"
-            + FamilyMemberListTable.COLUMN_SYSDATE + " TEXT,"
-            + FamilyMemberListTable.COLUMN_INDEXED + " TEXT,"
-            + FamilyMemberListTable.COLUMN_ISTATUS + " TEXT,"
-            + FamilyMemberListTable.COLUMN_DEVICEID + " TEXT,"
-            + FamilyMemberListTable.COLUMN_DEVICETAGID + " TEXT,"
-            + FamilyMemberListTable.COLUMN_SYNCED + " TEXT,"
-            + FamilyMemberListTable.COLUMN_SYNCED_DATE + " TEXT,"
-            + FamilyMemberListTable.COLUMN_APPVERSION + " TEXT,"
-            + FamilyMemberListTable.COLUMN_SA2 + " TEXT"
-            + " );"
-            )
-
 
     const val SQL_CREATE_USERS = ("CREATE TABLE "
             + UsersTable.TABLE_NAME + "("
@@ -75,17 +54,6 @@ object CreateTable {
             + EnumBlocksTable.COLUMN_ENUM_BLOCK_CODE + " TEXT"
             + " );"
             )
-
-
-    /*const val SQL_CREATE_RANDOM = ("CREATE TABLE "
-            + RandomTable.TABLE_NAME + "("
-            + RandomTable.COLUMN_ID + " INTEGER PRIMARY KEY,"
-            + RandomTable.COLUMN_SNO + " TEXT,"
-            + RandomTable.COLUMN_ENUM_BLOCK_CODE + " TEXT,"
-            + RandomTable.COLUMN_HH_NO + " TEXT,"
-            + RandomTable.COLUMN_HEAD_HH + " TEXT"
-            + " );"
-            )*/
 
     const val SQL_CREATE_VERSIONAPP = ("CREATE TABLE "
             + VersionTable.TABLE_NAME + " ("

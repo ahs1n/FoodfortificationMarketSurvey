@@ -33,6 +33,7 @@ import edu.aku.hassannaqvi.foodfortification_marketsurvey.core.MainApp;
 
 public class DataUpWorkerALL extends Worker {
 
+    private static final Object APP_NAME = PROJECT_NAME;
     private final String TAG = "DataWorkerEN()";
 
     // to be initialised by workParams
