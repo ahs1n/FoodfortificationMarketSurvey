@@ -32,7 +32,6 @@ public class EndingActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_ending);
         bi.setForm(form);
         setSupportActionBar(bi.toolbar);
-        setSupportActionBar(bi.toolbar);
         //setTitle(R.string.section1_mainheading);
 
         db = MainApp.appInfo.dbHelper;
