@@ -491,7 +491,9 @@ public class Form extends BaseObservable implements Observable {
     private String d11703x = _EMPTY_;
     private String d11704x = _EMPTY_;
     private String d11705x = _EMPTY_;
+    private String d11796 = _EMPTY_;
     private String d11796x = _EMPTY_;
+    private String d11798 = _EMPTY_;
     private String d118 = _EMPTY_;
     private String d119 = _EMPTY_;
     private String d11901x = _EMPTY_;
@@ -5701,12 +5703,6 @@ public class Form extends BaseObservable implements Observable {
 
     public void setD117(String d117) {
         this.d117 = d117;
-        setD11701x(d117.equals("1") ? this.d11701x : "");
-        setD11702x(d117.equals("2") ? this.d11702x : "");
-        setD11703x(d117.equals("3") ? this.d11703x : "");
-        setD11704x(d117.equals("4") ? this.d11704x : "");
-        setD11705x(d117.equals("5") ? this.d11705x : "");
-        setD11796x(d117.equals("96") ? this.d11796x : "");
         notifyPropertyChanged(BR.d117);
     }
 
@@ -5761,6 +5757,16 @@ public class Form extends BaseObservable implements Observable {
     }
 
     @Bindable
+    public String getD11796() {
+        return d11796;
+    }
+
+    public void setD11796(String d11796) {
+        this.d11796 = d11796;
+        notifyPropertyChanged(BR.d11796);
+    }
+
+    @Bindable
     public String getD11796x() {
         return d11796x;
     }
@@ -5768,6 +5774,16 @@ public class Form extends BaseObservable implements Observable {
     public void setD11796x(String d11796x) {
         this.d11796x = d11796x;
         notifyPropertyChanged(BR.d11796x);
+    }
+
+    @Bindable
+    public String getD11798() {
+        return d11798;
+    }
+
+    public void setD11798(String d11798) {
+        this.d11798 = d11798;
+        notifyPropertyChanged(BR.d11798);
     }
 
     @Bindable
@@ -9360,7 +9376,9 @@ public class Form extends BaseObservable implements Observable {
             this.d11703x = json.getString("d11703x");
             this.d11704x = json.getString("d11704x");
             this.d11705x = json.getString("d11705x");
+            this.d11796 = json.getString("d11796");
             this.d11796x = json.getString("d11796x");
+            this.d11798 = json.getString("d11798");
             this.d118 = json.getString("d118");
             this.d119 = json.getString("d119");
             this.d11901x = json.getString("d11901x");
@@ -10022,7 +10040,9 @@ public class Form extends BaseObservable implements Observable {
                 .put("d11703x", d11703x)
                 .put("d11704x", d11704x)
                 .put("d11705x", d11705x)
+                .put("d11796", d11796)
                 .put("d11796x", d11796x)
+                .put("d11798", d11798)
                 .put("d118", d118)
                 .put("d119", d119)
                 .put("d11901x", d11901x)

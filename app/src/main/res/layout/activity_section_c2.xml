@@ -47,41 +47,17 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- seccins  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVseccins"
-                    style="@style/cardView">
+                <TextView
+                    style="@style/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/seccins" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/sub_labels"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/seccins" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <!-- secct7  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVsecct7"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/sub_labels"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/secct7" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                <TextView
+                    style="@style/sub_labels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secct7" />
 
                 <!-- c132  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -259,23 +235,11 @@
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
-                <!-- secct8  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVsecct8"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/sub_labels"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/secct8" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                <TextView
+                    style="@style/sub_labels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secct8" />
 
                 <!-- c135  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -453,23 +417,11 @@
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
-                <!-- secct9  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVsecct9"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/sub_labels"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/secct9" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                <TextView
+                    style="@style/sub_labels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secct9" />
 
                 <!-- c138  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -647,23 +599,11 @@
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
-                <!-- secct10  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVsecct10"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/sub_labels"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/secct10" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                <TextView
+                    style="@style/sub_labels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secct10" />
 
                 <!-- c141  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -841,23 +781,11 @@
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
-                <!-- secct11  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVsecct11"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/sub_labels"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/secct11" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                <TextView
+                    style="@style/sub_labels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secct11" />
 
                 <!-- c144  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -1035,23 +963,11 @@
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
-                <!-- secct12  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVsecct12"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/sub_labels"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/secct12" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                <TextView
+                    style="@style/sub_labels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secct12" />
 
                 <!-- c147  Radio   -->
                 <androidx.cardview.widget.CardView
