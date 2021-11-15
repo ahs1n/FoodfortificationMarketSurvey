@@ -30,6 +30,7 @@ import edu.aku.hassannaqvi.foodfortification_marketsurvey.database.DatabaseHelpe
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.databinding.ActivityIdentificationBinding;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.models.EnumBlocks;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.models.Form;
+import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionAActivity;
 
 
 public class IdentificationActivity extends AppCompatActivity {
@@ -56,7 +57,7 @@ public class IdentificationActivity extends AppCompatActivity {
             case 1:
                 bi.btnContinue.setText(R.string.open_hh_form);
                 MainApp.form = new Form();
-//                openIntent = new Intent(this, SectionAS1Activity.class);
+                openIntent = new Intent(this, SectionAActivity.class);
                 break;
          /*   case 2:
                 bi.btnContinue.setText(R.string.open_anhtro_form);
@@ -159,7 +160,9 @@ public class IdentificationActivity extends AppCompatActivity {
                 if (position == 0) return;
                 Collection<EnumBlocks> tehsil = db.getTehsilByDist(distCodes.get(position));
                 tehsilNames = new ArrayList<>();
+                tehsilCodes = new ArrayList<>();
                 tehsilNames.add("...");
+                tehsilCodes.add("...");
 
                 for (EnumBlocks ebTehsil : tehsil) {
                     tehsilNames.add(ebTehsil.getTehsilName());
@@ -334,7 +337,7 @@ public class IdentificationActivity extends AppCompatActivity {
         MainApp.form = new Form();
 
         try {
-            MainApp.form = db.getFormByShopNo(tehsilCodes.get(bi.a107.getSelectedItemPosition()) + "-" + bi.a114a.getText().toString());
+            MainApp.form = db.getFormByShopNo(distCodes.get(bi.a107.getSelectedItemPosition()) + "-" + bi.a114a.getText().toString());
         } catch (JSONException e) {
             Toast.makeText(this, "JSONException(form): " + e.getMessage(), Toast.LENGTH_SHORT).show();
 

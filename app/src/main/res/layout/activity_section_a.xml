@@ -21,6 +21,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/app_bg_gray"
         android:orientation="vertical">
 
 
@@ -51,22 +52,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- secains  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVsecains"
-                    style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
 
                         <TextView
+                            style="@style/info"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/secains" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
                 <!-- a101  Title   -->
                 <androidx.cardview.widget.CardView

@@ -175,8 +175,10 @@
                                      />
 
                                 <CheckBox
+                                    android:id="@+id/ebCheck"
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
+                                    android:tag="-1"
                                     android:text="N/A"
                                     android:textColor="@color/colorPrimary" />
 
