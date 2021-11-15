@@ -910,11 +910,6 @@ public class Form extends BaseObservable implements Observable {
 
     public void setA110(String a110) {
         this.a110 = a110;
-        setA111(a110.equals("1") ? this.a111 : "");
-        setA112(a110.equals("1") ? this.a112 : "");
-        setA113(a110.equals("1") ? this.a113 : "");
-        setA114(a110.equals("1") ? this.a114 : "");
-        setA114a(a110.equals("1") ? this.a114a : "");
         setA115(a110.equals("1") ? this.a115 : "");
         setA116(a110.equals("1") ? this.a116 : "");
         setA117(a110.equals("1") ? this.a117 : "");

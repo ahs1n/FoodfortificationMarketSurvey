@@ -98,8 +98,7 @@
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="2"
-                                    android:hint="@string/a108"
-                                    />
+                                    android:hint="@string/a108" />
 
                             </LinearLayout>
 
@@ -127,13 +126,14 @@
                                     android:text="@string/a109" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz "
                                     android:id="@+id/a109"
                                     style="@style/textInput"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_weight="1"
-                                    android:hint="@string/a109"
-                                     />
+                                    android:gravity="center"
+                                    android:hint="@string/a109" />
 
                                 <Button
                                     android:visibility="gone"
@@ -145,6 +145,7 @@
                                     android:textColor="@color/colorPrimary" />
 
                             </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -190,6 +191,36 @@
 
 
                             </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:layout_width="166dp"
+                                    android:layout_height="match_parent"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="12dp"
+                                    android:text="@string/a114a" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/a114a"
+                                    style="@style/textInput"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:hint="####"
+                                    android:inputType="number"
+                                    android:maxLength="4" />
+
+                            </LinearLayout>
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

@@ -4,8 +4,6 @@ import static edu.aku.hassannaqvi.foodfortification_marketsurvey.core.MainApp.sh
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -165,7 +163,7 @@ public class IdentificationActivity extends AppCompatActivity {
 
                 }
                 // Apply the adapter to the spinner
-                bi.a108.setAdapter(new ArrayAdapter<>(IdentificationActivity.this, R.layout.support_simple_spinner_dropdown_item, tehsilNames));
+                bi.a108.setAdapter(new ArrayAdapter<>(IdentificationActivity.this, R.layout.custom_spinner, tehsilNames));
                 Log.d(TAG, "onItemSelected: setAdapter108");
 /*                bi.btnContinue.setBackgroundTintList(ContextCompat.getColorStateList(IdentificationActivity.this, R.color.gray));
                 bi.btnContinue.setEnabled(false);*/

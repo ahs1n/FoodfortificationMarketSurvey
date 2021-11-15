@@ -8,7 +8,7 @@
     <string name="action_sign_in_short">Sign in</string>
     <string name="splashText"> </string>
     <string name="check_pending_forms">CHECK PENDING FORMS</string>
-    <string name="open_household_form" translatable="false">OPEN HOUSEHOLD FORM</string>
+    <string name="open_household_form" translatable="false">OPEN SURVEY FORM</string>
     <string name="open_market_form" translatable="false">OPEN MARKET SURVEY FORM</string>
     <string name="open_anthro_form" translatable="false">UPDATE ANTHRO FORM</string>
     <string name="open_blood_form" translatable="false">UPDATE BLOOD INFORMANTION</string>
@@ -137,7 +137,7 @@
     <string name="invalid_password" translatable="false"> Invalid Password </string>
     <string name="username_required" translatable="false"> Username is required. </string>
     <string name="incorrect_username_or_password" translatable="false">Incorrect Username or Password</string>
-    <string name="open_hh_form" translatable="false"> Open Household Form </string>
+    <string name="open_hh_form" translatable="false"> Open SURVEY Form </string>
     <string name="open_anhtro_form" translatable="false">Open Anthro Form</string>
     <string name="info_hh_form_not_exist" translatable="false">INFO: Household information does not exist.</string>
     <string name="hh_not_found" translatable="false">Household not Found</string>
@@ -293,7 +293,7 @@
     <string name="b107_info">[Fill all boxes if not selling write “00”]</string>
     <string name="b10701">Whole wheat flour (Plain fine)</string>
     <string name="b10702">Pure fine flour (white)</string>
-    <string name="b10703">Baking flour (Maida) بیکنگ آٹا (میدہ) </string>
+    <string name="b10703">Baking flour (Maida) </string>
     <string name="b10704">Semolina (Suji) </string>
     <string name="b10705">Flaked, puffed, and extruded wheat </string>
     <string name="b10706">Bran (Choker) </string>
