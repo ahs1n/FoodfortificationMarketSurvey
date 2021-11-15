@@ -19,9 +19,13 @@ import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.SyncActivity;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.lists.FormsReportPending;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionAActivity;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionB1Activity;
+import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionB2Activity;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionC1Activity;
+import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionC2Activity;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionD1Activity;
+import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionD2Activity;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionE1Activity;
+import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionE2Activity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -95,24 +99,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, AndroidManager.class));
                 break;
 
-            /*case R.id.secb:
+            case R.id.secb2:
                 MainApp.form = new Form();
-                startActivity(new Intent(this, SectionB1Activity.class));
-            case R.id.secc:
-                MainApp.form = new Form();
-                startActivity(new Intent(this, SectionC1Activity.class));
-            case R.id.secd:
-                MainApp.form = new Form();
-                startActivity(new Intent(this, SectionD1Activity.class));
-            case R.id.sece:
-                MainApp.form = new Form();
-                startActivity(new Intent(this, SectionE1Activity.class));
+                startActivity(new Intent(this, SectionB2Activity.class));
                 break;
-            case R.id.dbManager:
-                startActivity(new Intent(this, AndroidManager.class));
-                break;*/
-
-
+            case R.id.secc2:
+                MainApp.form = new Form();
+                startActivity(new Intent(this, SectionC2Activity.class));
+                break;
+            case R.id.secd2:
+                MainApp.form = new Form();
+                startActivity(new Intent(this, SectionD2Activity.class));
+                break;
+            case R.id.sece2:
+                MainApp.form = new Form();
+                startActivity(new Intent(this, SectionE2Activity.class));
+                break;
         }
     }
 
