@@ -312,7 +312,7 @@
 
                         <TextView
                             android:id="@+id/seca"
-                            android:layout_width="60dp"
+                            android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:background="@color/colorPrimary"
@@ -327,7 +327,7 @@
 
                         <TextView
                             android:id="@+id/secb"
-                            android:layout_width="60dp"
+                            android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:background="@color/colorPrimary"
@@ -342,7 +342,7 @@
 
                         <TextView
                             android:id="@+id/secb2"
-                            android:layout_width="60dp"
+                            android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:background="@color/colorPrimary"
@@ -357,7 +357,7 @@
 
                         <TextView
                             android:id="@+id/secc"
-                            android:layout_width="60dp"
+                            android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:background="@color/colorPrimary"
@@ -372,7 +372,7 @@
 
                         <TextView
                             android:id="@+id/secc2"
-                            android:layout_width="60dp"
+                            android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:background="@color/colorPrimary"
@@ -395,7 +395,7 @@
 
                         <TextView
                             android:id="@+id/secd"
-                            android:layout_width="60dp"
+                            android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:background="@color/colorPrimary"
@@ -410,7 +410,7 @@
 
                         <TextView
                             android:id="@+id/secd2"
-                            android:layout_width="60dp"
+                            android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:background="@color/colorPrimary"
@@ -425,7 +425,7 @@
 
                         <TextView
                             android:id="@+id/sece"
-                            android:layout_width="60dp"
+                            android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:background="@color/colorPrimary"
@@ -440,7 +440,7 @@
 
                         <TextView
                             android:id="@+id/sece2"
-                            android:layout_width="60dp"
+                            android:layout_width="70dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="4dp"
                             android:background="@color/colorPrimary"

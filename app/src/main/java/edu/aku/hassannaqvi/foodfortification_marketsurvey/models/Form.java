@@ -643,9 +643,9 @@ public class Form extends BaseObservable implements Observable {
     private String e11796 = _EMPTY_;
     private String e11796x = _EMPTY_;
     private String e11798 = _EMPTY_;
-    private String e118 = _EMPTY_;
     private String e11801x = _EMPTY_;
     private String e11802x = _EMPTY_;
+    private String e11898 = _EMPTY_;
     private String e119 = _EMPTY_;
     private String e120 = _EMPTY_;
     private String e12001 = _EMPTY_;
@@ -713,9 +713,9 @@ public class Form extends BaseObservable implements Observable {
     private String e13396 = _EMPTY_;
     private String e13396x = _EMPTY_;
     private String e13398 = _EMPTY_;
-    private String e134 = _EMPTY_;
     private String e13401x = _EMPTY_;
     private String e13402x = _EMPTY_;
+    private String e13498 = _EMPTY_;
     private String e135a = _EMPTY_;
     private String e135b = _EMPTY_;
     private String e135c = _EMPTY_;
@@ -6677,7 +6677,9 @@ public class Form extends BaseObservable implements Observable {
         setE11796(e102.equals("1") ? this.e11796 : "");
         setE11798(e102.equals("1") ? this.e11798 : "");
 
-        setE118(e102.equals("1") ? this.e118 : "");
+        setE11801x(e102.equals("1") ? this.e11801x : "");
+        setE11802x(e102.equals("1") ? this.e11802x : "");
+        setE11898(e102.equals("1") ? this.e11898 : "");
 
         notifyPropertyChanged(BR.e102);
     }
@@ -7435,7 +7437,9 @@ public class Form extends BaseObservable implements Observable {
         setE11796(e116.equals("1") ? this.e11796 : "");
         setE11798(e116.equals("1") ? this.e11798 : "");
 
-        setE118(e116.equals("1") ? this.e118 : "");
+        setE11801x(e116.equals("1") ? this.e11801x : "");
+        setE11802x(e116.equals("1") ? this.e11802x : "");
+        setE11898(e116.equals("1") ? this.e11898 : "");
         notifyPropertyChanged(BR.e116);
     }
 
@@ -7568,15 +7572,16 @@ public class Form extends BaseObservable implements Observable {
     }
 
     @Bindable
-    public String getE118() {
-        return e118;
+    public String getE11898() {
+        return e11898;
     }
 
-    public void setE118(String e118) {
-        this.e118 = e118;
-        setE11801x(e118.equals("1") ? this.e11801x : ""); // for all skips, mention all skipped questions
-        setE11802x(e118.equals("2") ? this.e11802x : ""); // for all skips, mention all skipped questions
-        notifyPropertyChanged(BR.e118);
+    public void setE11898(String e11898) {
+        if (this.e11898.equals(e11898)) return; // for all checkboxes
+        this.e11898 = e11898;
+        setE11801x(e11898.equals("98") ? "" : this.e11801x);
+        setE11802x(e11898.equals("98") ? "" : this.e11802x);
+        notifyPropertyChanged(BR.e11898);
     }
 
     @Bindable
@@ -7655,7 +7660,9 @@ public class Form extends BaseObservable implements Observable {
         setE13396(e119.equals("1") ? this.e13396 : "");
         setE13398(e119.equals("1") ? this.e13398 : "");
 
-        setE134(e119.equals("1") ? this.e134 : "");
+        setE13401x(e119.equals("1") ? this.e13401x : "");
+        setE13402x(e119.equals("1") ? this.e13402x : "");
+        setE13498(e119.equals("1") ? this.e13498 : "");
 
         setE135a(e119.equals("1") ? this.e135a : "");
         setE135b(e119.equals("1") ? this.e135b : "");
@@ -7870,7 +7877,9 @@ public class Form extends BaseObservable implements Observable {
         setE13396(e121.equals("1") ? this.e13396 : "");
         setE13398(e121.equals("1") ? this.e13398 : "");
 
-        setE134(e121.equals("1") ? this.e134 : "");
+        setE13401x(e121.equals("1") ? this.e13401x : "");
+        setE13402x(e121.equals("1") ? this.e13402x : "");
+        setE13498(e121.equals("1") ? this.e13498 : "");
         notifyPropertyChanged(BR.e121);
     }
 
@@ -7915,7 +7924,9 @@ public class Form extends BaseObservable implements Observable {
         setE13396(e122.equals("1") ? this.e13396 : "");
         setE13398(e122.equals("1") ? this.e13398 : "");
 
-        setE134(e122.equals("1") ? this.e134 : "");
+        setE13401x(e122.equals("1") ? this.e13401x : "");
+        setE13402x(e122.equals("1") ? this.e13402x : "");
+        setE13498(e122.equals("1") ? this.e13498 : "");
         notifyPropertyChanged(BR.e122);
     }
 
@@ -8370,7 +8381,9 @@ public class Form extends BaseObservable implements Observable {
         setE13396(e132.equals("1") ? this.e13396 : "");
         setE13398(e132.equals("1") ? this.e13398 : "");
 
-        setE134(e132.equals("1") ? this.e134 : "");
+        setE13401x(e132.equals("1") ? this.e13401x : "");
+        setE13402x(e132.equals("1") ? this.e13402x : "");
+        setE13498(e132.equals("1") ? this.e13498 : "");
         notifyPropertyChanged(BR.e132);
     }
 
@@ -8503,15 +8516,13 @@ public class Form extends BaseObservable implements Observable {
     }
 
     @Bindable
-    public String getE134() {
-        return e134;
+    public String getE13498() {
+        return e13498;
     }
 
-    public void setE134(String e134) {
-        this.e134 = e134;
-        setE13401x(e134.equals("1") ? this.e13401x : ""); // for all skips, mention all skipped questions
-        setE13402x(e134.equals("2") ? this.e13402x : ""); // for all skips, mention all skipped questions
-        notifyPropertyChanged(BR.e134);
+    public void setE13498(String e13498) {
+        this.e13498 = e13498;
+        notifyPropertyChanged(BR.e13498);
     }
 
     @Bindable
@@ -9493,9 +9504,9 @@ public class Form extends BaseObservable implements Observable {
             this.e11796 = json.getString("e11796");
             this.e11796x = json.getString("e11796x");
             this.e11798 = json.getString("e11798");
-            this.e118 = json.getString("e118");
             this.e11801x = json.getString("e11801x");
             this.e11802x = json.getString("e11802x");
+            this.e11898 = json.getString("e11898");
             this.e119 = json.getString("e119");
             this.e12001 = json.getString("e12001");
             this.e12002 = json.getString("e12002");
@@ -9559,9 +9570,9 @@ public class Form extends BaseObservable implements Observable {
             this.e13396 = json.getString("e13396");
             this.e13396x = json.getString("e13396x");
             this.e13398 = json.getString("e13398");
-            this.e134 = json.getString("e134");
             this.e13401x = json.getString("e13401x");
             this.e13402x = json.getString("e13402x");
+            this.e13498 = json.getString("e13498");
             this.e135a = json.getString("e135a");
             this.e135b = json.getString("e135b");
             this.e135c = json.getString("e135c");
@@ -10153,9 +10164,9 @@ public class Form extends BaseObservable implements Observable {
                 .put("e11796", e11796)
                 .put("e11796x", e11796x)
                 .put("e11798", e11798)
-                .put("e118", e118)
                 .put("e11801x", e11801x)
                 .put("e11802x", e11802x)
+                .put("e11898", e11898)
                 .put("e119", e119)
                 .put("e12001", e12001)
                 .put("e12002", e12002)
@@ -10219,9 +10230,9 @@ public class Form extends BaseObservable implements Observable {
                 .put("e13396", e13396)
                 .put("e13396x", e13396x)
                 .put("e13398", e13398)
-                .put("e134", e134)
                 .put("e13401x", e13401x)
                 .put("e13402x", e13402x)
+                .put("e13498", e13498)
                 .put("e135a", e135a)
                 .put("e135b", e135b)
                 .put("e135c", e135c)

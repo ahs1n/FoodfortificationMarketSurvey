@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.openForm:
                 MainApp.form = new Form();
                 startActivity(new Intent(this, IdentificationActivity.class));
+                break;
             case R.id.seca:
                 MainApp.form = new Form();
                 startActivity(new Intent(this, SectionAActivity.class));
