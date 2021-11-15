@@ -706,150 +706,189 @@
                                 android:text="@string/b107" />
                         </LinearLayout>
 
-                        <RadioGroup
-                            android:id="@+id/b107"
+                        <LinearLayout
+                            android:id="@+id/b107check"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
 
-                            <RadioButton
-                                android:id="@+id/b10701"
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b107.equals(`1`)}"
-                                android:onClick="@{()->form.setB107(`1`)}"
-                                android:text="@string/b10701" />
+                                android:orientation="horizontal">
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/b10701x"
+                                <TextView
+                                    style="@style/sub_labels"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/b10701" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/b10701x"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:enabled="@{!form.b10798.equals(`98`) &amp;&amp; !form.b10799.equals(`99`)}"
+                                    android:gravity="center"
+                                    android:hint="#####"
+                                    android:inputType="number"
+                                    android:maxLength="5"
+                                    android:text="@={form.b10701x}"
+                                    app:maxValue="99999"
+                                    app:minValue="0"
+                                    app:type="range" />
+                            </LinearLayout>
+
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="@string/b10701"
-                                android:inputType="number"
-                                android:maxLength="5"
-                                android:tag="b10701"
-                                android:text="@={form.b10701x}"
-                                android:visibility="@{form.b107.equals(`1`) ? View.VISIBLE : View.GONE}"
-                                app:maxValue="99999"
-                                app:minValue="1"
-                                app:type="range" />
+                                android:orientation="horizontal">
 
-                            <RadioButton
-                                android:id="@+id/b10702"
+                                <TextView
+                                    style="@style/sub_labels"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/b10702" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/b10702x"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:enabled="@{!form.b10798.equals(`98`) &amp;&amp; !form.b10799.equals(`99`)}"
+                                    android:gravity="center"
+                                    android:hint="#####"
+                                    android:inputType="number"
+                                    android:maxLength="5"
+                                    android:text="@={form.b10702x}"
+                                    app:maxValue="99999"
+                                    app:minValue="0"
+                                    app:type="range" />
+                            </LinearLayout>
+
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b107.equals(`2`)}"
-                                android:onClick="@{()->form.setB107(`2`)}"
-                                android:text="@string/b10702" />
+                                android:orientation="horizontal">
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/b10702x"
+                                <TextView
+                                    style="@style/sub_labels"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/b10703" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/b10703x"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:enabled="@{!form.b10798.equals(`98`) &amp;&amp; !form.b10799.equals(`99`)}"
+                                    android:gravity="center"
+                                    android:hint="#####"
+                                    android:inputType="number"
+                                    android:maxLength="5"
+                                    android:text="@={form.b10703x}"
+                                    app:maxValue="99999"
+                                    app:minValue="0"
+                                    app:type="range" />
+                            </LinearLayout>
+
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="@string/b10702"
-                                android:inputType="number"
-                                android:maxLength="5"
-                                android:tag="b10702"
-                                android:text="@={form.b10702x}"
-                                android:visibility="@{form.b107.equals(`2`) ? View.VISIBLE : View.GONE}"
-                                app:maxValue="99999"
-                                app:minValue="1"
-                                app:type="range" />
+                                android:orientation="horizontal">
 
-                            <RadioButton
-                                android:id="@+id/b10703"
+                                <TextView
+                                    style="@style/sub_labels"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/b10704" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/b10704x"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:enabled="@{!form.b10798.equals(`98`) &amp;&amp; !form.b10799.equals(`99`)}"
+                                    android:gravity="center"
+                                    android:hint="#####"
+                                    android:inputType="number"
+                                    android:maxLength="5"
+                                    android:text="@={form.b10704x}"
+                                    app:maxValue="99999"
+                                    app:minValue="0"
+                                    app:type="range" />
+                            </LinearLayout>
+
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b107.equals(`3`)}"
-                                android:onClick="@{()->form.setB107(`3`)}"
-                                android:text="@string/b10703" />
+                                android:orientation="horizontal">
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/b10703x"
+                                <TextView
+                                    style="@style/sub_labels"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/b10705" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/b10705x"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:enabled="@{!form.b10798.equals(`98`) &amp;&amp; !form.b10799.equals(`99`)}"
+                                    android:gravity="center"
+                                    android:hint="#####"
+                                    android:inputType="number"
+                                    android:maxLength="5"
+                                    android:text="@={form.b10705x}"
+                                    app:maxValue="99999"
+                                    app:minValue="0"
+                                    app:type="range" />
+                            </LinearLayout>
+
+                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="@string/b10703"
-                                android:inputType="number"
-                                android:maxLength="5"
-                                android:tag="b10703"
-                                android:text="@={form.b10703x}"
-                                android:visibility="@{form.b107.equals(`3`)? View.VISIBLE : View.GONE}"
-                                app:maxValue="99999"
-                                app:minValue="1"
-                                app:type="range" />
+                                android:orientation="horizontal">
 
-                            <RadioButton
-                                android:id="@+id/b10704"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.b107.equals(`4`)}"
-                                android:onClick="@{()->form.setB107(`4`)}"
-                                android:text="@string/b10704" />
+                                <TextView
+                                    style="@style/sub_labels"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/b10706" />
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/b10704x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/b10704"
-                                android:inputType="number"
-                                android:maxLength="5"
-                                android:tag="b10704"
-                                android:text="@={form.b10704x}"
-                                android:visibility="@{form.b107.equals(`4`)? View.VISIBLE : View.GONE}"
-                                app:maxValue="99999"
-                                app:minValue="1"
-                                app:type="range" />
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/b10706"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:enabled="@{!form.b10798.equals(`98`) &amp;&amp; !form.b10799.equals(`99`)}"
+                                    android:gravity="center"
+                                    android:hint="#####"
+                                    android:inputType="number"
+                                    android:maxLength="5"
+                                    android:text="@={form.b10706x}"
+                                    app:maxValue="99999"
+                                    app:minValue="0"
+                                    app:type="range" />
+                            </LinearLayout>
 
-                            <RadioButton
-                                android:id="@+id/b10705"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.b107.equals(`5`)}"
-                                android:onClick="@{()->form.setB107(`5`)}"
-                                android:text="@string/b10705" />
-
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/b10705x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/b10705"
-                                android:inputType="number"
-                                android:maxLength="5"
-                                android:tag="b10705"
-                                android:text="@={form.b10705x}"
-                                android:visibility="@{form.b107.equals(`5`)? View.VISIBLE : View.GONE}"
-                                app:maxValue="99999"
-                                app:minValue="1"
-                                app:type="range" />
-
-                            <RadioButton
-                                android:id="@+id/b10706"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:checked="@{form.b107.equals(`6`)}"
-                                android:onClick="@{()->form.setB107(`6`)}"
-                                android:text="@string/b10706" />
-
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/b10706x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/b10706"
-                                android:inputType="number"
-                                android:maxLength="5"
-                                android:tag="b10706"
-                                android:text="@={form.b10706x}"
-                                android:visibility="@{form.b107.equals(`6`) ? View.VISIBLE : View.GONE}"
-                                app:maxValue="99999"
-                                app:minValue="1"
-                                app:type="range" />
-
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/b10796"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b107.equals(`96`)}"
-                                android:onClick="@{()->form.setB107(`96`)}"
-                                android:text="@string/b10796" />
+                                android:checked="@{form.b10796.equals(`96`)}"
+                                android:enabled="@{!form.b10798.equals(`98`) &amp;&amp; !form.b10799.equals(`99`)}"
+                                android:onClick="@{()->form.setB10796(form.b10796.equals(`96`)?``:`96`)}"
+                                android:tag="-1"
+                                android:text="@string/b10196" />
 
                             <EditText
                                 android:id="@+id/b10796x"
@@ -859,24 +898,68 @@
                                 android:hint="@string/b10796"
                                 android:tag="b10796"
                                 android:text="@={form.b10796x}"
-                                android:visibility="@{form.b107.equals(`96`) ? View.VISIBLE : View.GONE}" />
+                                android:visibility="@{form.b10796.equals(`96`) ? View.VISIBLE : View.GONE}" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/b10798"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b107.equals(`98`)}"
-                                android:onClick="@{()->form.setB107(`98`)}"
+                                android:checked="@{form.b10798.equals(`98`)}"
+                                android:enabled="@{!form.b10799.equals(`99`)}"
+                                android:onClick="@{()->form.setB10798(form.b10798.equals(`98`)?``:`98`)}"
+                                android:tag="-1"
                                 android:text="@string/b10798" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/b10799"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.b107.equals(`99`)}"
-                                android:onClick="@{()->form.setB107(`99`)}"
+                                android:checked="@{form.b10799.equals(`99`)}"
+                                android:enabled="@{!form.b10798.equals(`98`)}"
+                                android:onClick="@{()->form.setB10799(form.b10799.equals(`99`)?``:`99`)}"
+                                android:tag="-1"
                                 android:text="@string/b10799" />
-                        </RadioGroup>
+                        </LinearLayout>
+
+                        <!--  <RadioGroup
+                              android:id="@+id/b107"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content">
+
+                              <RadioButton
+                                  android:id="@+id/b10796"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:checked="@{form.b107.equals(`96`)}"
+                                  android:onClick="@{()->form.setB107(`96`)}"
+                                  android:text="@string/b10796" />
+
+                              <EditText
+                                  android:id="@+id/b10796x"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
+                                  android:hint="@string/b10796"
+                                  android:tag="b10796"
+                                  android:text="@={form.b10796x}"
+                                  android:visibility="@{form.b107.equals(`96`) ? View.VISIBLE : View.GONE}" />
+
+                              <RadioButton
+                                  android:id="@+id/b10798"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:checked="@{form.b107.equals(`98`)}"
+                                  android:onClick="@{()->form.setB107(`98`)}"
+                                  android:text="@string/b10798" />
+
+                              <RadioButton
+                                  android:id="@+id/b10799"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:checked="@{form.b107.equals(`99`)}"
+                                  android:onClick="@{()->form.setB107(`99`)}"
+                                  android:text="@string/b10799" />
+                          </RadioGroup>-->
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
