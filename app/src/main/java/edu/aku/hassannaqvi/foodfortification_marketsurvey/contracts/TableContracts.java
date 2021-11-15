@@ -10,9 +10,9 @@ public class TableContracts {
         public static final String COLUMN_PROJECT_NAME = "projectName";
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_UID = "_uid";
-        public static final String COLUMN_ENUM_BLOCK = "ebCode";
-        public static final String COLUMN_HHID = "hhid";
-        public static final String COLUMN_SNO = "sno";
+        public static final String COLUMN_DISTRICT_CODE = "district_code";
+        public static final String COLUMN_TEHSIL_CODE = "tehsil_code";
+        public static final String COLUMN_SHOP_NUMBER = "shopNo";
         public static final String COLUMN_USERNAME = "username";
         public static final String COLUMN_SYSDATE = "sysdate";
         public static final String COLUMN_SA = "sA";
@@ -45,7 +45,9 @@ public class TableContracts {
         public static final String TABLE_NAME = "enumBlocks";
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_DISTRICT_NAME = "district_name";
+        public static final String COLUMN_DISTRICT_CODE = "district_code";
         public static final String COLUMN_TEHSIL_NAME = "tehsil_name";
+        public static final String COLUMN_TEHSIL_CODE = "tehsil_code";
         public static final String COLUMN_ENUM_BLOCK_CODE = "eb_code";
 
     }
@@ -69,7 +71,7 @@ public class TableContracts {
         public static final String COLUMN_ID = "_id";
         public static final String COLUMN_UID = "_uid";
         public static final String COLUMN_UUID = "_uuid";
-        public static final String COLUMN_EB_CODE = "ebCode";
+        public static final String COLUMN_EB_CODE = "distCode";
         public static final String COLUMN_HHID = "hhid";
         public static final String COLUMN_USERNAME = "username";
         public static final String COLUMN_SYSDATE = "sysdate";

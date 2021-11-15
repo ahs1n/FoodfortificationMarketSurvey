@@ -81,8 +81,8 @@ public class FamilyMembers extends BaseObservable {
         setDeviceId(MainApp.deviceid);
         setAppver(MainApp.appInfo.getAppVersion());
         setAppver(MainApp.appInfo.getAppVersion());
-        /*setEbCode(MainApp.currentHousehold.getEbcode());
-        setHhid(MainApp.currentHousehold.getHhno());*/
+        /*setDistCode(MainApp.currentHousehold.getEbcode());
+        setTehsilCode(MainApp.currentHousehold.getHhno());*/
 
     }
 
