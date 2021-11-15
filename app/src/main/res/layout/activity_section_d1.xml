@@ -47,23 +47,11 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- sectiodins  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVsectiodins"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            style="@style/sub_labels"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/sectiodins" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                <TextView
+                    style="@style/sub_labels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sectiodins" />
 
                 <!-- d101  Radio   -->
                 <androidx.cardview.widget.CardView
@@ -1324,6 +1312,12 @@
                                 android:text="@string/d114" />
                         </LinearLayout>
 
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/d114_info" />
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1558,6 +1552,12 @@
                                 android:text="@string/d115" />
                         </LinearLayout>
 
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/d115_info" />
+
                         <RadioGroup
                             android:id="@+id/d115"
                             android:layout_width="match_parent"
@@ -1731,6 +1731,12 @@
                                 android:text="@string/d116" />
                         </LinearLayout>
 
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/d116_info" />
+
                         <RadioGroup
                             android:id="@+id/d116"
                             android:layout_width="match_parent"
@@ -1903,6 +1909,12 @@
                                 android:layout_weight="1"
                                 android:text="@string/d117" />
                         </LinearLayout>
+
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/d114_info" />
 
                         <RadioGroup
                             android:id="@+id/d117"
