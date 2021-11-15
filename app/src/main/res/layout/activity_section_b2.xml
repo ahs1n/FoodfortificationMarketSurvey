@@ -98,7 +98,7 @@
                             android:id="@+id/b114"
                             android:layout_height="wrap_content"
                             android:layout_width="match_parent"
-                            android:onCheckedChanged="@{()->b115.clearCheck() + b116.clearCheck() + b117.clearCheck()+ b118.clearCheck() + b120.clearCheck() + b121.clearCheck() + b123.clearCheck() + b124.clearCheck() + b125.clearCheck()}"
+                            android:onCheckedChanged="@{()->b115.clearCheck() + b116.clearCheck() + b117.clearCheck()+ b118.clearCheck() + b120.clearCheck() + b121.clearCheck() + b124.clearCheck() + b125.clearCheck()}"
                             android:orientation="horizontal">
 
                             <RadioButton
@@ -2232,7 +2232,8 @@
                 <!-- b131  CheckBox   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVb131"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{form.b130.equals(`1`)? View.VISIBLE : View.GONE}">
 
                     <LinearLayout
                         android:layout_width="match_parent"

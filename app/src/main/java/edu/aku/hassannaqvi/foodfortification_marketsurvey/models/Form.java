@@ -2860,6 +2860,7 @@ public class Form extends BaseObservable implements Observable {
 
     public void setB130(String b130) {
         this.b130 = b130;
+        setB131(b130.equals("1") ? this.b131 : "");
         notifyPropertyChanged(BR.b130);
     }
 
@@ -3354,6 +3355,14 @@ public class Form extends BaseObservable implements Observable {
     public void setC10308(String c10308) {
         if (this.c10308.equals(c10308)) return; // for all checkboxes
         this.c10308 = c10308;
+        setC10301(c10308.equals("8") ? "" : this.c10301);
+        setC10302(c10308.equals("8") ? "" : this.c10302);
+        setC10303(c10308.equals("8") ? "" : this.c10303);
+        setC10304(c10308.equals("8") ? "" : this.c10304);
+        setC10305(c10308.equals("8") ? "" : this.c10305);
+        setC10306(c10308.equals("8") ? "" : this.c10306);
+        setC10307(c10308.equals("8") ? "" : this.c10307);
+        setC10396(c10308.equals("8") ? "" : this.c10396);
         notifyPropertyChanged(BR.c10308);
     }
 
@@ -3532,6 +3541,15 @@ public class Form extends BaseObservable implements Observable {
     public void setC10708(String c10708) {
         if (this.c10708.equals(c10708)) return; // for all checkboxes
         this.c10708 = c10708;
+        setC10701(c10708.equals("8") ? "" : this.c10701);
+        setC10702(c10708.equals("8") ? "" : this.c10702);
+        setC10703(c10708.equals("8") ? "" : this.c10703);
+        setC10704(c10708.equals("8") ? "" : this.c10704);
+        setC10705(c10708.equals("8") ? "" : this.c10705);
+        setC10706(c10708.equals("8") ? "" : this.c10706);
+        setC10707(c10708.equals("8") ? "" : this.c10707);
+        setC10798(c10708.equals("8") ? "" : this.c10798);
+        setC10796(c10708.equals("8") ? "" : this.c10796);
         notifyPropertyChanged(BR.c10708);
     }
 
@@ -3918,6 +3936,15 @@ public class Form extends BaseObservable implements Observable {
     public void setC11208(String c11208) {
         if (this.c11208.equals(c11208)) return; // for all checkboxes
         this.c11208 = c11208;
+        setC11201(c11208.equals("8") ? "" : this.c11201);
+        setC11202(c11208.equals("8") ? "" : this.c11202);
+        setC11203(c11208.equals("8") ? "" : this.c11203);
+        setC11204(c11208.equals("8") ? "" : this.c11204);
+        setC11205(c11208.equals("8") ? "" : this.c11205);
+        setC11206(c11208.equals("8") ? "" : this.c11206);
+        setC11207(c11208.equals("8") ? "" : this.c11207);
+        setC11298(c11208.equals("8") ? "" : this.c11298);
+        setC11296(c11208.equals("8") ? "" : this.c11296);
         notifyPropertyChanged(BR.c11208);
     }
 
