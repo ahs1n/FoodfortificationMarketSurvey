@@ -20,14 +20,15 @@ import org.json.JSONException;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.R;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.core.MainApp;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.database.DatabaseHelper;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.databinding.ActivityIdentificationBinding;
+import edu.aku.hassannaqvi.foodfortification_marketsurvey.models.EnumBlocks;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.models.Form;
 
 
@@ -37,7 +38,9 @@ public class IdentificationActivity extends AppCompatActivity {
     ActivityIdentificationBinding bi;
     private DatabaseHelper db;
     private ArrayList<String> distNames;
+    private ArrayList<String> distCodes;
     private ArrayList<String> tehsilNames;
+    private ArrayList<String> tehsilCodes;
     private Intent openIntent;
 
     @Override
@@ -115,20 +118,27 @@ public class IdentificationActivity extends AppCompatActivity {
 
     private void populateSpinner() {
         Log.d(TAG, "populateSpinner: ");
-        List<String> districts = db.getAllDistricts();
+        Collection<EnumBlocks> districts = db.getAllDistricts();
         distNames = new ArrayList<>();
-        // distCodes = new ArrayList<>();
+        distCodes = new ArrayList<>();
 
         distNames.add("...");
+        distCodes.add("...");
 
-        for (String d : districts) {
-            distNames.add(d);
+        for (EnumBlocks ebDist : districts) {
+
+            distNames.add(ebDist.getDistrictName());
+            distCodes.add(ebDist.getDistrictCode());
 
         }
         if (MainApp.user.getUserName().contains("test") || MainApp.user.getUserName().contains("dmu")) {
             distNames.add("Test Dist 9");
             distNames.add("Test Dist 8");
             distNames.add("Test Dist 7");
+            distCodes.add("999");
+            distCodes.add("888");
+            distCodes.add("777");
+
 
         }
         // Apply the adapter to the spinner
@@ -138,21 +148,22 @@ public class IdentificationActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-           bi.a108.setAdapter(null);
+                bi.a108.setAdapter(null);
                 bi.a109.setText(null);
                 bi.a105.setText(null);
-             bi.btnContinue.setBackgroundTintList(ContextCompat.getColorStateList(IdentificationActivity.this, R.color.gray));
+                bi.btnContinue.setBackgroundTintList(ContextCompat.getColorStateList(IdentificationActivity.this, R.color.gray));
                 bi.btnContinue.setEnabled(false);
                 //  bi.checkHousehold.setBackgroundTintList(ContextCompat.getColorStateList(IdentificationActivity.this, R.color.colorAccent));
                 //  bi.checkHousehold.setEnabled(true);
 
                 if (position == 0) return;
-                List<String> tehsil = db.getTehsilByDist(distNames.get(position));
+                Collection<EnumBlocks> tehsil = db.getTehsilByDist(distCodes.get(position));
                 tehsilNames = new ArrayList<>();
                 tehsilNames.add("...");
 
-                for (String t : tehsil) {
-                    tehsilNames.add(t);
+                for (EnumBlocks ebTehsil : tehsil) {
+                    tehsilNames.add(ebTehsil.getTehsilName());
+                    tehsilCodes.add(ebTehsil.getTehsilCode());
 
                 }
                 if (MainApp.user.getUserName().contains("test") || MainApp.user.getUserName().contains("dmu")) {
@@ -167,8 +178,8 @@ public class IdentificationActivity extends AppCompatActivity {
                 Log.d(TAG, "onItemSelected: setAdapter108");
 /*                bi.btnContinue.setBackgroundTintList(ContextCompat.getColorStateList(IdentificationActivity.this, R.color.gray));
                 bi.btnContinue.setEnabled(false);*/
-                  bi.btnContinue.setBackgroundTintList(ContextCompat.getColorStateList(IdentificationActivity.this, R.color.colorAccent));
-                  bi.btnContinue.setEnabled(true);
+                bi.btnContinue.setBackgroundTintList(ContextCompat.getColorStateList(IdentificationActivity.this, R.color.colorAccent));
+                bi.btnContinue.setEnabled(true);
 /*                if (position == 0) return;
                 Collection<HealthFacilities> healthFacility = db.getHealthFacilityByDist(distCodes.get(position));
                 healthFacilityNames = new ArrayList<>();
@@ -244,12 +255,14 @@ public class IdentificationActivity extends AppCompatActivity {
         MainApp.form.setDeviceId(MainApp.deviceid);
         MainApp.form.setAppver(MainApp.versionName + "." + MainApp.versionCode);
 
-        /*MainApp.form.setA105(bi.a105.getText().toString());
-        MainApp.form.setA107(bi.a107.getText().toString());
-        MainApp.form.setA108(bi.a108.getText().toString());
-        MainApp.form.setA110(bi.a110.getText().toString());
-        MainApp.form.setSno(MainApp.currentHousehold.getSno());*/
+        MainApp.form.setA107(distCodes.get(bi.a107.getSelectedItemPosition()));
+        MainApp.form.setA108(tehsilCodes.get(bi.a108.getSelectedItemPosition()));
+        MainApp.form.setA109(bi.a109.getText().toString());
+        MainApp.form.setA105(bi.a105.getText().toString());
+        MainApp.form.setA114a(bi.a114a.getText().toString());
 
+        // Shop's Unique ID
+        MainApp.form.setShopNo(distCodes.get(bi.a107.getSelectedItemPosition()) + "-" + bi.a114a.getText().toString());
 
     }
 
@@ -285,7 +298,7 @@ public class IdentificationActivity extends AppCompatActivity {
 
     /*public void checkHousehold(View view) {
         RandomHH testRand = new RandomHH();
-        testRand.setSno("1");
+        testRand.setShopNo("1");
         testRand.setEbcode("909090909");
         testRand.setHeadhh("Test Head");
         testRand.setHhno("999-99");
@@ -318,62 +331,19 @@ public class IdentificationActivity extends AppCompatActivity {
 
     private boolean hhExists() {
 
-        switch (MainApp.idType) {
-            case 1:
-                MainApp.form = new Form();
-                try {
-                    MainApp.form = db.getFormByClusterHHNo(bi.a105.getText().toString(), bi.a109.getText().toString());
-                } catch (JSONException e) {
-                    Log.d(TAG, getString(R.string.hh_exists_form) + e.getMessage());
-                    Toast.makeText(this, getString(R.string.hh_exists_form) + e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-                return MainApp.form != null;
+        MainApp.form = new Form();
 
-            case 2:
-            case 3:
-            case 4:
-                MainApp.form = new Form();
-                try {
-                    MainApp.form = db.getFormByClusterHHNo(bi.a105.getText().toString(), bi.a109.getText().toString());
-                    // Populate Subject Names for spinner Adapter in Samples Activity.
-                    if (MainApp.form != null) {
-                        MainApp.subjectNames = new ArrayList<>();
-                        MainApp.subjectNames.add("...");
-
-                        /*// Add woman if exist
-                        if (!MainApp.form.getA105n().equals("")) {
-                            MainApp.subjectNames.add(MainApp.form.getA105n() + " (" + MainApp.form.getW102() + ")");
-                            // Add child if both woman and child exist
-                            if (!MainApp.form.getA105n().equals("")) {
-                                MainApp.subjectNames.add(MainApp.form.getA105n());
-                            } else {
-                                Toast.makeText(this, R.string.child_info_missing, Toast.LENGTH_SHORT).show();
-                                return false;
-
-                            }
-                        } else {
-                            Toast.makeText(this, R.string.woman_child_info_missing, Toast.LENGTH_SHORT).show();
-                            return false;
-
-                        }*/
-                    } else {
-                        return MainApp.form != null;
-                    }
-                    /*MainApp.samples = new Samples();
-                    MainApp.anthro = new Anthro();*/
-                    //MainApp.samples = db.getSamplesByClusterHHNo(bi.h103.getText().toString(), bi.h103.getText().toString());
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                    Log.d(TAG, getString(R.string.hh_exists_form) + e.getMessage());
-                    Toast.makeText(this, getString(R.string.hh_exists_form) + e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-                return MainApp.form != null;
-
-            default:
-                return false;
+        try {
+            MainApp.form = db.getFormByShopNo(tehsilCodes.get(bi.a107.getSelectedItemPosition()) + "-" + bi.a114a.getText().toString());
+        } catch (JSONException e) {
+            Toast.makeText(this, "JSONException(form): " + e.getMessage(), Toast.LENGTH_SHORT).show();
 
         }
+
+        return MainApp.form != null;
+
     }
+}
 
 /*    public void searchEB(View view) {
         bi.btnContinue.setEnabled(false);
@@ -388,11 +358,11 @@ public class IdentificationActivity extends AppCompatActivity {
             enumBlock = testEb;
         }
 
-        *//*ebCode = new ArrayList<>();
+        *//*distCode = new ArrayList<>();
         districtNames = new ArrayList<>();
         tehsilNames = new ArrayList<>();
         for (EnumBlocks eb : enumBlocks) {
-            ebCode.add(eb.getEnumBlock());
+            distCode.add(eb.getEnumBlock());
             districtNames.add(eb.getDistrictName());
             tehsilNames.add(eb.getTehsilName()); //
         }*//*
@@ -411,4 +381,4 @@ public class IdentificationActivity extends AppCompatActivity {
             bi.fldGrpHH.setVisibility(View.GONE);
         }
     }*/
-}
+

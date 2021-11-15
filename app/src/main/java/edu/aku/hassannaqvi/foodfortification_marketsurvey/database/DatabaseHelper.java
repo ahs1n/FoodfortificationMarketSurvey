@@ -73,9 +73,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(FormsTable.COLUMN_PROJECT_NAME, form.getProjectName());
         values.put(FormsTable.COLUMN_UID, form.getUid());
-        values.put(FormsTable.COLUMN_ENUM_BLOCK, form.getEbCode());
-        values.put(FormsTable.COLUMN_HHID, form.getHhid());
-        values.put(FormsTable.COLUMN_SNO, form.getSno());
+        values.put(FormsTable.COLUMN_DISTRICT_CODE, form.getDistCode());
+        values.put(FormsTable.COLUMN_TEHSIL_CODE, form.getTehsilCode());
+        values.put(FormsTable.COLUMN_SHOP_NUMBER, form.getShopNo());
         values.put(FormsTable.COLUMN_USERNAME, form.getUserName());
         values.put(FormsTable.COLUMN_SYSDATE, form.getSysDate());
         values.put(FormsTable.COLUMN_SA, form.sAtoString());
@@ -471,7 +471,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 ran.sync(json);
                 ContentValues values = new ContentValues();
                 values.put(RandomTable.COLUMN_ID, ran.getID());
-                values.put(RandomTable.COLUMN_SNO, ran.getSno());
+                values.put(RandomTable.COLUMN_SHOP_NUMBER, ran.getShopNo());
                 values.put(RandomTable.COLUMN_ENUM_BLOCK_CODE, ran.getEbcode());
                 values.put(RandomTable.COLUMN_HH_NO, ran.getHhno());
                 values.put(RandomTable.COLUMN_HEAD_HH, ran.getHeadhh());
@@ -648,16 +648,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }*/
 
-    public Form getFormByClusterHHNo(String enumblock, String hh_no) throws JSONException {
+    public Form getFormByShopNo(String shopNo) throws JSONException {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = null;
 
         String whereClause;
-        whereClause = FormsTable.COLUMN_ENUM_BLOCK + "=? AND " +
-                FormsTable.COLUMN_HHID + " =? ";
+        whereClause = FormsTable.COLUMN_DISTRICT_CODE + "=? AND " +
+                FormsTable.COLUMN_TEHSIL_CODE + " =? ";
 
-        String[] whereArgs = {enumblock, hh_no};
+        String[] whereArgs = {shopNo};
 
         String groupBy = null;
         String having = null;
@@ -696,7 +696,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = null;
-        String whereClause = FormsTable.COLUMN_ENUM_BLOCK + " = ? ";
+        String whereClause = FormsTable.COLUMN_DISTRICT_CODE + " = ? ";
         String[] whereArgs = new String[]{cluster};
 //        String[] whereArgs = new String[]{"%" + spDateT.substring(0, 8).trim() + "%"};
         String groupBy = null;
@@ -721,9 +721,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 fc.setId(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ID)));
                 fc.setUid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_UID)));
                 fc.setSysDate(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYSDATE)));
-                fc.setEbCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ENUM_BLOCK)));
-                fc.setHhid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_HHID)));
-                fc.setSno(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SNO)));
+                fc.setDistCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_DISTRICT_CODE)));
+                fc.setTehsilCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_TEHSIL_CODE)));
+                fc.setShopNo(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SHOP_NUMBER)));
                 fc.setiStatus(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS)));
                 fc.setSynced(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYNCED)));
                 allFC.add(fc);
@@ -769,8 +769,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 fc.setId(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ID)));
                 fc.setUid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_UID)));
                 fc.setSysDate(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYSDATE)));
-                fc.setEbCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ENUM_BLOCK)));
-                fc.setHhid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_HHID)));
+                fc.setDistCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_DISTRICT_CODE)));
+                fc.setTehsilCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_TEHSIL_CODE)));
                 fc.setiStatus(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS)));
                 fc.setSynced(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYNCED)));
                 allFC.add(fc);
@@ -817,9 +817,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 fc.setId(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ID)));
                 fc.setUid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_UID)));
                 fc.setSysDate(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYSDATE)));
-                fc.setEbCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ENUM_BLOCK)));
-                fc.setHhid(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_HHID)));
-                fc.setSno(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SNO)));
+                fc.setDistCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_DISTRICT_CODE)));
+                fc.setTehsilCode(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_TEHSIL_CODE)));
+                fc.setShopNo(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SHOP_NUMBER)));
                 fc.setiStatus(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_ISTATUS)));
                 fc.setSynced(c.getString(c.getColumnIndexOrThrow(FormsTable.COLUMN_SYNCED)));
                 allFC.add(fc);
@@ -876,7 +876,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    /*public RandomHH getHHbyEnumBlocks(String ebcode, String hhno) {
+    /*public RandomHH getHHbyEnumBlocks(String ebcode, String shopNo) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
         String[] columns = null;
@@ -884,7 +884,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String whereClause = RandomTable.COLUMN_ENUM_BLOCK_CODE + " = ? AND " +
                 RandomTable.COLUMN_HH_NO + " = ?";
 
-        String[] whereArgs = {ebcode, hhno};
+        String[] whereArgs = {ebcode, shopNo};
 
         String groupBy = null;
         String having = null;
@@ -1059,22 +1059,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public ArrayList<String> getAllDistricts() {
+    public Collection<EnumBlocks> getAllDistricts() {
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
 
         Boolean distinct = true;
         String tableName = EnumBlocksTable.TABLE_NAME;
-        String[] columns = {EnumBlocksTable.COLUMN_DISTRICT_NAME};
+        String[] columns = {EnumBlocksTable.COLUMN_DISTRICT_NAME, EnumBlocksTable.COLUMN_DISTRICT_CODE};
         String whereClause = null;
         String[] whereArgs = null;
-        String groupBy = null;
+        String groupBy = EnumBlocksTable.COLUMN_DISTRICT_NAME;
         String having = null;
         String orderBy = EnumBlocksTable.COLUMN_DISTRICT_NAME + " ASC";
         String limitRows = "9999";
 
-        ArrayList<String> d = new ArrayList<>();
+        Collection<EnumBlocks> ebDistricts = new ArrayList<>();
         try {
             c = db.query(
                     distinct,       // Distinct values
@@ -1088,7 +1088,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     limitRows
             );
             while (c.moveToNext()) {
-                d.add(c.getString(c.getColumnIndexOrThrow(EnumBlocksTable.COLUMN_DISTRICT_NAME)));
+
+                ebDistricts.add(new EnumBlocks().hydrate(c));
 
             }
         } finally {
@@ -1099,25 +1100,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 db.close();
             }
         }
-        return d;
+        return ebDistricts;
     }
 
-    public List<String> getTehsilByDist(String dist) {
+    public Collection<EnumBlocks> getTehsilByDist(String distCode) {
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor c = null;
 
         Boolean distinct = true;
         String tableName = EnumBlocksTable.TABLE_NAME;
-        String[] columns = {EnumBlocksTable.COLUMN_TEHSIL_NAME};
-        String whereClause = EnumBlocksTable.COLUMN_DISTRICT_NAME + " = ? ";
-        String[] whereArgs = {dist};
+        String[] columns = {EnumBlocksTable.COLUMN_TEHSIL_NAME, EnumBlocksTable.COLUMN_TEHSIL_CODE,};
+        String whereClause = EnumBlocksTable.COLUMN_DISTRICT_CODE + " = ? ";
+        String[] whereArgs = {distCode};
         String groupBy = null;
         String having = null;
         String orderBy = EnumBlocksTable.COLUMN_TEHSIL_NAME + " ASC";
         String limitRows = "9999";
 
-        ArrayList<String> d = new ArrayList<>();
+        Collection<EnumBlocks> ebTehsils = new ArrayList<>();
         try {
             c = db.query(
                     distinct,       // Distinct values
@@ -1131,7 +1132,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     limitRows
             );
             while (c.moveToNext()) {
-                d.add(c.getString(c.getColumnIndexOrThrow(EnumBlocksTable.COLUMN_TEHSIL_NAME)));
+
+                ebTehsils.add(new EnumBlocks().hydrate(c));
 
             }
         } finally {
@@ -1142,6 +1144,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 db.close();
             }
         }
-        return d;
+        return ebTehsils;
     }
 }

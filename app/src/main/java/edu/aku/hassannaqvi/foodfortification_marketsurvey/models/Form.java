@@ -33,9 +33,9 @@ public class Form extends BaseObservable implements Observable {
     private String uid = _EMPTY_;
     private String userName = _EMPTY_;
     private String sysDate = _EMPTY_;
-    private String ebCode = _EMPTY_;
-    private String hhid = _EMPTY_;
-    private String sno = _EMPTY_;
+    private String distCode = _EMPTY_;
+    private String tehsilCode = _EMPTY_;
+    private String shopNo = _EMPTY_;
     private String deviceId = _EMPTY_;
     private String deviceTag = _EMPTY_;
     private String appver = _EMPTY_;
@@ -8740,33 +8740,33 @@ public class Form extends BaseObservable implements Observable {
     }
 
     @Bindable
-    public String getEbCode() {
-        return ebCode;
+    public String getDistCode() {
+        return distCode;
     }
 
-    public void setEbCode(String ebCode) {
-        this.ebCode = ebCode;
+    public void setDistCode(String distCode) {
+        this.distCode = distCode;
         notifyPropertyChanged(BR.ebCode);
     }
 
     @Bindable
-    public String getHhid() {
-        return hhid;
+    public String getTehsilCode() {
+        return tehsilCode;
     }
 
-    public void setHhid(String hhid) {
-        this.hhid = hhid;
+    public void setTehsilCode(String tehsilCode) {
+        this.tehsilCode = tehsilCode;
         notifyPropertyChanged(BR.hhid);
     }
 
     @Bindable
-    public String getSno() {
-        return sno;
+    public String getShopNo() {
+        return shopNo;
     }
 
-    public void setSno(String sno) {
-        this.sno = sno;
-        notifyPropertyChanged(BR.sno);
+    public void setShopNo(String shopNo) {
+        this.shopNo = shopNo;
+        notifyPropertyChanged(BR.shopNo);
     }
 
     public String getUserName() {
@@ -8905,9 +8905,9 @@ public class Form extends BaseObservable implements Observable {
     public Form Hydrate(Cursor cursor) throws JSONException {
         this.id = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_ID));
         this.uid = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_UID));
-        this.ebCode = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_ENUM_BLOCK));
-        this.hhid = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_HHID));
-        this.sno = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SNO));
+        this.distCode = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_DISTRICT_CODE));
+        this.tehsilCode = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_TEHSIL_CODE));
+        this.shopNo = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SHOP_NUMBER));
         this.userName = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_USERNAME));
         this.sysDate = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_SYSDATE));
         this.deviceId = cursor.getString(cursor.getColumnIndexOrThrow(FormsTable.COLUMN_DEVICEID));
@@ -10264,9 +10264,9 @@ public class Form extends BaseObservable implements Observable {
 
         json.put(FormsTable.COLUMN_ID, this.id);
         json.put(FormsTable.COLUMN_UID, this.uid);
-        json.put(FormsTable.COLUMN_ENUM_BLOCK, this.ebCode);
-        json.put(FormsTable.COLUMN_HHID, this.hhid);
-        json.put(FormsTable.COLUMN_SNO, this.sno);
+        json.put(FormsTable.COLUMN_DISTRICT_CODE, this.distCode);
+        json.put(FormsTable.COLUMN_TEHSIL_CODE, this.tehsilCode);
+        json.put(FormsTable.COLUMN_SHOP_NUMBER, this.shopNo);
         json.put(FormsTable.COLUMN_USERNAME, this.userName);
         json.put(FormsTable.COLUMN_SYSDATE, this.sysDate);
         json.put(FormsTable.COLUMN_DEVICEID, this.deviceId);

@@ -48,7 +48,7 @@
                         android:orientation="horizontal">
 
                         <TextView
-                            android:id="@+id/hhno"
+                            android:id="@+id/shopNo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="0dp"
@@ -58,7 +58,7 @@
                             android:textStyle="bold" />
 
                         <TextView
-                            android:id="@+id/ebCode"
+                            android:id="@+id/distCode"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="12dp"
