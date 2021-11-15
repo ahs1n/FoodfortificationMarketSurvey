@@ -8,6 +8,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,13 +23,13 @@ import org.json.JSONException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.R;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.core.MainApp;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.database.DatabaseHelper;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.databinding.ActivityIdentificationBinding;
-import edu.aku.hassannaqvi.foodfortification_marketsurvey.models.EnumBlocks;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.models.Form;
 
 
@@ -36,10 +38,8 @@ public class IdentificationActivity extends AppCompatActivity {
     private static final String TAG = "IdentificationActivity";
     ActivityIdentificationBinding bi;
     private DatabaseHelper db;
-    private ArrayList<String> ebCode;
-    private ArrayList<String> districtNames;
+    private ArrayList<String> distNames;
     private ArrayList<String> tehsilNames;
-    private ArrayList<String> headHH;
     private Intent openIntent;
 
     @Override
@@ -48,7 +48,7 @@ public class IdentificationActivity extends AppCompatActivity {
         setTheme(sharedPref.getString("lang", "1").equals("1") ? R.style.AppThemeEnglish1 : R.style.AppThemeUrdu);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_identification);
         db = MainApp.appInfo.dbHelper;
-        // populateSpinner();
+        populateSpinner();
 
         openIntent = new Intent();
         switch (MainApp.idType) {
@@ -75,7 +75,7 @@ public class IdentificationActivity extends AppCompatActivity {
 
         }
 
-        bi.a105.addTextChangedListener(new TextWatcher() {
+      /*  bi.a105.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
             }
@@ -86,17 +86,16 @@ public class IdentificationActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                bi.a107.setText(null);
-                bi.a108.setText(null);
-                bi.a110.setText(null);
-                bi.ahhead.setText(null);
-                bi.fldGrpHH.setVisibility(View.GONE);
+                bi.a109.setText(null);  // Village
+                bi.a105.setText(null);  // EnumBlock
+                //   bi.a110.setText(null);
+                // bi.ahhead.setText(null);
                 bi.btnContinue.setBackgroundTintList(ContextCompat.getColorStateList(IdentificationActivity.this, R.color.gray));
                 bi.btnContinue.setEnabled(false);
             }
         });
 
-        bi.a110.addTextChangedListener(new TextWatcher() {
+        bi.a109.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
             }
@@ -112,63 +111,96 @@ public class IdentificationActivity extends AppCompatActivity {
                 bi.btnContinue.setEnabled(false);
             }
         });
-
+*/
 
     }
 
     private void populateSpinner() {
-     /*   Collection<EnumBlocks> enumBlocks = db.getEnumBlocks();
-        ebCode = new ArrayList<>();
-        districtNames = new ArrayList<>();
-        tehsilNames = new ArrayList<>();
-        for (EnumBlocks eb : enumBlocks) {
-            ebCode.add(eb.getEnumBlock());
-            districtNames.add(eb.getDistrictName());
-            tehsilNames.add(eb.getTehsilName()); //
+        Log.d(TAG, "populateSpinner: ");
+        List<String> districts = db.getAllDistricts();
+        distNames = new ArrayList<>();
+        // distCodes = new ArrayList<>();
+
+        distNames.add("...");
+
+        for (String d : districts) {
+            distNames.add(d);
+
         }
+        if (MainApp.user.getUserName().contains("test") || MainApp.user.getUserName().contains("dmu")) {
+            distNames.add("Test Dist 9");
+            distNames.add("Test Dist 8");
+            distNames.add("Test Dist 7");
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, ebCode);
-
-        bi.a105.setAdapter(adapter);
-
-        bi.a105.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
+        }
+        // Apply the adapter to the spinner
+        bi.a107.setAdapter(new ArrayAdapter<>(IdentificationActivity.this, R.layout.custom_spinner, distNames));
+        Log.d(TAG, "populateSpinner: setAdapter107");
+        bi.a107.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                int position = ebCode.indexOf(bi.a105.getText().toString());
-                bi.a107.setText(districtNames.get(position));
-                bi.a108.setText(tehsilNames.get(position));
+           bi.a108.setAdapter(null);
+                bi.a109.setText(null);
+                bi.a105.setText(null);
+             bi.btnContinue.setBackgroundTintList(ContextCompat.getColorStateList(IdentificationActivity.this, R.color.gray));
+                bi.btnContinue.setEnabled(false);
+                //  bi.checkHousehold.setBackgroundTintList(ContextCompat.getColorStateList(IdentificationActivity.this, R.color.colorAccent));
+                //  bi.checkHousehold.setEnabled(true);
 
-                Collection<RandomHH> randHH = db.getHHbyEnumBlocks(bi.a105.getText().toString());
-                ArrayList<String> households = new ArrayList<String>();
-                for (RandomHH r : randHH) {
-                    households.add(r.getHhno());
-                    headHH = new ArrayList<String>();
-                    headHH.add(r.getHeadhh());
+                if (position == 0) return;
+                List<String> tehsil = db.getTehsilByDist(distNames.get(position));
+                tehsilNames = new ArrayList<>();
+                tehsilNames.add("...");
 
-
+                for (String t : tehsil) {
+                    tehsilNames.add(t);
 
                 }
+                if (MainApp.user.getUserName().contains("test") || MainApp.user.getUserName().contains("dmu")) {
 
+                    tehsilNames.add("Test Tehsil 1 " + distNames.get(position));
+                    tehsilNames.add("Test Tehsil 2 " + distNames.get(position));
+                    tehsilNames.add("Test Tehsil 3 " + distNames.get(position));
 
-                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(IdentificationActivity.this,
-                        android.R.layout.simple_dropdown_item_1line, households);
+                }
+                // Apply the adapter to the spinner
+                bi.a108.setAdapter(new ArrayAdapter<>(IdentificationActivity.this, R.layout.support_simple_spinner_dropdown_item, tehsilNames));
+                Log.d(TAG, "onItemSelected: setAdapter108");
+/*                bi.btnContinue.setBackgroundTintList(ContextCompat.getColorStateList(IdentificationActivity.this, R.color.gray));
+                bi.btnContinue.setEnabled(false);*/
+                  bi.btnContinue.setBackgroundTintList(ContextCompat.getColorStateList(IdentificationActivity.this, R.color.colorAccent));
+                  bi.btnContinue.setEnabled(true);
+/*                if (position == 0) return;
+                Collection<HealthFacilities> healthFacility = db.getHealthFacilityByDist(distCodes.get(position));
+                healthFacilityNames = new ArrayList<>();
+                healthFacilityCodes = new ArrayList<>();
+                healthFacilityNames.add("...");
+                healthFacilityCodes.add("...");
 
-                bi.a105.setAdapter(adapter);
+                for (HealthFacilities hf : healthFacility) {
+                    healthFacilityNames.add(hf.getHfName());
+                    healthFacilityCodes.add(hf.getHfCode());
+                }
+                if (MainApp.user.getUserName().contains("test") || MainApp.user.getUserName().contains("dmu")) {
+
+                    healthFacilityNames.add("Test HealthFacility 1 " + distNames.get(position));
+                    healthFacilityNames.add("Test HealthFacility 2 " + distNames.get(position));
+                    healthFacilityNames.add("Test HealthFacility 3 " + distNames.get(position));
+                    healthFacilityCodes.add(distCodes.get(position) + "001");
+                    healthFacilityCodes.add(distCodes.get(position) + "002");
+                    healthFacilityCodes.add(distCodes.get(position) + "003");
+                }
+                // Apply the adapter to the spinner
+                bi.a110.setAdapter(new ArrayAdapter<>(LhwIdentificationActivity.this, R.layout.custom_spinner, healthFacilityNames));*/
 
             }
-        });
-
-        bi.a110.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-
+            public void onNothingSelected(AdapterView<?> parent) {
             }
-        });*/
+
+        });
 
     }
 
@@ -292,7 +324,7 @@ public class IdentificationActivity extends AppCompatActivity {
             case 1:
                 MainApp.form = new Form();
                 try {
-                    MainApp.form = db.getFormByClusterHHNo(bi.a105.getText().toString(), bi.a110.getText().toString());
+                    MainApp.form = db.getFormByClusterHHNo(bi.a105.getText().toString(), bi.a109.getText().toString());
                 } catch (JSONException e) {
                     Log.d(TAG, getString(R.string.hh_exists_form) + e.getMessage());
                     Toast.makeText(this, getString(R.string.hh_exists_form) + e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -304,18 +336,18 @@ public class IdentificationActivity extends AppCompatActivity {
             case 4:
                 MainApp.form = new Form();
                 try {
-                    MainApp.form = db.getFormByClusterHHNo(bi.a105.getText().toString(), bi.a110.getText().toString());
+                    MainApp.form = db.getFormByClusterHHNo(bi.a105.getText().toString(), bi.a109.getText().toString());
                     // Populate Subject Names for spinner Adapter in Samples Activity.
                     if (MainApp.form != null) {
                         MainApp.subjectNames = new ArrayList<>();
                         MainApp.subjectNames.add("...");
 
                         /*// Add woman if exist
-                        if (!MainApp.form.getA104n().equals("")) {
-                            MainApp.subjectNames.add(MainApp.form.getA104n() + " (" + MainApp.form.getW102() + ")");
+                        if (!MainApp.form.getA105n().equals("")) {
+                            MainApp.subjectNames.add(MainApp.form.getA105n() + " (" + MainApp.form.getW102() + ")");
                             // Add child if both woman and child exist
-                            if (!MainApp.form.getA104n().equals("")) {
-                                MainApp.subjectNames.add(MainApp.form.getA104n());
+                            if (!MainApp.form.getA105n().equals("")) {
+                                MainApp.subjectNames.add(MainApp.form.getA105n());
                             } else {
                                 Toast.makeText(this, R.string.child_info_missing, Toast.LENGTH_SHORT).show();
                                 return false;
@@ -345,7 +377,7 @@ public class IdentificationActivity extends AppCompatActivity {
         }
     }
 
-    public void searchEB(View view) {
+/*    public void searchEB(View view) {
         bi.btnContinue.setEnabled(false);
         EnumBlocks testEb = new EnumBlocks();
         testEb.setEnumBlock("909090909");
@@ -358,14 +390,14 @@ public class IdentificationActivity extends AppCompatActivity {
             enumBlock = testEb;
         }
 
-        /*ebCode = new ArrayList<>();
+        *//*ebCode = new ArrayList<>();
         districtNames = new ArrayList<>();
         tehsilNames = new ArrayList<>();
         for (EnumBlocks eb : enumBlocks) {
             ebCode.add(eb.getEnumBlock());
             districtNames.add(eb.getDistrictName());
             tehsilNames.add(eb.getTehsilName()); //
-        }*/
+        }*//*
         if (!enumBlock.getEnumBlock().equals("")) {
             bi.a107.setError(null);
             bi.a108.setError(null);
@@ -380,5 +412,5 @@ public class IdentificationActivity extends AppCompatActivity {
             bi.ahhead.setText(null);
             bi.fldGrpHH.setVisibility(View.GONE);
         }
-    }
+    }*/
 }

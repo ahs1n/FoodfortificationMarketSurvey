@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Food Fortification Market Survey</string>
+    <string name="app_name" translatable="false">BFF: Market Survey</string>
     <string name="btnDownload" translatable="false">Download Data</string>
     <string name="btnUpload">Upload Data</string>
     <string name="prompt_email">Email</string>
@@ -9,6 +9,7 @@
     <string name="splashText"> </string>
     <string name="check_pending_forms">CHECK PENDING FORMS</string>
     <string name="open_household_form" translatable="false">OPEN HOUSEHOLD FORM</string>
+    <string name="open_market_form" translatable="false">OPEN MARKET SURVEY FORM</string>
     <string name="open_anthro_form" translatable="false">UPDATE ANTHRO FORM</string>
     <string name="open_blood_form" translatable="false">UPDATE BLOOD INFORMANTION</string>
     <string name="open_stool_form" translatable="false">UPDATE STOOL INFORMANTION</string>

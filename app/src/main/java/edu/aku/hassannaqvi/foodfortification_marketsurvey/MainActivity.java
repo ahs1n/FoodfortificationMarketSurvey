@@ -14,6 +14,7 @@ import edu.aku.hassannaqvi.foodfortification_marketsurvey.core.MainApp;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.database.AndroidManager;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.models.Form;
+import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.IdentificationActivity;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.SyncActivity;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.lists.FormsReportPending;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionAActivity;
@@ -70,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, IdentificationActivity.class));
                 break;*/
             case R.id.openForm:
-            case R.id.seca:
                 MainApp.form = new Form();
-                startActivity(new Intent(this, SectionAActivity.class));
+                startActivity(new Intent(this, IdentificationActivity.class));
+            case R.id.seca:
                 break;
             case R.id.secb:
                 MainApp.form = new Form();

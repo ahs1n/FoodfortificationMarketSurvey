@@ -1059,4 +1059,89 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+    public ArrayList<String> getAllDistricts() {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+
+        Boolean distinct = true;
+        String tableName = EnumBlocksTable.TABLE_NAME;
+        String[] columns = {EnumBlocksTable.COLUMN_DISTRICT_NAME};
+        String whereClause = null;
+        String[] whereArgs = null;
+        String groupBy = null;
+        String having = null;
+        String orderBy = EnumBlocksTable.COLUMN_DISTRICT_NAME + " ASC";
+        String limitRows = "9999";
+
+        ArrayList<String> d = new ArrayList<>();
+        try {
+            c = db.query(
+                    distinct,       // Distinct values
+                    tableName,      // The table to query
+                    columns,        // The columns to return
+                    whereClause,    // The columns for the WHERE clause
+                    whereArgs,      // The values for the WHERE clause
+                    groupBy,        // don't group the rows
+                    having,         // don't filter by row groups
+                    orderBy,
+                    limitRows
+            );
+            while (c.moveToNext()) {
+                d.add(c.getString(c.getColumnIndexOrThrow(EnumBlocksTable.COLUMN_DISTRICT_NAME)));
+
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return d;
+    }
+
+    public List<String> getTehsilByDist(String dist) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+
+        Boolean distinct = true;
+        String tableName = EnumBlocksTable.TABLE_NAME;
+        String[] columns = {EnumBlocksTable.COLUMN_TEHSIL_NAME};
+        String whereClause = EnumBlocksTable.COLUMN_DISTRICT_NAME + " = ? ";
+        String[] whereArgs = {dist};
+        String groupBy = null;
+        String having = null;
+        String orderBy = EnumBlocksTable.COLUMN_TEHSIL_NAME + " ASC";
+        String limitRows = "9999";
+
+        ArrayList<String> d = new ArrayList<>();
+        try {
+            c = db.query(
+                    distinct,       // Distinct values
+                    tableName,      // The table to query
+                    columns,        // The columns to return
+                    whereClause,    // The columns for the WHERE clause
+                    whereArgs,      // The values for the WHERE clause
+                    groupBy,        // don't group the rows
+                    having,         // don't filter by row groups
+                    orderBy,
+                    limitRows
+            );
+            while (c.moveToNext()) {
+                d.add(c.getString(c.getColumnIndexOrThrow(EnumBlocksTable.COLUMN_TEHSIL_NAME)));
+
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return d;
+    }
 }

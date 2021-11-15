@@ -51,7 +51,7 @@
                     android:layout_gravity="center"
                     android:paddingTop="24dp"
                     android:src="@drawable/app_icon" />
-
+f
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
