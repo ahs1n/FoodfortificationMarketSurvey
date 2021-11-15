@@ -443,7 +443,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 ContentValues values = new ContentValues();
 
                 values.put(EnumBlocksTable.COLUMN_DISTRICT_NAME, cluster.getDistrictName());
+                values.put(EnumBlocksTable.COLUMN_DISTRICT_CODE, cluster.getDistrictCode());
                 values.put(EnumBlocksTable.COLUMN_TEHSIL_NAME, cluster.getTehsilName());
+                values.put(EnumBlocksTable.COLUMN_TEHSIL_CODE, cluster.getTehsilCode());
                 values.put(EnumBlocksTable.COLUMN_ENUM_BLOCK_CODE, cluster.getEnumBlock());
                 long rowID = db.insert(EnumBlocksTable.TABLE_NAME, null, values);
                 if (rowID != -1) insertCount++;
@@ -1066,7 +1068,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         Boolean distinct = true;
         String tableName = EnumBlocksTable.TABLE_NAME;
-        String[] columns = {EnumBlocksTable.COLUMN_DISTRICT_NAME, EnumBlocksTable.COLUMN_DISTRICT_CODE};
+        String[] columns = null;
         String whereClause = null;
         String[] whereArgs = null;
         String groupBy = EnumBlocksTable.COLUMN_DISTRICT_NAME;
@@ -1110,10 +1112,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         Boolean distinct = true;
         String tableName = EnumBlocksTable.TABLE_NAME;
-        String[] columns = {EnumBlocksTable.COLUMN_TEHSIL_NAME, EnumBlocksTable.COLUMN_TEHSIL_CODE,};
+        String[] columns = null;
         String whereClause = EnumBlocksTable.COLUMN_DISTRICT_CODE + " = ? ";
         String[] whereArgs = {distCode};
-        String groupBy = null;
+        String groupBy = EnumBlocksTable.COLUMN_TEHSIL_NAME;
         String having = null;
         String orderBy = EnumBlocksTable.COLUMN_TEHSIL_NAME + " ASC";
         String limitRows = "9999";
