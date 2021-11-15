@@ -183,6 +183,7 @@
     <string name="a112">Age of Respondent in completed years </string>
     <string name="a113">Name of Market/Hub</string>
     <string name="a114">Name of business outlet/shop</string>
+    <string name="a114a">Business/Outlet/Shop number</string>
     <string name="a115">Type of business entity?</string>
     <string name="a11501">Sole Proprietorship </string>
     <string name="a11502">Partnership</string>
@@ -1174,6 +1175,7 @@ Wheat Grower Landless (Sharecropper)</string>
     <string name='Q_a112'>a112</string>
     <string name='Q_a113'>a113</string>
     <string name='Q_a114'>a114</string>
+    <string name='Q_a114a'>a114a</string>
     <string name='Q_a115'>a115</string>
     <string name='Q_a116'>a116</string>
     <string name='Q_a117'>a117</string>

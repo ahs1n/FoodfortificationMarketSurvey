@@ -4,12 +4,14 @@ import static edu.aku.hassannaqvi.foodfortification_marketsurvey.core.MainApp.fo
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -25,6 +27,7 @@ public class SectionAActivity extends AppCompatActivity {
     private static final String TAG = "SectionAActivity";
     ActivitySectionABinding bi;
     private DatabaseHelper db;
+    private boolean respAgeCheck = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,21 @@ public class SectionAActivity extends AppCompatActivity {
         bi.setForm(form);
         db = MainApp.appInfo.dbHelper;
         setSupportActionBar(bi.toolbar);
+    }
+
+
+    public void ageSkip(CharSequence s, int i, int i1, int i2) {
+        if (TextUtils.isEmpty(bi.a112.getText())) return;
+        if (Integer.parseInt(bi.a112.getText().toString()) < 18) {
+            Clear.clearAllFields(bi.fldGrpCVa11201);
+            bi.fldGrpCVa11201.setVisibility(View.GONE);
+            bi.btnContinue.setVisibility(View.GONE);
+            respAgeCheck = false;
+        } else {
+            bi.fldGrpCVa11201.setVisibility(View.VISIBLE);
+            bi.btnContinue.setVisibility(View.VISIBLE);
+            respAgeCheck = true;
+        }
     }
 
     private boolean insertNewRecord() {
