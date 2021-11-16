@@ -5995,7 +5995,7 @@ public class Form extends BaseObservable implements Observable {
         setD11903x(d119.equals("3") ? this.d11903x : "");
         setD11904x(d119.equals("4") ? this.d11904x : "");
         setD11905x(d119.equals("5") ? this.d11905x : "");
-        setD11996x(d119.equals("96") ? this.d11996x : "")*/;
+        setD11996x(d119.equals("96") ? this.d11996x : "")*/
         notifyPropertyChanged(BR.d119);
     }
 
@@ -9970,7 +9970,7 @@ public class Form extends BaseObservable implements Observable {
                 .put("a11802", a11802)
                 .put("a11803", a11803)
                 .put("a119", a119)
-                .put("a11901", a11901)
+                .put("a11901x", a11901x)
                 .put("a11902x", a11902x)
                 .put("a11903x", a11903x)
                 .put("a120", a120)
