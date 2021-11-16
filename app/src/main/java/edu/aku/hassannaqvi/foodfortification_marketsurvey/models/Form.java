@@ -87,7 +87,7 @@ public class Form extends BaseObservable implements Observable {
     private String a11802 = _EMPTY_;
     private String a11803 = _EMPTY_;
     private String a119 = _EMPTY_;
-    private String a11901 = _EMPTY_;
+    private String a11901x = _EMPTY_;
     private String a11902x = _EMPTY_;
     private String a11903x = _EMPTY_;
     private String a120 = _EMPTY_;
@@ -1092,13 +1092,13 @@ public class Form extends BaseObservable implements Observable {
     }
 
     @Bindable
-    public String getA11901() {
-        return a11901;
+    public String getA11901x() {
+        return a11901x;
     }
 
-    public void setA11901(String a11901) {
-        this.a11901 = a11901;
-        notifyPropertyChanged(BR.a11901);
+    public void setA11901x(String a11901x) {
+        this.a11901x = a11901x;
+        notifyPropertyChanged(BR.a11901x);
     }
 
     @Bindable
@@ -2560,7 +2560,16 @@ public class Form extends BaseObservable implements Observable {
     public void setB12398(String b12398) {
 
         if (this.b12398.equals(b12398)) return; // for all checkboxes
+        if (this.b12398.equals(b12398)) return; // for all checkboxes
         this.b12398 = b12398;
+        setB12301x(b12398.equals("98") ? "" : this.b12301x);
+        setB12302x(b12398.equals("98") ? "" : this.b12302x);
+        setB12303x(b12398.equals("98") ? "" : this.b12303x);
+        setB12304x(b12398.equals("98") ? "" : this.b12304x);
+        setB12305x(b12398.equals("98") ? "" : this.b12305x);
+        setB12306x(b12398.equals("98") ? "" : this.b12306x);
+        setB12396(b12398.equals("98") ? "" : this.b12396);
+        setB12399(b12398.equals("98") ? "" : this.b12399);
         notifyPropertyChanged(BR.b12398);
     }
 
@@ -2571,7 +2580,16 @@ public class Form extends BaseObservable implements Observable {
 
     public void setB12399(String b12399) {
         if (this.b12399.equals(b12399)) return;
+        if (this.b12399.equals(b12399)) return; // for all checkboxes
         this.b12399 = b12399;
+        setB12301x(b12399.equals("99") ? "" : this.b12301x);
+        setB12302x(b12399.equals("99") ? "" : this.b12302x);
+        setB12303x(b12399.equals("99") ? "" : this.b12303x);
+        setB12304x(b12399.equals("99") ? "" : this.b12304x);
+        setB12305x(b12399.equals("99") ? "" : this.b12305x);
+        setB12306x(b12399.equals("99") ? "" : this.b12306x);
+        setB12396(b12399.equals("99") ? "" : this.b12396);
+        setB12398(b12399.equals("99") ? "" : this.b12398);
         notifyPropertyChanged(BR.b12399);
     }
 
@@ -5922,7 +5940,9 @@ public class Form extends BaseObservable implements Observable {
     }
 
     public void setD11796(String d11796) {
+        if (this.d11796.equals(d11796)) return; // for all checkboxes
         this.d11796 = d11796;
+        setD11796x(d11796.equals("96") ? this.d11796x : ""); // for all skips, mention all skipped questions
         notifyPropertyChanged(BR.d11796);
     }
 
@@ -5942,7 +5962,14 @@ public class Form extends BaseObservable implements Observable {
     }
 
     public void setD11798(String d11798) {
+        if (this.d11798.equals(d11798)) return; // for all checkboxes
         this.d11798 = d11798;
+        setD11701x(d11798.equals("98") ? "" : this.d11701x);
+        setD11702x(d11798.equals("98") ? "" : this.d11702x);
+        setD11703x(d11798.equals("98") ? "" : this.d11703x);
+        setD11704x(d11798.equals("98") ? "" : this.d11704x);
+        setD11705x(d11798.equals("98") ? "" : this.d11705x);
+        setD11796(d11798.equals("98") ? "" : this.d11796);
         notifyPropertyChanged(BR.d11798);
     }
 
@@ -8821,7 +8848,10 @@ public class Form extends BaseObservable implements Observable {
     }
 
     public void setE13498(String e13498) {
+        if (this.e13498.equals(e13498)) return; // for all checkboxes
         this.e13498 = e13498;
+        setE13401x(e13498.equals("98") ? "" : this.e13401x);
+        setE13402x(e13498.equals("98") ? "" : this.e13402x);
         notifyPropertyChanged(BR.e13498);
     }
 
@@ -9258,7 +9288,7 @@ public class Form extends BaseObservable implements Observable {
             this.a11802 = json.getString("a11802");
             this.a11803 = json.getString("a11803");
             this.a119 = json.getString("a119");
-            this.a11901 = json.getString("a11901");
+            this.a11901x = json.getString("a11901x");
             this.a11902x = json.getString("a11902x");
             this.a11903x = json.getString("a11903x");
             this.a120 = json.getString("a120");
