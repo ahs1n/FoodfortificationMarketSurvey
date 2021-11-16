@@ -129,6 +129,8 @@ public class SectionAActivity extends AppCompatActivity {
 
             else if (form.getA123().equals("11") || form.getA123().equals("12"))
                 startActivity(new Intent(this, SectionD1Activity.class).putExtra("complete", true));
+            else if (form.getA123().equals("96"))
+                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
 
             else
                 startActivity(new Intent(this, SectionE1Activity.class).putExtra("complete", true));
