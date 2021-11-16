@@ -192,7 +192,9 @@ public class Form extends BaseObservable implements Observable {
     private String b12108x = _EMPTY_;
     private String b12109x = _EMPTY_;
     private String b12110x = _EMPTY_;
+    private String b12196 = _EMPTY_;
     private String b12196x = _EMPTY_;
+    private String b12198 = _EMPTY_;
     private String b122 = _EMPTY_;
     private String b12201 = _EMPTY_;
     private String b12202 = _EMPTY_;
@@ -2009,7 +2011,7 @@ public class Form extends BaseObservable implements Observable {
         setB11996(b114.equals("1") ? this.b11996 : "");
         setB11998(b114.equals("1") ? this.b11998 : "");
 
-        setB120(b114.equals("1") ? this.b120 : "");
+//        setB120(b114.equals("1") ? this.b120 : "");
         setB121(b114.equals("1") ? this.b121 : "");
 
         setB12201(b114.equals("1") ? this.b12201 : "");
@@ -2233,17 +2235,6 @@ public class Form extends BaseObservable implements Observable {
 
     public void setB121(String b121) {
         this.b121 = b121;
-        setB12101x(b121.equals("1") ? this.b12101x : ""); // for all skips, mention all skipped questions
-        setB12102x(b121.equals("2") ? this.b12102x : ""); // for all skips, mention all skipped questions
-        setB12103x(b121.equals("3") ? this.b12103x : ""); // for all skips, mention all skipped questions
-        setB12104x(b121.equals("4") ? this.b12104x : ""); // for all skips, mention all skipped questions
-        setB12105x(b121.equals("5") ? this.b12105x : ""); // for all skips, mention all skipped questions
-        setB12106x(b121.equals("6") ? this.b12106x : ""); // for all skips, mention all skipped questions
-        setB12107x(b121.equals("7") ? this.b12107x : ""); // for all skips, mention all skipped questions
-        setB12108x(b121.equals("8") ? this.b12108x : ""); // for all skips, mention all skipped questions
-        setB12109x(b121.equals("9") ? this.b12109x : ""); // for all skips, mention all skipped questions
-        setB12110x(b121.equals("10") ? this.b12110x : ""); // for all skips, mention all skipped questions
-        setB12196x(b121.equals("96") ? this.b12196x : ""); // for all skips, mention all skipped questions
         notifyPropertyChanged(BR.b121);
     }
 
@@ -2348,6 +2339,18 @@ public class Form extends BaseObservable implements Observable {
     }
 
     @Bindable
+    public String getB12196() {
+        return b12196;
+    }
+
+    public void setB12196(String b12196) {
+        if (this.b12196.equals(b12196)) return; // for all checkboxes
+        this.b12196 = b12196;
+        setB12196x(b12196.equals("96") ? this.b12196x : ""); // for all skips, mention all skipped questions
+        notifyPropertyChanged(BR.b12196);
+    }
+
+    @Bindable
     public String getB12196x() {
         return b12196x;
     }
@@ -2355,6 +2358,28 @@ public class Form extends BaseObservable implements Observable {
     public void setB12196x(String b12196x) {
         this.b12196x = b12196x;
         notifyPropertyChanged(BR.b12196x);
+    }
+
+    @Bindable
+    public String getB12198() {
+        return b12198;
+    }
+
+    public void setB12198(String b12198) {
+        if (this.b12198.equals(b12198)) return; // for all checkboxes
+        this.b12198 = b12198;
+        setB12101x(b12198.equals("98") ? "" : this.b12101x);
+        setB12102x(b12198.equals("98") ? "" : this.b12102x);
+        setB12103x(b12198.equals("98") ? "" : this.b12103x);
+        setB12104x(b12198.equals("98") ? "" : this.b12104x);
+        setB12105x(b12198.equals("98") ? "" : this.b12105x);
+        setB12106x(b12198.equals("98") ? "" : this.b12106x);
+        setB12107x(b12198.equals("98") ? "" : this.b12107x);
+        setB12108x(b12198.equals("98") ? "" : this.b12108x);
+        setB12109x(b12198.equals("98") ? "" : this.b12109x);
+        setB12110x(b12198.equals("98") ? "" : this.b12110x);
+        setB12196(b12198.equals("98") ? "" : this.b12196);
+        notifyPropertyChanged(BR.b12198);
     }
 
     @Bindable
@@ -9397,7 +9422,9 @@ public class Form extends BaseObservable implements Observable {
             this.b12108x = json.getString("b12108x");
             this.b12109x = json.getString("b12109x");
             this.b12110x = json.getString("b12110x");
+            this.b12196 = json.getString("b12196");
             this.b12196x = json.getString("b12196x");
+            this.b12198 = json.getString("b12198");
             this.b12201 = json.getString("b12201");
             this.b12202 = json.getString("b12202");
             this.b12203 = json.getString("b12203");
@@ -10074,7 +10101,9 @@ public class Form extends BaseObservable implements Observable {
                 .put("b12108x", b12108x)
                 .put("b12109x", b12109x)
                 .put("b12110x", b12110x)
+                .put("b12196", b12196)
                 .put("b12196x", b12196x)
+                .put("b12198", b12198)
                 .put("b12201", b12201)
                 .put("b12202", b12202)
                 .put("b12203", b12203)
