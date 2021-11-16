@@ -46,10 +46,15 @@
         <entry key="..\:/Users/abdul.sajid/Desktop/ANDROID APPS/Android/F4HE-Baseline/app/src/main/res/layout/activity_section_bs5.xml" value="0.55859375" />
         <entry key="..\:/Users/abdul.sajid/Desktop/ANDROID APPS/Android/F4HE-Baseline/app/src/main/res/layout/activity_section_cs4.xml" value="0.536" />
         <entry key="..\:/Users/abdul.sajid/Desktop/ANDROID APPS/Android/F4HE-Baseline/app/src/main/res/layout/activity_section_es3.xml" value="0.2734375" />
+        <entry key="..\:/Users/hassan.naqvi/StudioProjects/FoodfortificationMarketSurvey/app/src/main/res/layout/activity_section_b1.xml" value="0.1" />
+        <entry key="..\:/Users/hassan.naqvi/StudioProjects/FoodfortificationMarketSurvey/app/src/main/res/layout/activity_section_b2.xml" value="0.1" />
+        <entry key="..\:/Users/hassan.naqvi/StudioProjects/FoodfortificationMarketSurvey/app/src/main/res/layout/activity_section_d1.xml" value="0.11057788442311538" />
+        <entry key="..\:/Users/hassan.naqvi/StudioProjects/FoodfortificationMarketSurvey/app/src/main/res/layout/activity_section_d2.xml" value="0.17297466374726306" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="16" project-jdk-type="JavaSDK">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="16" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

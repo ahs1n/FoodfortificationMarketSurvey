@@ -87,7 +87,7 @@
                             android:id="@+id/e119"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:onCheckedChanged="@{()->e121.clearCheck() + e122.clearCheck() + e125.clearCheck() + e126.clearCheck() + e127.clearCheck() + e128.clearCheck() + e129.clearCheck() + e130.clearCheck() + e131.clearCheck() + e132.clearCheck()+ e135a.clearCheck() + e135b.clearCheck() + e135c.clearCheck() + e135d.clearCheck() + e135e.clearCheck()}">
+                            android:onCheckedChanged="@{()->e121.clearCheck() + e122.clearCheck() + e126.clearCheck() + e127.clearCheck() + e128.clearCheck() + e129.clearCheck() + e130.clearCheck() + e131.clearCheck() + e132.clearCheck()+ e135a.clearCheck() + e135b.clearCheck() + e135c.clearCheck() + e135d.clearCheck() + e135e.clearCheck()}">
 
                             <RadioButton
                                 android:id="@+id/e11901"
@@ -294,7 +294,7 @@
                                 android:id="@+id/e121"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:onCheckedChanged="@{()->e122.clearCheck() + e125.clearCheck() + e126.clearCheck() + e127.clearCheck() + e128.clearCheck() + e129.clearCheck() + e130.clearCheck() + e131.clearCheck() + e132.clearCheck()}"
+                                android:onCheckedChanged="@{()->e122.clearCheck() + e126.clearCheck() + e127.clearCheck() + e128.clearCheck() + e129.clearCheck() + e130.clearCheck() + e131.clearCheck() + e132.clearCheck()}"
                                 android:orientation="horizontal">
 
                                 <RadioButton
@@ -366,7 +366,7 @@
                                     android:id="@+id/e122"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:onCheckedChanged="@{()->e125.clearCheck() + e126.clearCheck() + e127.clearCheck() + e128.clearCheck() + e129.clearCheck() + e130.clearCheck() + e131.clearCheck() + e132.clearCheck()}"
+                                    android:onCheckedChanged="@{()->e126.clearCheck() + e127.clearCheck() + e128.clearCheck() + e129.clearCheck() + e130.clearCheck() + e131.clearCheck() + e132.clearCheck()}"
                                     android:orientation="horizontal">
 
                                     <RadioButton
@@ -621,7 +621,219 @@
                             </androidx.cardview.widget.CardView>
 
                             <!-- e125  Radio   -->
+
                             <androidx.cardview.widget.CardView
+                                android:id="@+id/fldGrpCVe125"
+                                style="@style/cardView">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/bottom"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            style="@style/quesNum"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:text="@string/Q_e125" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:text="@string/e125" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/e125check"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                style="@style/sub_labels"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="@string/e12501" />
+
+                                            <com.edittextpicker.aliazaz.EditTextPicker
+                                                android:id="@+id/e12501"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:enabled="@{!form.e12598.equals(`98`) }"
+                                                android:gravity="center"
+                                                android:hint="#"
+                                                android:inputType="number"
+                                                android:maxLength="1"
+                                                android:text="@={form.e12501}"
+                                                app:maxValue="5"
+                                                app:minValue="0"
+                                                app:type="range" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                style="@style/sub_labels"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="@string/e12502" />
+
+                                            <com.edittextpicker.aliazaz.EditTextPicker
+                                                android:id="@+id/e12502"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:enabled="@{!form.e12598.equals(`98`)}"
+                                                android:gravity="center"
+                                                android:hint="#"
+                                                android:inputType="number"
+                                                android:maxLength="1"
+                                                android:text="@={form.e12502}"
+                                                app:maxValue="5"
+                                                app:minValue="0"
+                                                app:type="range" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                style="@style/sub_labels"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="@string/e12503" />
+
+                                            <com.edittextpicker.aliazaz.EditTextPicker
+                                                android:id="@+id/e12503"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:enabled="@{!form.e12598.equals(`98`)}"
+                                                android:gravity="center"
+                                                android:hint="#"
+                                                android:inputType="number"
+                                                android:maxLength="1"
+                                                android:text="@={form.e12503}"
+                                                app:maxValue="5"
+                                                app:minValue="0"
+                                                app:type="range" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                style="@style/sub_labels"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="@string/e12504" />
+
+                                            <com.edittextpicker.aliazaz.EditTextPicker
+                                                android:id="@+id/e12504"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:enabled="@{!form.e12598.equals(`98`)}"
+                                                android:gravity="center"
+                                                android:hint="#"
+                                                android:inputType="number"
+                                                android:maxLength="1"
+                                                android:text="@={form.e12504}"
+                                                app:maxValue="5"
+                                                app:minValue="0"
+                                                app:type="range" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <TextView
+                                                style="@style/sub_labels"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:text="@string/e12505" />
+
+                                            <com.edittextpicker.aliazaz.EditTextPicker
+                                                android:id="@+id/e12505"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:enabled="@{!form.e12598.equals(`98`)}"
+                                                android:gravity="center"
+                                                android:hint="#"
+                                                android:inputType="number"
+                                                android:maxLength="1"
+                                                android:text="@={form.e12505}"
+                                                app:maxValue="5"
+                                                app:minValue="0"
+                                                app:type="range" />
+                                        </LinearLayout>
+
+
+
+                                        <CheckBox
+                                            android:id="@+id/e12596"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:checked="@{form.e12596.equals(`96`)}"
+                                            android:enabled="@{!form.e12598.equals(`98`) }"
+                                            android:onClick="@{()->form.setE12596(form.e12596.equals(`96`)?``:`96`)}"
+                                            android:tag="-1"
+                                            android:text="@string/e12596" />
+
+                                        <EditText
+                                            android:id="@+id/e12596x"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0104456789,. "
+                                            android:hint="@string/e12596"
+                                            android:tag="e12596"
+                                            android:text="@={form.e12596x}"
+                                            android:visibility="@{form.e12596.equals(`96`) ? View.VISIBLE : View.GONE}" />
+
+                                        <CheckBox
+                                            android:id="@+id/e12598"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:checked="@{form.e12598.equals(`98`)}"
+                                            android:onClick="@{()->form.setE12598(form.e12598.equals(`98`)?``:`98`)}"
+                                            android:tag="-1"
+                                            android:text="@string/e12598" />
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+                            <!--<androidx.cardview.widget.CardView
                                 android:id="@+id/fldGrpCVe125"
                                 style="@style/cardView">
 
@@ -797,7 +1009,7 @@
                                             android:text="@string/e12598" />
                                     </RadioGroup>
                                 </LinearLayout>
-                            </androidx.cardview.widget.CardView>
+                            </androidx.cardview.widget.CardView>-->
 
                             <!-- e126  Radio   -->
                             <androidx.cardview.widget.CardView
