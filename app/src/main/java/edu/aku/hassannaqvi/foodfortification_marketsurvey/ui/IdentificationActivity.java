@@ -175,6 +175,10 @@ public class IdentificationActivity extends AppCompatActivity {
                     tehsilNames.add("Test Tehsil 2 " + distNames.get(position));
                     tehsilNames.add("Test Tehsil 3 " + distNames.get(position));
 
+                    tehsilCodes.add("1" + distCodes.get(position));
+                    tehsilCodes.add("2" + distCodes.get(position));
+                    tehsilCodes.add("3" + distCodes.get(position));
+
                 }
                 // Apply the adapter to the spinner
                 bi.a108.setAdapter(new ArrayAdapter<>(IdentificationActivity.this, R.layout.custom_spinner, tehsilNames));
