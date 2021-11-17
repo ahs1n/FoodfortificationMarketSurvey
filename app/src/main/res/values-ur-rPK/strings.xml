@@ -914,9 +914,9 @@
     <string name="e114">عام طور پر آپ کی ذخیرہ کی ہوئی گندم کتنے ماہ استعمال کرتے ہیں / چلتی ہے؟</string>
     <string name="e11401">ایک مہینے سے کم </string>
     <string name="e11402">1-3 ماہ </string>
-    <string name="e11403">3-6 ماہ </string>
-    <string name="e11404">6-9 ماہ </string>
-    <string name="e11405">9-12 ماہ </string>
+    <string name="e11403">4-6 ماہ </string>
+    <string name="e11404">7-9 ماہ </string>
+    <string name="e11405">10-12 ماہ </string>
     <string name="e11498">معلوم نہیں</string>
     <string name="e115">اگر آپ کی ذخیرہ شدہ گندم اگلی فصل سے پہلے ختم ہو جائے تو آپ کہاں سے گندم یا گندم کا آٹا خریدتے ہیں؟</string>
     <string name="e11501">چکی رسمی</string>
@@ -1016,9 +1016,9 @@
     <string name="e131">آپ نے  ذخیرہ کی ہوئی بائیوفورٹیفائیڈ گندم کتنے ماہ استعمال کی </string>
     <string name="e13101">ایک مہینے سے کم </string>
     <string name="e13102">1-3 ماہ </string>
-    <string name="e13103">3-6 ماہ </string>
-    <string name="e13104">6-9 ماہ </string>
-    <string name="e13105">9-12 ماہ </string>
+    <string name="e13103">4-6 ماہ </string>
+    <string name="e13104">7-9 ماہ </string>
+    <string name="e13105">10-12 ماہ </string>
     <string name="e13198">معلوم نہیں</string>
     <string name="e132">کیا آپ نے بائیوفورٹیفائیڈ گندم کا اناج فروخت کیا؟ </string>
     <string name="e13201">ہاں</string>
