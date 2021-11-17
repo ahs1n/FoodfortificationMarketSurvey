@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.foodfortification_marketsurvey.ui;
 
 import static edu.aku.hassannaqvi.foodfortification_marketsurvey.core.MainApp.form;
+import static edu.aku.hassannaqvi.foodfortification_marketsurvey.core.MainApp.sharedPref;
 
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +29,7 @@ public class EndingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(sharedPref.getString("lang", "1").equals("1") ? R.style.AppThemeEnglish1 : R.style.AppThemeUrdu);
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_ending);
         bi.setForm(form);

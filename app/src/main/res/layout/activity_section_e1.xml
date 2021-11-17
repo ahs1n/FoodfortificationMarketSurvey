@@ -1003,6 +1003,12 @@
                                     android:text="@string/e109" />
                             </LinearLayout>
 
+                            <TextView
+                                style="@style/info"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/e109_info" />
+
                             <LinearLayout
                                 android:id="@+id/e109check"
                                 android:layout_width="match_parent"

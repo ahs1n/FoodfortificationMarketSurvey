@@ -530,7 +530,7 @@
                                         android:layout_height="wrap_content"
                                         android:checked="@{form.d10604.equals(`4`)}"
                                         android:onClick="@{()->form.setD10604(form.d10604.equals(`4`)?``:`4`)}"
-                                        android:text="@string/sd10604" />
+                                        android:text="@string/d10604" />
 
                                     <CheckBox
                                         android:id="@+id/d10696"
@@ -1313,6 +1313,12 @@
                                 android:text="@string/d114" />
                         </LinearLayout>
 
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/d114_info" />
+
                         <LinearLayout
                             android:id="@+id/d114check"
                             android:layout_width="match_parent"
@@ -1813,6 +1819,18 @@
                                 android:text="@string/d115" />
                         </LinearLayout>
 
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/d115_info" />
+
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/d115_info" />
+
                         <LinearLayout
                             android:id="@+id/d115check"
                             android:layout_width="match_parent"
@@ -2203,6 +2221,12 @@
                                 android:layout_weight="1"
                                 android:text="@string/d116" />
                         </LinearLayout>
+
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/d116_info" />
 
                         <LinearLayout
                             android:id="@+id/d116check"

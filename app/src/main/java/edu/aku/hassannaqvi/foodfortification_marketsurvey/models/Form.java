@@ -573,8 +573,8 @@ public class Form extends BaseObservable implements Observable {
     private String d13003 = _EMPTY_;
     private String d13004 = _EMPTY_;
     private String d13005 = _EMPTY_;
-    private String d13098 = _EMPTY_;
-    private String d13098x = _EMPTY_;
+    private String d13096 = _EMPTY_;
+    private String d13096x = _EMPTY_;
     private String e101 = _EMPTY_;
     private String e10101x = _EMPTY_;
     private String e10102x = _EMPTY_;
@@ -5817,7 +5817,7 @@ public class Form extends BaseObservable implements Observable {
         setD11504(d11598.equals("98") ? "" : this.d11504);
         setD11505(d11598.equals("98") ? "" : this.d11505);
         setD11596(d11598.equals("98") ? "" : this.d11596);
-        notifyPropertyChanged(BR.d11596);
+        notifyPropertyChanged(BR.d11598);
     }
 
     @Bindable
@@ -6135,7 +6135,7 @@ public class Form extends BaseObservable implements Observable {
         setD11904(d11998.equals("98") ? "" : this.d11904);
         setD11905(d11998.equals("98") ? "" : this.d11905);
         setD11996(d11998.equals("98") ? "" : this.d11996);
-        notifyPropertyChanged(BR.d11996);
+        notifyPropertyChanged(BR.d11998);
     }
 
     @Bindable
@@ -6749,7 +6749,7 @@ public class Form extends BaseObservable implements Observable {
         setD13003(d129.equals("1") ? this.d13003 : "");
         setD13004(d129.equals("1") ? this.d13004 : "");
         setD13005(d129.equals("1") ? this.d13005 : "");
-        setD13098(d129.equals("1") ? this.d13098 : "");
+        setD13096(d129.equals("1") ? this.d13096 : "");
         notifyPropertyChanged(BR.d129);
     }
 
@@ -6819,25 +6819,25 @@ public class Form extends BaseObservable implements Observable {
     }
 
     @Bindable
-    public String getD13098() {
-        return d13098;
+    public String getD13096() {
+        return d13096;
     }
 
-    public void setD13098(String d13098) {
-        if (this.d13098.equals(d13098)) return; // for all checkboxes
-        this.d13098 = d13098;
-        setD13098x(d13098.equals("96") ? this.d13098x : ""); // for all skips, mention all skipped questions
-        notifyPropertyChanged(BR.d13098);
+    public void setD13096(String d13096) {
+        if (this.d13096.equals(d13096)) return; // for all checkboxes
+        this.d13096 = d13096;
+        setD13096x(d13096.equals("96") ? this.d13096x : ""); // for all skips, mention all skipped questions
+        notifyPropertyChanged(BR.d13096);
     }
 
     @Bindable
-    public String getD13098x() {
-        return d13098x;
+    public String getD13096x() {
+        return d13096x;
     }
 
-    public void setD13098x(String d13098x) {
-        this.d13098x = d13098x;
-        notifyPropertyChanged(BR.d13098x);
+    public void setD13096x(String d13096x) {
+        this.d13096x = d13096x;
+        notifyPropertyChanged(BR.d13096x);
     }
 
     @Bindable
@@ -8580,8 +8580,8 @@ public class Form extends BaseObservable implements Observable {
         setE12503(e12598.equals("98") ?  "" : this.e12503);
         setE12504(e12598.equals("98") ?  "" : this.e12504);
         setE12505(e12598.equals("98") ?  "" : this.e12505);
-        setE12596(e12598.equals("98") ?  "" : this.e12596);
-        notifyPropertyChanged(BR.e12596);
+        setE12596(e12598.equals("98") ? "" : this.e12596);
+        notifyPropertyChanged(BR.e12598);
     }
     @Bindable
     public String getE126() {
@@ -9807,8 +9807,8 @@ public class Form extends BaseObservable implements Observable {
             this.d13003 = json.getString("d13003");
             this.d13004 = json.getString("d13004");
             this.d13005 = json.getString("d13005");
-            this.d13098 = json.getString("d13098");
-            this.d13098x = json.getString("d13098x");
+            this.d13096 = json.getString("d13096");
+            this.d13096x = json.getString("d13096x");
         }
     }
 
@@ -10483,8 +10483,8 @@ public class Form extends BaseObservable implements Observable {
                 .put("d13003", d13003)
                 .put("d13004", d13004)
                 .put("d13005", d13005)
-                .put("d13098", d13098)
-                .put("d13098x", d13098x);
+                .put("d13096", d13096)
+                .put("d13096x", d13096x);
         return json.toString();
     }
 

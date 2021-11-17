@@ -759,7 +759,7 @@ Ice Cream parlor/shop etc.
     <string name="d10601">Government</string>
     <string name="d10602">Own Farms </string>
     <string name="d10603">Growers</string>
-    <string name="sd10604">Wheat grain middleman/dealer</string>
+    <string name="d10604">Wheat grain middleman/dealer</string>
     <string name="d10696">Other specify </string>
     <string name="d107">Who are buyers of your biofortified wheat grain? </string>
     <string name="d10701">Government</string>
@@ -906,7 +906,7 @@ Ice Cream parlor/shop etc.
     <string name="d12702">No </string>
     <string name="d12798">Don’t Know</string>
     <string name="d128">If yes with which department it is registered?</string>
-    <string name="d1208">Sindh Food department </string>
+    <string name="d12801">Sindh Food department </string>
     <string name="d12802">Sindh Food control Authority </string>
     <string name="d12803">Agriculture Department </string>
     <string name="d12804">Securities and Exchange Commission of Pakistan</string>
@@ -921,7 +921,7 @@ Ice Cream parlor/shop etc.
     <string name="d13003">Agri input association </string>
     <string name="d13004">Seed Association of Pakistan </string>
     <string name="d13005">Chamber of commerce</string>
-    <string name="d13098">Other specify </string>
+    <string name="d13096">Other specify </string>
     <string name="sectionetitle">WHEAT GROWER/FARMER</string>
     <string name="secet1">Wheat Grower Own Land
 Wheat Grower Landless (Sharecropper)</string>
@@ -1119,7 +1119,7 @@ Wheat Grower Landless (Sharecropper)</string>
     <string name="e13305">Flourmill </string>
     <string name="e13306">Seed companies/Dealers </string>
     <string name="e13307">Other wheat grain dealers/businessman</string>
-    <string name="e13308">Other specify </string>
+    <string name="e13396">Other specify </string>
     <string name="e13398">Don’t Know </string>
     <string name="e134">In what price (p/mound) you sold biofortified wheat grain last time?  </string>
     <string name="e134ins">P/Mound Rate. Rs</string>

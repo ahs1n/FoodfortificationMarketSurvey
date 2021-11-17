@@ -139,6 +139,12 @@
                                 android:text="@string/d119" />
                         </LinearLayout>
 
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/d119_info" />
+
                         <LinearLayout
                             android:id="@+id/d119check"
                             android:layout_width="match_parent"
@@ -1364,7 +1370,7 @@
                                 android:layout_height="wrap_content"
                                 android:checked="@{form.d12801.equals(`1`)}"
                                 android:onClick="@{()->form.setD12801(form.d12801.equals(`1`)?``:`1`)}"
-                                android:text="@string/d1208" />
+                                android:text="@string/d12801" />
 
                             <CheckBox
                                 android:id="@+id/d12802"
@@ -1557,19 +1563,19 @@
                                 android:id="@+id/d13098"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:checked="@{form.d13098.equals(`96`)}"
-                                android:onClick="@{()->form.setD13098(form.d13098.equals(`96`)?``:`96`)}"
-                                android:text="@string/d13098" />
+                                android:checked="@{form.d13096.equals(`96`)}"
+                                android:onClick="@{()->form.setD13096(form.d13096.equals(`96`)?``:`96`)}"
+                                android:text="@string/d13096" />
 
                             <EditText
                                 android:id="@+id/d13098x"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789,. "
-                                android:hint="@string/d13098"
+                                android:hint="@string/d13096"
                                 android:tag="d13098"
-                                android:text="@={form.d13098x}"
-                                android:visibility="@{form.d13098.equals(`96`) ? View.VISIBLE : View.GONE}" />
+                                android:text="@={form.d13096x}"
+                                android:visibility="@{form.d13096.equals(`96`) ? View.VISIBLE : View.GONE}" />
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
