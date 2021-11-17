@@ -362,6 +362,12 @@
                                 android:text="@string/b104" />
                         </LinearLayout>
 
+                        <TextView
+                            style="@style/info"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/b104t" />
+
                         <LinearLayout
                             android:id="@+id/b104check"
                             android:layout_width="match_parent"
