@@ -101,10 +101,10 @@
     <string name="a11504">کارپوریشن</string>
     <string name="a116">کتنے سالوں سے کاروبار چل رہا ہے؟</string>
     <string name="a117">کاروبار کے آؤٹ لیٹس کی کل تعداد؟</string>
-    <string name="a11701"></string>
-    <string name="a11702"></string>
-    <string name="a11703"></string>
-    <string name="a11704"></string>
+    <string name="a11701">1</string>
+    <string name="a11702">2-5</string>
+    <string name="a11703">6-10</string>
+    <string name="a11704">10 سے زیادہ</string>
     <string name="a118">اس کاروبار میں کتنے لوگ کام کرتے ہیں؟</string>
     <string name="a11801">لوگوں کی کل تعداد </string>
     <string name="a11802"> مرد </string>
@@ -154,8 +154,8 @@
     <string name="a12402">کوئی فرد یا باصلاحیت جواب دہندہ موجود نہیں </string>
     <string name="a12403"></string>
     <string name="a12404">انکار کردیا</string>
-    <string name="a12405"></string>
-    <string name="a12406"></string>
+    <string name="a12405">بزنس آؤٹ لیٹ نہیں ملا</string>
+    <string name="a12406">نامکمل</string>
     <string name="a12496">دیگر وضاحت کریں </string>
     <string name="sectionbtitle">سیکشن- بی: گندم کے آٹے کی چکی/فلور مل</string>
     <string name="sectionbins">رسمی گندم کے آٹے کی چکی
@@ -304,7 +304,7 @@
     <string name="b12205">گھریلو صارفین</string>
     <string name="b12296">دیگر وضاحت کریں </string>
     <string name="b12298">معلوم نہیں</string>
-    <string name="b123_info">Fill all boxes if no fill “00”</string>
+    <string name="b123_info">اگرشامل نہ ہو تو "00" لکھیں، تمام خانوں کو پُر کریں</string>
     <string name="b123">اوسطا، ہر قسم کے گندم کے فورٹیفائیڈ آٹے / مصنوعات کی کتنی مقدار (منوں میں) آپ ایک مہینے میں فروخت کرتے ہیں؟</string>
     <string name="b12301">(پورے گندم کا آٹا (سادہ باریک)</string>
     <string name="b12302">خالص عمدہ آٹا (سفید)</string>
@@ -380,7 +380,7 @@
     <string name="b13303">شاپ کیپرز/دکاندار ایسوسی ایشن</string>
     <string name="b13304">تھوک فروش/خوردہ فروش</string>
     <string name="b13396">دیگر وضاحت کریں </string>
-    <string name="b13398">Don’t Know </string>
+    <string name="b13398">معلوم نہیں </string>
     <string name="sectionctitle">سیکشن- سی: گندم کے آٹے اور اس سے بنی مصنوعات کے مرچنٹ</string>
     <string name="seccins">گندم کا آٹا/کریانہ کی دکان (تھوک فروش/خوردہ فروش) بشمول سپر مارٹ
 گندم کے آٹے سے بنی ہوئی مصنوعات کی دکانیں
@@ -620,11 +620,11 @@
     <string name="c149">کیا یہ اشیاء گندم کے فورٹیفائڈ آٹے سے بنی ہوئی ہیں؟</string>
     <string name="c14901">ہاں</string>
     <string name="c14902">نہیں</string>
-    <string name="c150">Is this business is registered with any department of Government?</string>
+    <string name="c150">کیا یہ کاروبار حکومت کے کسی بھی محکمے کے ساتھ رجسٹرڈ ہے؟</string>
     <string name="c15001">ہاں</string>
     <string name="c15002">نہیں</string>
     <string name="c15098">معلوم نہیں</string>
-    <string name="c151">If yes with which department it is registered?</string>
+    <string name="c151">اگر ہاں تو یہ کس محکمہ میں رجسٹرڈ ہے؟</string>
     <string name="c15101">محکمہ خوراک سندھ</string>
     <string name="c15102">سندھ فوڈ کنٹرول اتھارٹی</string>
     <string name="c15103">سیکیورٹیزاینڈ ایکسچینج کمیشن آف پاکستان </string>
@@ -736,7 +736,7 @@
     <string name="d11505">  دیگربیج کے ڈیلر</string>
     <string name="d11596"> دیگر وضاحت کریں </string>
     <string name="d11598">معلوم نہیں</string>
-    <string name="d116_info">Rate by the Volume of wheat seed from 1-5 if no enter “0”</string>
+    <string name="d116_info">گندم کے بیج کے حجم سے 1سے 5 تک درجہ دیں اگر نہیں تو "0" درج کریں</string>
     <string name="d116">آپ کے ضلع میں گندم کے بیج سپلائرز کے ذرائع کو حجم کے لحاظ سے درجہ بندی کریں؟</string>
     <string name="d11601">حکومت</string>
     <string name="d11602"> بیج کی کمپنیاں</string>
@@ -745,8 +745,8 @@
     <string name="d11605">کاشتکاراپنا بیج استعمال کرتے ہیں </string>
     <string name="d11696"> دیگر وضاحت کریں </string>
     <string name="d11698">معلوم نہیں</string>
-    <string name="d117_info">Fill all boxes if no fill “00”</string>
-    <string name="d117"></string>
+    <string name="d117_info">تمام خانوں کو پُر کریں اگرنہیں ہے تو "00" بھریں</string>
+    <string name="d117">آپ کے ضلع کی مارکیٹ میں تمام اسٹیک ہولڈرز کی طرف سے فراہم کردہ گندم کے بیج کا تقریبا فیصد حصہ کتنا ہے؟</string>
     <string name="d11701">حکومت</string>
     <string name="d11702"> بیج کی کمپنیاں</string>
     <string name="d11703">مقامی پرائیویٹ ڈیلرز</string>
@@ -820,7 +820,7 @@
     <string name="d128">اگر ہاں تو یہ کس محکمہ میں رجسٹرڈ ہے؟</string>
     <string name="d12801"> محکمہ خوراک سندھ</string>
     <string name="d12802">سندھ فوڈ کنٹرول اتھارٹی</string>
-    <string name="d12803"></string>
+    <string name="d12803">محکمہ زراعت</string>
     <string name="d12804">سیکیورٹیزاینڈ ایکسچینج کمیشن آف پاکستان </string>
     <string name="d12896">دیگر وضاحت کریں</string>
     <string name="d129">کیا اس کاروبار کی کسی انجمن کے ساتھ رکنیت ہے؟</string>
@@ -890,7 +890,7 @@
     <string name="e10810">ادھارپہ ملتا ہے </string>
     <string name="e10896"> دیگر وضاحت کریں </string>
     <string name="e10898">معلوم نہیں</string>
-    <string name="e109_info">Rate the influence factor by its importance from 1-5 if no enter “0”</string>
+    <string name="e109_info">عوامل کی اہمیت سے 1سے 5 تک درجہ دیں اگر نہیں تو "0" درج کریں</string>
     <string name="e109">وہ کون سے عوامل ہیں جو آپ کے گندم کے بیج کے انتخاب کے فیصلے پر اثرانداز ہوتے ہیں؟</string>
     <string name="e10901">غذائیت کی مقدار </string>
     <string name="e10902">مسابقتی قیمت</string>
@@ -959,9 +959,9 @@
     <string name="e12006">اخبار / میگزین</string>
     <string name="e12007">کمیو نٹی ورکرز </string>
     <string name="e12008">دوست/خاندان/رشتے دار </string>
-    <string name="e12009"></string>
-    <string name="e12010"></string>
-    <string name="e12011"></string>
+    <string name="e12009">محکمہ خوراک</string>
+    <string name="e12010">محکمہ زراعت</string>
+    <string name="e12011">این جی او</string>
     <string name="e12096">دیگر وضاحت کریں</string>
     <string name="e121">کیا آپ کے خاندان نے کبھی بھی زرعی زمین میں بائیوفورٹیفائیڈ گندم  کی جنس کی کاشت کی ؟</string>
     <string name="e12101">ہاں</string>

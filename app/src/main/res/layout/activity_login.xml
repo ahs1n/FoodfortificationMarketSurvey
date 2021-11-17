@@ -228,7 +228,7 @@ f
                                 android:paddingStart="12dp"
                                 android:paddingEnd="12dp"
                                 android:text="@string/downData"
-                                android:textColor="@color/white" />
+                                android:textColor="@color/colorPrimary" />
                         </LinearLayout>
 
 
