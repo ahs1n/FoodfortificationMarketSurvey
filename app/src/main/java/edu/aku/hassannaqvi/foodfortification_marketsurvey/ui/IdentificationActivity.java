@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -77,6 +78,7 @@ public class IdentificationActivity extends AppCompatActivity {
 
         }
 
+        setupListeners();
       /*  bi.a105.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -116,6 +118,15 @@ public class IdentificationActivity extends AppCompatActivity {
 */
 
     }
+
+    private void setupListeners() {
+
+        bi.ebCheck.setOnCheckedChangeListener((compoundButton, b) -> {
+            Clear.clearAllFields(bi.a105, !b);
+        });
+
+    }
+
 
     private void populateSpinner() {
         Log.d(TAG, "populateSpinner: ");
