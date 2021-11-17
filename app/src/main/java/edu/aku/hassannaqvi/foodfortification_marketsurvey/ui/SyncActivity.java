@@ -146,7 +146,13 @@ public class SyncActivity extends AppCompatActivity {
 
                 // Forms
                 uploadTables.add(new SyncModel(FormsTable.TABLE_NAME));
-                MainApp.uploadData.add(db.getUnsyncedForms());
+                try {
+                    MainApp.uploadData.add(db.getUnsyncedForms());
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Log.d(TAG, "ProcessStart: JSONException(Forms): "+e.getMessage());
+                    Toast.makeText(this, "JSONException(Forms): "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
 
                 MainApp.downloadData = new String[uploadData.size()];
 

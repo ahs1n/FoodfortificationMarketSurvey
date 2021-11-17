@@ -9113,7 +9113,7 @@ public class Form extends BaseObservable implements Observable {
 
     public void setDistCode(String distCode) {
         this.distCode = distCode;
-        notifyPropertyChanged(BR.ebCode);
+        notifyPropertyChanged(BR.distCode);
     }
 
     @Bindable
@@ -9123,7 +9123,7 @@ public class Form extends BaseObservable implements Observable {
 
     public void setTehsilCode(String tehsilCode) {
         this.tehsilCode = tehsilCode;
-        notifyPropertyChanged(BR.hhid);
+        notifyPropertyChanged(BR.tehsilCode);
     }
 
     @Bindable

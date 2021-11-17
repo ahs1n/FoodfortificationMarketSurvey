@@ -17,7 +17,6 @@ import java.io.File;
 import java.util.List;
 
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.BuildConfig;
-import edu.aku.hassannaqvi.foodfortification_marketsurvey.models.FamilyMembers;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.models.Form;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.models.Users;
 
@@ -45,7 +44,6 @@ public class MainApp extends Application {
     public static File sdDir;
     public static String[] downloadData;
     public static Form form;
-    public static FamilyMembers familyMember;
 
     //public static Samples samples;
 
@@ -64,24 +62,7 @@ public class MainApp extends Application {
     public static boolean permissionCheck = false;
     public static int idType = 0;
 
-    public static List<String> subjectNames;
-    public static List<FamilyMembers> familyList;
-    public static List<Integer> mwraList;
-    public static List<Integer> childOfSelectedMWRAList;
-    public static List<FamilyMembers> fatherList;
-    public static List<FamilyMembers> motherList;
-    //public static FamilyMembers familyMember;
-    public static int memberCount = 0;
-    public static String selectedMWRA;
-    public static String selectedChild;
-    public static int memberCountComplete;
-    public static boolean memberComplete;
-    //public static int mwraCount;
-    public static FamilyMembers mwra;
-    /*public static RandomHH currentHousehold;
-    public static List<FoodConsumption> foodConsumption;*/
-    public static int foodIndex;
-    public static boolean hhheadSelected = false;
+
 
 
     public static void hideSystemUI(View decorView) {
