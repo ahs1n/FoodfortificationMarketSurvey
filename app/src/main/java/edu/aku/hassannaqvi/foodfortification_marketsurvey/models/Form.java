@@ -111,6 +111,7 @@ public class Form extends BaseObservable implements Observable {
     private String b10202 = _EMPTY_;
     private String b10203 = _EMPTY_;
     private String b10296 = _EMPTY_;
+    private String b10296x = _EMPTY_;
     private String b103 = _EMPTY_;
     private String b10396x = _EMPTY_;
     private String b104 = _EMPTY_;
@@ -1358,7 +1359,19 @@ public class Form extends BaseObservable implements Observable {
     public void setB10296(String b10296) {
         if (this.b10296.equals(b10296)) return; // for all checkboxes
         this.b10296 = b10296;
+        setB10296x(b10296.equals("96") ? this.b10296x : ""); // for all skips, mention all skipped questions
         notifyPropertyChanged(BR.b10296);
+    }
+
+    @Bindable
+    public String getB10296x() {
+        return b10296x;
+    }
+
+    public void setB10296x(String b10296x) {
+        if (this.b10296x.equals(b10296x)) return; // for all checkboxes
+        this.b10296x = b10296x;
+        notifyPropertyChanged(BR.b10296x);
     }
 
     @Bindable
@@ -9346,6 +9359,7 @@ public class Form extends BaseObservable implements Observable {
             this.b10202 = json.getString("b10202");
             this.b10203 = json.getString("b10203");
             this.b10296 = json.getString("b10296");
+            this.b10296x = json.getString("b10296x");
             this.b103 = json.getString("b103");
             this.b10396x = json.getString("b10396x");
             //this.b104 = json.getString("b104");
@@ -10028,6 +10042,7 @@ public class Form extends BaseObservable implements Observable {
                 .put("b10202", b10202)
                 .put("b10203", b10203)
                 .put("b10296", b10296)
+                .put("b10296x", b10296x)
                 .put("b103", b103)
                 .put("b10396x", b10396x)
                 .put("b10401", b10401)
