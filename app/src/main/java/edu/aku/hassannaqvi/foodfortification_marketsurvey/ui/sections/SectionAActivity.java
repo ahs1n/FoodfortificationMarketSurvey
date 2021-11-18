@@ -109,6 +109,10 @@ public class SectionAActivity extends AppCompatActivity {
         return true;
     }
 
+    private boolean formValidationEnd() {
+        return Validator.emptyCheckingContainer(this, bi.GrpName01);
+    }
+
 
     private void saveDraft() {
     }
@@ -142,7 +146,15 @@ public class SectionAActivity extends AppCompatActivity {
 
 
     public void btnEnd(View view) {
-       finish();
-        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+        if (!formValidationEnd()) return;
+        if (!insertNewRecord()) return;
+        if (updateDB()) {
+            finish();
+            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+        }
+       /*finish();
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));*/
     }
 }

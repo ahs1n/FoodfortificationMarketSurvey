@@ -53,458 +53,463 @@
                 android:orientation="vertical">
 
 
+                <TextView
+                    style="@style/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secains" />
 
-                        <TextView
-                            style="@style/info"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/secains" />
+                <LinearLayout
+                    android:id="@+id/GrpName01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                <!-- a101  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa101"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <!-- a101  Title   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVa101"
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_a101" />
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/a101" />
-
-                            <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
-                                android:id="@+id/a101"
-                                android:layout_width="0dp"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="2"
-                                android:gravity="center"
-                                android:hint="YYYY-MM-DD"
-                                android:text="@={form.a101}"
-                                app:dateFormat="yyyy-MM-dd"
-                                app:maxDate="CR_DATE"
-                                app:minDate="CR_DATE" />
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_a101" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/a101" />
+
+                                <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+                                    android:id="@+id/a101"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:hint="YYYY-MM-DD"
+                                    android:text="@={form.a101}"
+                                    app:dateFormat="yyyy-MM-dd"
+                                    app:maxDate="CR_DATE"
+                                    app:minDate="CR_DATE" />
+                            </LinearLayout>
+
+                            <!--<LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="ltr"
+                                android:orientation="horizontal"
+                                android:textDirection="ltr">
+
+                                <TextView
+                                    style="@style/sub_labels"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/a101d" />
+
+                                <TextView
+                                    style="@style/sub_labels"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/a101m" />
+
+                                <TextView
+                                    style="@style/sub_labels"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/a101y" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layoutDirection="ltr"
+                                android:orientation="horizontal"
+                                android:textDirection="ltr">
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/a101d"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:hint="##"
+                                    android:inputType="number"
+                                    android:maxLength="2"
+                                    android:text="@={form.a101d}"
+                                    app:maxValue="31"
+                                    app:minValue="1"
+                                    app:type="range" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/a101m"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:hint="##"
+                                    android:inputType="number"
+                                    android:maxLength="2"
+                                    android:text="@={form.a101m}"
+                                    app:maxValue="12"
+                                    app:minValue="1"
+                                    app:type="range" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/a101y"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:hint="##"
+                                    android:inputType="number"
+                                    android:maxLength="4"
+                                    android:text="@={form.a101y}"
+                                    app:maxValue="2021"
+                                    app:minValue="2021"
+                                    app:type="range" />
+                            </LinearLayout>-->
                         </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
-                        <!--<LinearLayout
+                    <!-- a102  Title   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVa102"
+                        style="@style/cardView">
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layoutDirection="ltr"
-                            android:orientation="horizontal"
-                            android:textDirection="ltr">
+                            android:orientation="vertical">
 
-                            <TextView
-                                style="@style/sub_labels"
-                                android:layout_width="0dp"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="@string/a101d" />
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
 
-                            <TextView
-                                style="@style/sub_labels"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="@string/a101m" />
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_a102" />
 
-                            <TextView
-                                style="@style/sub_labels"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="@string/a101y" />
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/a102" />
+
+                                <io.blackbox_vision.datetimepickeredittext.view.TimePickerEditText
+                                    android:id="@+id/a102"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:hint="HH:mm"
+                                    android:text="@={form.a102}"
+                                    app:timeFormat="HH:mm" />
+                            </LinearLayout>
                         </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- a103  Input-Numeric   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVa103"
+                        style="@style/cardView">
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layoutDirection="ltr"
-                            android:orientation="horizontal"
-                            android:textDirection="ltr">
+                            android:orientation="vertical">
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/a101d"
-                                android:layout_width="0dp"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:hint="##"
-                                android:inputType="number"
-                                android:maxLength="2"
-                                android:text="@={form.a101d}"
-                                app:maxValue="31"
-                                app:minValue="1"
-                                app:type="range" />
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/a101m"
-                                android:layout_width="0dp"
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_a103" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/a103" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:hint="##"
-                                android:inputType="number"
-                                android:maxLength="2"
-                                android:text="@={form.a101m}"
-                                app:maxValue="12"
-                                app:minValue="1"
-                                app:type="range" />
-
-                            <com.edittextpicker.aliazaz.EditTextPicker
-                                android:id="@+id/a101y"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:hint="##"
-                                android:inputType="number"
-                                android:maxLength="4"
-                                android:text="@={form.a101y}"
-                                app:maxValue="2021"
-                                app:minValue="2021"
-                                app:type="range" />
-                        </LinearLayout>-->
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <!-- a102  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa102"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_a102" />
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/a102" />
-
-                            <io.blackbox_vision.datetimepickeredittext.view.TimePickerEditText
-                                android:id="@+id/a102"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="2"
-                                android:gravity="center"
-                                android:hint="HH:mm"
-                                android:text="@={form.a102}"
-                                app:timeFormat="HH:mm" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <!-- a103  Input-Numeric   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa103"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_a103" />
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/a103" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
-                            android:text="@string/a103a" />
-
-                        <EditText
-                            android:id="@+id/a103a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/a103a"
-                            android:text="@={form.a103a}" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <!-- a104  Input   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa104"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_a104" />
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/a104" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/a104a" />
-
-                        <EditText
-                            android:id="@+id/a104a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/a104a"
-                            android:text="@={form.a104a}" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <!-- a105  Input   -->
-                <!--<androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa105"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_a105" />
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/a105" />
-                        </LinearLayout>
-
-                        <EditText
-                            android:id="@+id/a105"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:hint="@string/a105"
-                            android:text="@={form.a105}" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>-->
-
-                <!-- a106  Input
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa106"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_a106" />
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/a106" />
+                                android:layout_marginTop="12dp"
+                                android:text="@string/a103a" />
 
                             <EditText
-                                android:id="@+id/a106"
-                                android:layout_width="0dp"
+                                android:id="@+id/a103a"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="2"
-                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz "
-                                android:hint="@string/a106"
-                                android:text="@={form.a106}" />
+                                android:hint="@string/a103a"
+                                android:text="@={form.a103a}" />
                         </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
-                &lt;!&ndash; a107  Input   &ndash;&gt;
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa107"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <!-- a104  Input   -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVa104"
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_a104" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/a104" />
+                            </LinearLayout>
 
                             <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_a107" />
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/a107" />
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/a104a" />
 
                             <EditText
-                                android:id="@+id/a107"
-                                android:layout_width="0dp"
+                                android:id="@+id/a104a"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="2"
-                                android:hint="@string/a107"
-                                android:text="@={form.a107}" />
+                                android:hint="@string/a104a"
+                                android:text="@={form.a104a}" />
                         </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
-                &lt;!&ndash; a108  Input   &ndash;&gt;
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa108"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <!-- a105  Input   -->
+                    <!--<androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVa105"
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_a108" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
 
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/a108" />
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_a105" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/a105" />
+                            </LinearLayout>
 
                             <EditText
-                                android:id="@+id/a108"
-                                android:layout_width="0dp"
+                                android:id="@+id/a105"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="2"
-                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz "
-                                android:hint="@string/a108"
-                                android:text="@={form.a108}" />
+                                android:hint="@string/a105"
+                                android:text="@={form.a105}" />
                         </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>-->
 
-                &lt;!&ndash; a109  Input   &ndash;&gt;
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVa109"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <!-- a106  Input
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVa106"
+                        style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/bottom"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <TextView
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:text="@string/Q_a109" />
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:text="@string/a109" />
-
-                            <EditText
-                                android:id="@+id/a109"
-                                android:layout_width="0dp"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="2"
-                                android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz "
-                                android:hint="@string/a109"
-                                android:text="@={form.a109}" />
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_a106" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/a106" />
+
+                                <EditText
+                                    android:id="@+id/a106"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz "
+                                    android:hint="@string/a106"
+                                    android:text="@={form.a106}" />
+                            </LinearLayout>
                         </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>-->
+                    </androidx.cardview.widget.CardView>
+
+                    &lt;!&ndash; a107  Input   &ndash;&gt;
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVa107"
+                        style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_a107" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/a107" />
+
+                                <EditText
+                                    android:id="@+id/a107"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:hint="@string/a107"
+                                    android:text="@={form.a107}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    &lt;!&ndash; a108  Input   &ndash;&gt;
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVa108"
+                        style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_a108" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/a108" />
+
+                                <EditText
+                                    android:id="@+id/a108"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz "
+                                    android:hint="@string/a108"
+                                    android:text="@={form.a108}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    &lt;!&ndash; a109  Input   &ndash;&gt;
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVa109"
+                        style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bottom"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    style="@style/quesNum"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/Q_a109" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:text="@string/a109" />
+
+                                <EditText
+                                    android:id="@+id/a109"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:digits="AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz "
+                                    android:hint="@string/a109"
+                                    android:text="@={form.a109}" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>-->
 
                     <!-- a111  Input   -->
                     <androidx.cardview.widget.CardView
@@ -584,10 +589,11 @@
                                 android:text="@={form.a112}"
                                 android:onTextChanged="@{callback::ageSkip}"
                                 app:maxValue="99"
-                                app:minValue="18"
+                                app:minValue="0"
                                 app:type="range" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
+                </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/fldGrpCVa11201"
