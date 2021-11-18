@@ -95,7 +95,7 @@
     <string name="a114">کاروباری آؤٹ لیٹ/دکان کا نام</string>
     <string name="a114a">کاروبار/آؤٹ لیٹ/دکان نمبر</string>
     <string name="a115">کاروباری ادارے کی قسم؟</string>
-    <string name="a11501">نہا ملکیت</string>
+    <string name="a11501">تنہا ملکیت</string>
     <string name="a11502">شراکت داری</string>
     <string name="a11503">کمپنی</string>
     <string name="a11504">کارپوریشن</string>
@@ -111,7 +111,7 @@
     <string name="a11803">عورت</string>
     <string name="a119">کاروباری ڈھانچے/دکان کا سائز کتنا ہے؟ (مربع گز میں)</string>
     <string name="a11901">سائز (مربع گز میں)</string>
-    <string name="a11902">سائز (مربع فث میں)</string>
+    <string name="a11902">سائز (مربع فٹ میں)</string>
     <string name="a11903">سائز (ایکڑ میں)</string>
     <string name="a120">آپ کا کاروبار کس مالیاتی ماڈل کے تحت چل رہا ہے؟</string>
     <string name="a120ins">تین بیاناتی ماڈل مالیاتی ماڈلنگ کی ایک قسم ہے جو تین اہم مالیاتی بیانات جیسے انکم اسٹیٹمنٹ، بیلنس شیٹ اور کیش فلو اسٹیٹمنٹ کو جوڑتی ہے</string>
@@ -124,7 +124,7 @@
     <string name="a12005">صرف نقد رقم رکارڈ رکھے بغیر </string>
     <string name="a12006">صرف بینک رکارڈ رکھے بغیر </string>
     <string name="a12007">نقد اور بینک دونوں رکارڈ رکھے بغیر </string>
-    <string name="a12098">علوم نہیں</string>
+    <string name="a12098">معلوم نہیں</string>
     <string name="a12096"> دیگر وضاحت کریں </string>
     <string name="a121">کیا کاروبار دوسرے شہروں/اضلاع میں چلتا ہے؟</string>
     <string name="a12101">ہاں</string>
@@ -152,7 +152,7 @@
     <string name="a124_info">مکمل نہ ہونے کی صورت میں ٹیم لیڈر سے مشورہ کریں</string>
     <string name="a12401">مکمل</string>
     <string name="a12402">کوئی فرد یا باصلاحیت جواب دہندہ موجود نہیں </string>
-    <string name="a12403"></string>
+    <string name="a12403">بزنس آؤٹ لیٹ بند/مقفل ہے</string>
     <string name="a12404">انکار کردیا</string>
     <string name="a12405">بزنس آؤٹ لیٹ نہیں ملا</string>
     <string name="a12406">نامکمل</string>
@@ -181,7 +181,7 @@
     <string name="b10396">دیگر وضاحت کریں </string>
     <string name="b10398">معلوم نہیں</string>
     <string name="b104">عام طور پرآپ گندم کا اناج کہاں سے خریدتے ہیں؟</string>
-    <string name="b104t">گندم کی خریداری کے حجم کے مطابق درجہ بندی کریں (1-5)، اگر کسی ذریعہ سے نہیں خریدتےتو </string>
+    <string name="b104t">گندم کی خریداری کے حجم کے مطابق درجہ بندی کریں (1-5)، اگر کسی ذریعہ سے نہیں خریدتےتو "0" بھریں </string>
     <string name="b10401">حکومت سے</string>
     <string name="b10402">اپنے فارمزسے</string>
     <string name="b10403">شتکاروں سے</string>
@@ -285,7 +285,7 @@
     <string name="b121">آٹے کی فورٹیفکیشن میں آپ کتنی مقدار میں مائکرو نیوٹرینٹس/معدنیات (فی/100کلوگرام) شامل کرتے ہیں؟</string>
     <string name="b121_info">تمام خانوں کو پُر کریں اگرشامل نہ ہو تو &quot;00&quot; لکھیں </string>
     <string name="b12101">وٹامن اے</string>
-    <string name="b12102">وٹامن بی </string>
+    <string name="b12102">وٹامن بی 12</string>
     <string name="b12103">آئرن</string>
     <string name="b12104">فولک ایسڈ </string>
     <string name="b12105">زنک</string>
@@ -320,10 +320,10 @@
     <string name="b12402">نہیں </string>
     <string name="b12498">معلوم نہیں</string>
     <string name="b125">اگر ہاں تو قیمت میں کیا فرق ہے؟</string>
-    <string name="b12501">روپے فی/کلو</string>
-    <string name="b12502">روپے فی/کلو</string>
-    <string name="b12503">روپے فی/کلو </string>
-    <string name="b12504">روپے سے زیادہ فی/کلو</string>
+    <string name="b12501">1-5 روپے فی/کلو</string>
+    <string name="b12502">6-10 روپے فی/کلو</string>
+    <string name="b12503">11-20 روپے فی/کلو </string>
+    <string name="b12504">20 روپے سے زیادہ فی/کلو</string>
     <string name="b12598">معلوم نہیں</string>
     <string name="b126">گندم کے آٹے کی فورٹیفکیشن اور اس کی مارکیٹنگ میں بڑے چیلنجز کیا ہیں؟</string>
     <string name="b12601">شعورکی کمی</string>
@@ -728,7 +728,7 @@
     <string name="d11407">دیگربیج کی کمپنی</string>
     <string name="d11496">دیگر وضاحت کریں </string>
     <string name="d115">اپنے گندم کے بیج کے بڑے خریداروں کو حجم کے مطابق درجہ دیں جو آپ عام طور پر فروخت کرتے ہیں؟</string>
-    <string name="d115_info">حجم کے مطابق 1 سے 5 تک درجہ دیں اگر نہیں </string>
+    <string name="d115_info">حجم کے مطابق 1 سے 5 تک درجہ دیں اگر نہیں تو "0" درج کریں </string>
     <string name="d11501">چھوٹے کاشتکار</string>
     <string name="d11502">درمیانے/بڑے زمیندار </string>
     <string name="d11503">حکومت</string>
@@ -758,7 +758,7 @@
     <string name="d11801">ہاں</string>
     <string name="d11802">نہیں</string>
     <string name="d119">وہ کون سے عوامل ہیں جو کاشتکاروں کے گندم کے بیج کے انتخاب کے فیصلے پر اثرانداز ہوتے ہیں؟</string>
-    <string name="d119_info">عوامل کی اہمیت سے 1سے 5 تک درجہ دیں اگر نہیں تو </string>
+    <string name="d119_info">عوامل کی اہمیت سے 1 سے 5 تک درجہ دیں اگر نہیں تو "0" درج کریں</string>
     <string name="d11901">غذائیت کی مقدار </string>
     <string name="d11902">مسابقتی قیمت</string>
     <string name="d11903">زیادہ پیداوار</string>
