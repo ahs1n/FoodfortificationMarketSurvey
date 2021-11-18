@@ -9363,11 +9363,11 @@ public class Form extends BaseObservable implements Observable {
             this.b103 = json.getString("b103");
             this.b10396x = json.getString("b10396x");
             //this.b104 = json.getString("b104");
-            this.b10401 = json.getString("b10401x");
-            this.b10402 = json.getString("b10402x");
-            this.b10403 = json.getString("b10403x");
-            this.b10404 = json.getString("b10404x");
-            this.b10496 = json.getString("b104096");
+            this.b10401 = json.getString("b10401");
+            this.b10402 = json.getString("b10402");
+            this.b10403 = json.getString("b10403");
+            this.b10404 = json.getString("b10404");
+            this.b10496 = json.getString("b10496");
             this.b10496x = json.getString("b10496x");
             this.b10498 = json.getString("b10498");
             this.b10501 = json.getString("b10501");
