@@ -9543,6 +9543,7 @@ public class Form extends BaseObservable implements Observable {
             this.c10396 = json.getString("c10396");
             this.c10396x = json.getString("c10396x");
             this.c104 = json.getString("c104");
+            this.c105 = json.getString("c105");
             this.c106 = json.getString("c106");
             this.c10701 = json.getString("c10701");
             this.c10702 = json.getString("c10702");
@@ -9572,6 +9573,7 @@ public class Form extends BaseObservable implements Observable {
             this.c10898 = json.getString("c10898");
             this.c109 = json.getString("c109");
             this.c110 = json.getString("c110");
+            this.c111 = json.getString("c111");
             this.c11201 = json.getString("c11201");
             this.c11202 = json.getString("c11202");
             this.c11203 = json.getString("c11203");
@@ -9843,8 +9845,14 @@ public class Form extends BaseObservable implements Observable {
             this.e10601 = json.getString("e10601");
             this.e10602 = json.getString("e10602");
             this.e10603 = json.getString("e10603");
+            this.e10701 = json.getString("e10701");
+            this.e10702 = json.getString("e10702");
+            this.e10703 = json.getString("e10703");
+            this.e10704 = json.getString("e10704");
+            this.e10705 = json.getString("e10705");
             this.e10796 = json.getString("e10796");
             this.e10796x = json.getString("e10796x");
+            this.e10798 = json.getString("e10798");
             this.e10801 = json.getString("e10801");
             this.e10802 = json.getString("e10802");
             this.e10803 = json.getString("e10803");
@@ -10221,6 +10229,7 @@ public class Form extends BaseObservable implements Observable {
                 .put("c10396", c10396)
                 .put("c10396x", c10396x)
                 .put("c104", c104)
+                .put("c105", c105)
                 .put("c106", c106)
                 .put("c10701", c10701)
                 .put("c10702", c10702)
@@ -10250,6 +10259,7 @@ public class Form extends BaseObservable implements Observable {
                 .put("c10898", c10898)
                 .put("c109", c109)
                 .put("c110", c110)
+                .put("c111", c111)
                 .put("c11201", c11201)
                 .put("c11202", c11202)
                 .put("c11203", c11203)
@@ -10517,8 +10527,14 @@ public class Form extends BaseObservable implements Observable {
                 .put("e10601", e10601)
                 .put("e10602", e10602)
                 .put("e10603", e10603)
+                .put("e10701", e10701)
+                .put("e10702", e10702)
+                .put("e10703", e10703)
+                .put("e10704", e10704)
+                .put("e10705", e10705)
                 .put("e10796", e10796)
                 .put("e10796x", e10796x)
+                .put("e10798", e10798)
                 .put("e10801", e10801)
                 .put("e10802", e10802)
                 .put("e10803", e10803)
