@@ -108,9 +108,8 @@ public class SectionAActivity extends AppCompatActivity {
 
         return true;
     }
-
     private boolean formValidationEnd() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName01);
+     return Validator.emptyCheckingContainer(this, bi.GrpName01);
     }
 
 
