@@ -125,7 +125,6 @@ f
                                     android:paddingBottom="8dp"
                                     android:radius="2dp"
                                     android:singleLine="true"
-                                    android:text="test1234"
                                     android:textColor="@color/colorPrimary"
                                     android:textSize="18sp" />
 
@@ -156,7 +155,6 @@ f
                                         android:paddingBottom="8dp"
                                         android:radius="2dp"
                                         android:singleLine="true"
-                                        android:text="test1234"
                                         android:textColor="@color/colorPrimary"
                                         android:textSize="18sp" />
 
