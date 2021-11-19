@@ -1825,12 +1825,6 @@
                             android:layout_height="match_parent"
                             android:text="@string/d115_info" />
 
-                        <TextView
-                            style="@style/info"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="@string/d115_info" />
-
                         <LinearLayout
                             android:id="@+id/d115check"
                             android:layout_width="match_parent"

@@ -61,10 +61,10 @@
     <string name="istatusi">مکمل نہ ہونے کی صورت میں ٹیم لیڈر سے مشورہ کریں</string>
     <string name="istatus01">مکمل</string>
     <string name="istatus02">کوئی فرد یا باصلاحیت جواب دہندہ موجود نہیں </string>
-    <string name="istatus03"></string>
+    <string name="istatus03">بزنس آؤٹ لیٹ بند/مقفل ہے</string>
     <string name="istatus04">انکار کردیا</string>
-    <string name="istatus05"></string>
-    <string name="istatus06"></string>
+    <string name="istatus05">بزنس آؤٹ لیٹ نہیں ملا</string>
+    <string name="istatus06">نامکمل</string>
     <string name="istatus96">دیگر وضاحت کریں </string>
 
 
@@ -134,7 +134,7 @@
     <string name="a12202">نہیں</string>
     <string name="a123">کاروباری آؤٹ لیٹ/دکان کی قسم</string>
     <string name="a12301">رسمی گندم کے آٹے کی چکی </string>
-    <string name="a12302">یر رسمی گندم کے آٹے کی چکی </string>
+    <string name="a12302">غیر رسمی گندم کے آٹے کی چکی </string>
     <string name="a12303">گندم کے آٹے کا فلورمل </string>
     <string name="a12304">گندم کا آٹا فروخت/تقسیم کرنے والوں کی /کریانہ کی دکان (تھوک فروش)</string>
     <string name="a12305">گندم کے آٹے کی/کریانہ کی دکان (خوردہ فروش)</string>
@@ -173,7 +173,7 @@
     <string name="b10202">مصنوعات اور خدمات پر مبنی چکی/مل (پیسنے کی خدمات فراہم کرنا اور گندم کا آٹا فروخت کرنا) </string>
     <string name="b10203">بڑے پیمانے/تجارتی طور پرآٹا پیسنا</string>
     <string name="b10296">دیگر وضاحت کریں </string>
-    <string name="b103">کی/مل میں توانائی کا کون سا بڑا ذریعہ استعمال ہوتاہے؟</string>
+    <string name="b103">چکی/مل میں توانائی کا کون سا بڑا ذریعہ استعمال ہوتاہے؟</string>
     <string name="b10301"> بجلی</string>
     <string name="b10302">شمسی توانائی</string>
     <string name="b10303">ونڈ مل</string>
