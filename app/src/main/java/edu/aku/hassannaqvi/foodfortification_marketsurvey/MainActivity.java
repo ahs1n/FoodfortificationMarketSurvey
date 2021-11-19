@@ -42,7 +42,9 @@ public class MainActivity extends AppCompatActivity {
         //getSupportActionBar().setIcon(R.drawable.app_icon);
 //        bi.adminView.setVisibility(MainApp.admin ? View.VISIBLE : View.GONE);
         bi.toolbar.setSubtitle("Welcome, " + MainApp.user.getFullname() + (MainApp.admin ? " (Admin)" : "") + "!");
-        bi.dbManager.setVisibility(MainApp.admin ? View.VISIBLE : View.GONE);
+        //bi.dbManager.setVisibility(MainApp.admin ? View.VISIBLE : View.GONE);
+
+        invalidateOptionsMenu();
     }
 
     public void sectionPress(View view) {
@@ -154,7 +156,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.item_menu, menu);
-        return super.onCreateOptionsMenu(menu);
+        MenuItem action_database = menu.findItem(R.id.action_database);
+
+        action_database.setVisible(MainApp.admin);
+        return true;
     }
 
 }
