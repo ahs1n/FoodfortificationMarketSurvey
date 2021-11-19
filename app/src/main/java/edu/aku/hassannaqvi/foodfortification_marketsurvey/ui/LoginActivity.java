@@ -341,8 +341,8 @@ public class LoginActivity extends AppCompatActivity {
                     || (username.equals("test1234") && password.equals("test1234"))
                     || db.doLogin(username, password)
             ) {
-                MainApp.admin = username.contains("@") || username.contains("test1234");
                 MainApp.user.setUserName(username);
+                MainApp.admin = username.contains("@") || username.contains("test1234");
 
                 Intent iLogin = new Intent(edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.LoginActivity.this, MainActivity.class);
                 startActivity(iLogin);

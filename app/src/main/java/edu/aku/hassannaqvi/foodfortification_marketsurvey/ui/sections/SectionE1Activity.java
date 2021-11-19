@@ -89,10 +89,12 @@ public class SectionE1Activity extends AppCompatActivity {
         if (!Validator.emptyCheckingContainer(this, bi.GrpName))
             return false;
 
-        int total = Integer.parseInt(bi.e10602.getText().toString()) + Integer.parseInt(bi.e10603.getText().toString());
+        if (form.getE102().equals("1")) {
+            int total = Integer.parseInt(bi.e10602.getText().toString()) + Integer.parseInt(bi.e10603.getText().toString());
 
-        if (total != Integer.parseInt(bi.e10601.getText().toString()))
-            return Validator.emptyCustomTextBox(this, bi.e10601, "Invalid count");
+            if (total != Integer.parseInt(bi.e10601.getText().toString()))
+                return Validator.emptyCustomTextBox(this, bi.e10601, "Invalid count");
+        }
 
         return true;
     }
