@@ -17,7 +17,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.contracts.TableContracts.EnumBlocksTable;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.contracts.TableContracts.FormsTable;
@@ -148,7 +147,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String having = null;
         String orderBy = UsersTable.COLUMN_ID + " ASC";
 
-        Users loggedInUser = null;
+        Users loggedInUser = new Users();
         try {
             c = db.query(
                     UsersTable.TABLE_NAME,  // The table to query
