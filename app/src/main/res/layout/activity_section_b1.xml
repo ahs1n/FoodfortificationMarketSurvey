@@ -913,11 +913,11 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/b10601"
                                 android:inputType="number"
-                                android:maxLength="4"
+                                android:maxLength="5"
                                 android:tag="b10601"
                                 android:text="@={form.b10601x}"
                                 android:visibility="@{form.b106.equals(`1`) ? View.VISIBLE : View.GONE}"
-                                app:maxValue="9999"
+                                app:maxValue="99999"
                                 app:minValue="0"
                                 app:type="range" />
 

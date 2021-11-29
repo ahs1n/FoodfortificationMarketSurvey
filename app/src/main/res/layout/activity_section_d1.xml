@@ -2645,12 +2645,12 @@
                                     android:layout_weight="1"
                                     android:enabled="@{!form.d11798.equals(`98`)}"
                                     android:gravity="center"
-                                    android:hint="#"
+                                    android:hint="##"
                                     android:inputType="number"
-                                    android:maxLength="1"
+                                    android:maxLength="2"
                                     android:text="@={form.d11701x}"
                                     app:maxValue="99"
-                                    app:minValue="0"
+                                    app:minValue="00"
                                     app:type="range" />
                             </LinearLayout>
 
