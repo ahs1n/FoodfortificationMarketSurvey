@@ -2673,12 +2673,12 @@
                                     android:layout_weight="1"
                                     android:enabled="@{!form.d11798.equals(`98`)}"
                                     android:gravity="center"
-                                    android:hint="#"
+                                    android:hint="##"
                                     android:inputType="number"
-                                    android:maxLength="1"
+                                    android:maxLength="2"
                                     android:text="@={form.d11702x}"
                                     app:maxValue="99"
-                                    app:minValue="0"
+                                    app:minValue="00"
                                     app:type="range" />
                             </LinearLayout>
 
@@ -2701,12 +2701,12 @@
                                     android:layout_weight="1"
                                     android:enabled="@{!form.d11798.equals(`98`)}"
                                     android:gravity="center"
-                                    android:hint="#"
+                                    android:hint="##"
                                     android:inputType="number"
-                                    android:maxLength="1"
+                                    android:maxLength="2"
                                     android:text="@={form.d11703x}"
                                     app:maxValue="99"
-                                    app:minValue="0"
+                                    app:minValue="00"
                                     app:type="range" />
                             </LinearLayout>
 
@@ -2729,12 +2729,12 @@
                                     android:layout_weight="1"
                                     android:enabled="@{!form.d11798.equals(`98`)}"
                                     android:gravity="center"
-                                    android:hint="#"
+                                    android:hint="##"
                                     android:inputType="number"
-                                    android:maxLength="1"
+                                    android:maxLength="2"
                                     android:text="@={form.d11704x}"
                                     app:maxValue="99"
-                                    app:minValue="0"
+                                    app:minValue="00"
                                     app:type="range" />
                             </LinearLayout>
 
@@ -2757,12 +2757,12 @@
                                     android:layout_weight="1"
                                     android:enabled="@{!form.d11798.equals(`98`)}"
                                     android:gravity="center"
-                                    android:hint="#"
+                                    android:hint="##"
                                     android:inputType="number"
-                                    android:maxLength="1"
+                                    android:maxLength="2"
                                     android:text="@={form.d11705x}"
                                     app:maxValue="99"
-                                    app:minValue="0"
+                                    app:minValue="00"
                                     app:type="range" />
                             </LinearLayout>
 
