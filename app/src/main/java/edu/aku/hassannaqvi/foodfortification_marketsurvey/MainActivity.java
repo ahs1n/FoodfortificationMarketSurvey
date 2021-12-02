@@ -1,14 +1,19 @@
 package edu.aku.hassannaqvi.foodfortification_marketsurvey;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+
+import java.lang.reflect.Method;
 
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.core.MainApp;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.database.AndroidManager;
@@ -36,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.AppTheme);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
         setSupportActionBar(bi.toolbar);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
@@ -136,17 +142,22 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(MainActivity.this, SyncActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.debugDB:
+                showDebugDBAddressLogToast(getApplicationContext());
+                intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("http://10.199.28.121:8081"));
+                startActivity(intent);
+                break;
             case R.id.checkPendingForms:
                 intent = new Intent(MainActivity.this, FormsReportPending.class);
                 startActivity(intent);
                 break;
             case R.id.formsReportDate:
-                //intent = new Intent(MainActivity.this, FormsReportDate.class);
-                startActivity(intent);
+                /*intent = new Intent(MainActivity.this, FormsReportDate.class);
+                startActivity(intent);*/
                 break;
             case R.id.formsReportCluster:
-                //intent = new Intent(MainActivity.this, FormsReportCluster.class);
-                startActivity(intent);
+                /*intent = new Intent(MainActivity.this, FormsReportCluster.class);
+                startActivity(intent);*/
                 break;
         }
 
@@ -157,9 +168,25 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.item_menu, menu);
         MenuItem action_database = menu.findItem(R.id.action_database);
+        MenuItem debugDB = menu.findItem(R.id.debugDB);
 
         action_database.setVisible(MainApp.admin);
+        debugDB.setVisible(MainApp.admin);
         return true;
+    }
+
+    public void showDebugDBAddressLogToast(Context context) {
+        if (BuildConfig.DEBUG) {
+            try {
+                Class<?> debugDB = Class.forName("com.amitshekhar.DebugDB");
+                Method getAddressLog = debugDB.getMethod("getAddressLog");
+                Object value = getAddressLog.invoke(null);
+                Toast.makeText(context, (String) value, Toast.LENGTH_LONG).show();
+//                bi.ipAddress.setText((String) value);
+            } catch (Exception ignore) {
+
+            }
+        }
     }
 
 }
