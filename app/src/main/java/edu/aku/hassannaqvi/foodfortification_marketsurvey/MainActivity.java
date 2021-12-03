@@ -139,8 +139,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.debugDB:
-//                showDebugDBAddressLogToast(getApplicationContext());
-                /*               intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("http://10.199.28.121:8081"));*/
                 intent = new Intent(MainActivity.this, WebViewActivity.class);
                 startActivity(intent);
                 break;
