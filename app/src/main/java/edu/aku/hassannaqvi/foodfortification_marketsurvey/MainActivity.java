@@ -1,19 +1,14 @@
 package edu.aku.hassannaqvi.foodfortification_marketsurvey;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-
-import java.lang.reflect.Method;
 
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.core.MainApp;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.database.AndroidManager;
@@ -21,6 +16,7 @@ import edu.aku.hassannaqvi.foodfortification_marketsurvey.databinding.ActivityMa
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.models.Form;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.IdentificationActivity;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.SyncActivity;
+import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.WebViewActivity;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.lists.FormsReportPending;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionAActivity;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionB1Activity;
@@ -143,8 +139,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.debugDB:
-                showDebugDBAddressLogToast(getApplicationContext());
-                intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("http://10.199.28.121:8081"));
+//                showDebugDBAddressLogToast(getApplicationContext());
+                /*               intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("http://10.199.28.121:8081"));*/
+                intent = new Intent(MainActivity.this, WebViewActivity.class);
                 startActivity(intent);
                 break;
             case R.id.checkPendingForms:
@@ -174,19 +171,4 @@ public class MainActivity extends AppCompatActivity {
         debugDB.setVisible(MainApp.admin);
         return true;
     }
-
-    public void showDebugDBAddressLogToast(Context context) {
-        if (BuildConfig.DEBUG) {
-            try {
-                Class<?> debugDB = Class.forName("com.amitshekhar.DebugDB");
-                Method getAddressLog = debugDB.getMethod("getAddressLog");
-                Object value = getAddressLog.invoke(null);
-                Toast.makeText(context, (String) value, Toast.LENGTH_LONG).show();
-//                bi.ipAddress.setText((String) value);
-            } catch (Exception ignore) {
-
-            }
-        }
-    }
-
 }

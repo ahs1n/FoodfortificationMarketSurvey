@@ -17,7 +17,7 @@
                 app:showAsAction="collapseActionView" />
             <item
                 android:id="@+id/debugDB"
-                android:title="Show Debug Address"
+                android:title="Open Debug Database"
                 app:showAsAction="collapseActionView" />
 
             <item

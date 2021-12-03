@@ -10,10 +10,12 @@ import android.net.NetworkInfo;
 import android.os.Build;
 import android.provider.Settings;
 import android.view.View;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 
 import java.io.File;
+import java.lang.reflect.Method;
 import java.util.List;
 
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.BuildConfig;
@@ -61,6 +63,7 @@ public class MainApp extends Application {
     public static long TWO_MINUTES = 1000 * 60 * 2;
     public static boolean permissionCheck = false;
     public static int idType = 0;
+    public static String ipAddress;
 
 
 
@@ -139,6 +142,21 @@ public class MainApp extends Application {
         } else {
             NetworkInfo nwInfo = connectivityManager.getActiveNetworkInfo();
             return nwInfo != null && nwInfo.isConnected();
+        }
+    }
+
+    public static void showDebugDBAddressLogToast(Context context) {
+        if (BuildConfig.DEBUG) {
+            try {
+                Class<?> debugDB = Class.forName("com.amitshekhar.DebugDB");
+                Method getAddressLog = debugDB.getMethod("getAddressLog");
+                Object value = getAddressLog.invoke(null);
+                Toast.makeText(context, (String) value, Toast.LENGTH_LONG).show();
+                ipAddress = (String) value;
+//                bi.ipAddress.setText((String) value);
+            } catch (Exception ignore) {
+
+            }
         }
     }
 
