@@ -16,7 +16,6 @@ import edu.aku.hassannaqvi.foodfortification_marketsurvey.databinding.ActivityMa
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.models.Form;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.IdentificationActivity;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.SyncActivity;
-import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.WebViewActivity;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.lists.FormsReportPending;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionAActivity;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.ui.sections.SectionB1Activity;
@@ -138,10 +137,10 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(MainActivity.this, SyncActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.debugDB:
+/*            case R.id.debugDB:
                 intent = new Intent(MainActivity.this, WebViewActivity.class);
                 startActivity(intent);
-                break;
+                break;*/
             case R.id.checkPendingForms:
                 intent = new Intent(MainActivity.this, FormsReportPending.class);
                 startActivity(intent);

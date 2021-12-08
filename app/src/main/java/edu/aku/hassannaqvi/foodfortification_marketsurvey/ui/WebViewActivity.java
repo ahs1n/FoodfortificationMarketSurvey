@@ -1,19 +1,11 @@
 package edu.aku.hassannaqvi.foodfortification_marketsurvey.ui;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.amitshekhar.DebugDB;
-
-import java.lang.reflect.Method;
-
-import edu.aku.hassannaqvi.foodfortification_marketsurvey.BuildConfig;
 import edu.aku.hassannaqvi.foodfortification_marketsurvey.R;
 
 public class WebViewActivity extends AppCompatActivity {
@@ -27,7 +19,7 @@ public class WebViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_web_view);
         setSupportActionBar(findViewById(R.id.toolbar));
 
-        showDebugDBAddressLogToast(getApplicationContext());
+//        showDebugDBAddressLogToast(getApplicationContext());
 
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -44,7 +36,7 @@ public class WebViewActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public String showDebugDBAddressLogToast(Context context) {
+/*    public String showDebugDBAddressLogToast(Context context) {
         if (BuildConfig.DEBUG) {
             try {
                 Class<?> debugDB = Class.forName("com.amitshekhar.DebugDB");
@@ -61,5 +53,5 @@ public class WebViewActivity extends AppCompatActivity {
             }
         }
         return null;
-    }
+    }*/
 }
